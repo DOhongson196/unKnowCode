@@ -1,18 +1,16 @@
 #include<stdio.h>
 #include<string.h>
 
-void daonguoc(char ch[])
+void daonguoc(char *p)
 {
 	int i;
-	char *p;
 	int len;
-	p=&ch[0];
-	len = strlen(ch);
+	len = strlen(p);
 	for(i=0;i<len/2;i++)
 	{
-		char temp=ch[i];
-		ch[i]=ch[len-i-1];
-		ch[len-i-1]=temp;
+		char temp=p[i];
+		p[i]=p[len-i-1];
+		p[len-i-1]=temp;
 	}
 }
 
