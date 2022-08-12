@@ -4,7 +4,6 @@
 
 void xucsac()
 {
-	int i;
 	srand((unsigned)time(NULL));
 	printf("Do xuc xac\n");
 	printf("%d diem\n",rand()%6+1);
