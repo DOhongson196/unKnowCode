@@ -1,0 +1,35 @@
+image
+{
+    height: 150px;
+}
+
+.description
+{
+    font-size: 20px;
+}
+
+#cock-time
+{
+    font-weight: bold;
+}
+
+.ingredients li
+{
+    list-style: square;
+}
+
+.time
+{
+    color: grey;
+}
+
+.citation a
+{
+    color: seagreen;
+}
+
+h1,h2,p,li
+{
+    font-family: Helvetica;
+}
+
