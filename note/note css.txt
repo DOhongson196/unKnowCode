@@ -1,0 +1,70 @@
+Functions: -var()gọi biến để thêm thuộc tính màu
+	   -linear-gradient(): tạo phông mờ
+	   -rgba() màu có mờ
+	   -rgb() màu đặc
+	   -calc() tính toán
+	   -attr() gọi lớp giả
+
+pseudo-classes(biến giả): -Nhận biết bằng (:)
+			  -:root: tham chiếu đến phần tử gốc
+			  -:hover: di chuột đến sẽ kích hoạt thuộc tính
+			  -:active: ấn và giữ chuột vào sẽ kích hoạt thuộc tính
+			  -:frist-child: đứa con đầu tiên
+			  -:last-child: đứa con cuối cùng
+
+pseudo-elements(phần tử giả): -Nhận biết bằng (::)
+			      -::before(phải có content:"") chỉ có thể tồn tại 1 phần tử giả,luôn đứng đầu
+			      -::after(phải có content:"") chỉ có thể tồn tại 1 phần tử giả,luôn đứng cuối
+			      -::first-letter: chữ đầu tiên
+			      -::first-line: dòng đầu tiên
+			      -::selection: khi bôi chuột vào lựa chọn vd: h1::selection{}
+
+kết hợp biến giả và phần tử giả: VD(:hover::first-letter)
+
+Position:  -Để ghi đè lên nhau, ứng dụng làm khung đăng ký, đăng nhập....
+           -Realative: tương đối(lấy chính mình làm gốc tọa độ)
+           -Absolute: tuyệt đối(lấy thẻ cha làm gốc tọa độ)(phụ thuộc vào thẻ gần nhất có position), có thể di chuyển xung quanh.
+           -Fixed: phụ thuộc vào khung trình duyệt(dùng cho header) VD tiêu đề trang kéo lên xuống
+           -sticky: dính phụ thuộc vào khung
+			
+flexbox: flex container:thẻ chứa, flex item thẻ con
+	  main axis là trục ngang, có main start và main end, có thể đảo ngược lại, quyết định thứ tự chuyền ngang
+	  cross axis là trục dọc, có cross start và cross end, có thể đảo ngược lại, quyết định thứ tự hiển thị chiều dọc
+ 	  main size kích thước chiều ngang, cross size kích thước chiều dọc
+
+CSS flexbox: 
+            -display: flex,inline flex
+            -flex-direction: (thay đổi phương hướng main-axis) mặc định là row(nằm ngang), column(nằm dọc)
+            -flex-wrap: nowrap(ko xuống dòng), wrap(xuống dòng), wrap-reverse( đảo ngược thứ tự)
+            -flex-basic: (length) độ dài main-size
+            -justify-content: (để căn chỉnh flex-box) flex-start|flex-end|center|space-between|space-around
+            -justify-self:(để căn chỉnh flex-item)  flex-start|flex-end|center
+            -align-content: flex-start|flex-end|center (căn chỉnh theo chiều cross-axis)
+            -align-self: flex-start|flex-end|center
+            -flex-grow:<number> tăng kích thước main-size
+            -flex-shrink:<number> giảm kích thước main-size
+            -flex: shorthand flex-grow|flex-shrink|flex-basic
+	    -flex-flow:shorthand flex-direction|flex-wrap
+            -order:<number> thứ tự hiển thị
+
+
+BEM:  -Block element modifier
+      -.block
+      -.block__element
+      -.block--modifier
+      -.block__element--modifier (modifier dùng để bổ nghĩa, phân biệt các thuộc tính khác nhau)
+      -dùng block lông nhau nếu có một global variable phải giữ nguyên tên(rule bem) ko được đặt tên khác block hoặc
+       lòng tên block vào biến global variable
+
+
+point-event: ko ấn vào được
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,115 @@
+DOC
+-----------------------------------------------------------------------------------------------------------------
+Dom - Document Object model
+Dom có thể lấy ra và chỉnh sửa thuộc tính của element,attribute,text
+Dom xây dựng trên tiêu chuẩn W3C (world wide web consortium)
+Core Dom(là cơ sở của tất cả document), XML Dom ,HTML DOM
+Dom theo mô hình cây có 3 thành phần chính: element,attribute,text
+Node là mỗi điểm rẽ nhánh
+
+JS ko chứa DOM
+
+Js là công cụ để giúp chúng ta truy xuất vào HTML DOM
+
+document đại diện cho toàn bộ website vì thế mỗi lần muốn truy xuất, chỉnh sửa đều phải chạy qua document
+
+
+ELEMENT
+------------------------------------------------------------------------------------------------------------------
+Có 5 cách để truy xuất đến element (ID,class,tag,CSS selector,HTML collection)
+ID : trả về element
+class và tag : trả về 1 mảng tất cả phần tử
+CSS selector :querySelector  trả về element đầu tiên và querySelectorAll trả về 1 mảng tất cả phần tử
+var boxNode = document.querySelectorAll('.box')   (trong đó có box 1 và box 2)
+boxNode[0].querySelectorAll('li") : lấy ra box1 và tất cả thẻ li của phần tử đấy
+
+document.write : sẽ được thực thi ngay sau khi gọi script
+
+innerHTML = '<h1 title="heading">New Heading</h1>' có thể thêm element, attribute, text
+
+các thuộc tính:
+attribute: trả về mảng các attribute của element
+
+contenteditable="" : có thể chỉnh sửa viết thêm vào như thẻ input
+
+ATTRIBUTE
+------------------------------------------------------------------------------------------------------------------
+cách thêm vào:
+let headingElement = document.querySelector('h1');
+headingElement.(attribute muốn thêm) = 'tên'; chỉ thên được attribute hợp lệ
+headingElement.setAttribute('attribute muốn thêm', 'tên') thêm được attribute tự tạo
+
+lấy ra tên:
+headingElement.(attribute muốn lấy) chỉ lấy được attribute hợp lệ
+headingElement.getAttribute('attribute muốn lấy') lấy được attribute tự tạo
+
+
+
+Text
+------------------------------------------------------------------------------------------------------------------
+.innerText = 'nội dung muốn thay đổi'    : thay đổi nội dung (lấy ra những text được hiển thị bao gôm thuộc tính)
+.textContent  = 'nội dung muốn thay đổi'  : thay đổi nội dung (lấy ra tất cả text bao gồm khoảng cách bỏ qua thuộc tính)
+
+thẻ style và scripts đều là element và nội dung bên trong đều là text
+
+
+.Style (element node)
+------------------------------------------------------------------------------------------------------------------
+có thể sử dụng tất cả thuộc tính của style
+nếu muốn sử dụng nhiều thuộc tính cho một đối tượng dùng object
+
+object.assign(tên.style, {
+	width: ,
+	height: ,
+	backgroundColor: ,
+});
+
+
+.classList (element node)
+------------------------------------------------------------------------------------------------------------------
+add: thêm thuộc tính
+contains: kiểm tra
+remove: xóa bỏ
+toggle: có thì xóa, ko có thì thêm
+
+index(chỉ mục) = class,id
+value = giá trị dạng chuỗi của class="dasdas asdas" (value:dasdas asdas)
+
+This trong JS
+------------------------------------------------------------------------------------------------------------------
+This trỏ về đối tượng mà nó đang thuộc về
+đối tượng cần có thuộc tính(miêu tả) và phương thức(hành động) 
+hàm trong đối tượng được gọi là phương thức
+trong một phương thức, this tham chiếu tới đối tượng truy cập phương thức(trước dấu chấm)
+
+nếu this ko có đối tượng đứng trước thì nó sẽ trỏ về window
+
+this trong hàm tạo sẽ đại diện cho đối tượng được tạo
+
+=>(around function) ko có context nên nó sẽ lấy this gần nhất là đối tượng
+
+Phân biệt qua cách hàm/method được gọi. Được gọi qua object.method() thì this là object
+. Được gọi theo tenHam() thì this là window (strict mode là undefined).
+Mỗi hàm luôn có context riêng, hàm trong method cũng có context riêng của nó (trừ arrow function).
+
+
+Events (element node)
+------------------------------------------------------------------------------------------------------------------
+onchange : dùng cho thẻ input text(value gõ xong mới lấy ra), checkbox(checked), select.value
+oninput  : dùng cho thẻ input (gõ đến đâu lấy ra đến đấy)
+
+keyup,keydown: để làm phím tắt
+onkeypress   : ấn phím
+
+preventDefault: vô hiệu hóa hành vi
+
+stopPrapagation: vô hiệu hóa sự kiện nổi bọt
+
+Dom events: xử lý nhiều việc bằng cách nhập bên trong nó
+
+addEventListener: xử lý nhiều việc bằng cách gọi nhiều lần theo thứ tự
+
+addEventListener('tên event',funciton() {
+	
+});
+

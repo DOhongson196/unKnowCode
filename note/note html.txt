@@ -1,0 +1,191 @@
+<!DOCTYPE html>: phải có để chạy document
+
+<html></html>: document bắt đầu và kết thúc bằng <html>
+
+<body></body>: Phần có thể nhìn thấy (trong đó có <h1> đến <h6>(heading)  sắp xếp theo độ quan trong(kích thước) giảm dần)
+	                             (<p> để viết ký tự cần in ra)
+
+<a>          : link đính kèm được xác định qua tag <a>, có attribute(thuộc tính): (href)
+
+<img>	     : hình ảnh đính kèm được xác định qua tag <img>, có attribute(thuộc tính): (src),
+	       attribute aternative text (văn bản thay thế khi hình ảnh bị lỗi): (alt) 
+	       attribute (width) và (height) để xác định kích thước ảnh(đơn vị thường dùng pixels)
+
+attribute (style): dùng để thêm vào các kiểu cho phần tử (Vd: màu sắc,font chữ, size ...)
+attribute (lang) : dùng dể xác định ngôn ngữ cho web dùng trong lúc gọi <html> (vd: <html lang="en")
+attribute (title):(tiêu đề) dùng đẻ bổ sung(chú thích) cho thông tin phần tử khi dùng chuột di qua
+attribute (",')  : dấu " có thể thay thế bằng dấu ', linh hoạt sử dụng trong 1 số trường hợp(VD: "Son", "Ha Noi") dùng
+		   ngoặc đơn
+
+<hr>             : Để kết thúc tag
+<br>             : Để xuống dòng
+<pre>            : để hiển thị bằng phông chữ có chiều rộng cố định(courier) và có dấu cách, dấu chấm.
+
+cấu trúc style   :<tagname style="property:value;">
+
+Style            :style="background-color:....;"    
+		 :style="color:...;"
+		 :style="font-family:....;"
+		 :style="font-size:..%;"
+		 :style="text-align:....;"(căn chỉnh văn bản)
+
+<b>=<strong> : in đậm.
+<i>=<em>     : in nghiêng
+<small>      : in nhỏ
+<mark>       : use highlight(đánh dấu giống bút nhớ)
+<del>        : ngạch ngang chữ
+<ins>        : ngạch dưới
+<sub>        : chữ xuống 
+<sup>	     : chữ lên.
+
+<blockquote> :(cite="")trích dẫn
+<q>          :Ngoặc kép
+<abbr>       : xác định từ viết tắt, dùng với title.(VD:<p> the <abbr title="DO HONG SON">DHS</abbr> dep trai.</p>)
+<address>    : địa chỉ.
+<cite>	     : dùng để đánh dấu các tác giả
+<bdo>        : dùng để ghi đè hướng văn bản hiện tại.
+
+<!--cmt-->   : dùng để cmt(note).
+
+color            : background color, text color, border color
+RGB & RGBA color : màu chủ đạo (red, green, blue), alpha chanel (opacity) ( độ mờ).
+RRGGBB           : màu thập lục phân(hex color)
+HSL&HSLA         :(hue,saturation,lightness) màu sắc, dộ bão hòa, độ sáng , alpha chanel(opacity)(độ mờ)
+
+
+CSS		 : Cascading style sheets để xác định bố cục trang web
+		 : có thể sử dụng bằng 3 cách Inline ngay tại dòng(attribute inside elements)
+					      Internal bên trong(element in the <head> section)
+					      External dùng bên ngoài(element to link to an external CSS file)
+
+
+Link             :mặc định mở trong trình duyệt hiện tại - self
+		 :mở trình duyệt trong tab mới		 - blank
+		 :mở trong khung chính			 - parent
+		 :toàn bộ phần thân cửa sổ 		 - top
+Link		 :(link,visited(đã vào),hover(di chuột),active(hoạt đông)
+		 :text-decoration(gạch chân)
+
+
+button           :tạo nút ấn vào
+
+Link to Email    :dùng mailto bên trong href để mở chương trình email(href="mailto:...")
+
+attribute(id)    : để tạo ra book(<h2 id="c4">chapter 4</h2>)
+		 : nhảy tới chap (href="#C4")
+
+IMG              : dùng (float) để chèn ảnh vào bên trái hoặc phải chữ.
+                 : dùng width="..px" height="..px" sẽ bị ghi đè nếu dùng style ở head.
+		 : dùng style="width:..px;height:..px;" không bị ghi đè.
+
+IMG<map>	 : <map> dùng để xác định bản đồ hình ảnh, có các khu vực có thể thể ấn vào được.Có thể có nhiều thẻ <area>
+		  Dùng thẻ <usemap="#..."> để khởi tạo.
+		  <img src="workplace.jpg" alt="workplace" usemap="#workmap" witdh="400" height="379">
+		  <map name="workmap">
+		      <area shape="rect" cords="34,44,270,350" alt="computer" href="computer.htm">
+
+IMG<background>  :có thể chèn background cho <p>: <style>
+						  p{background-image:url('img_girl.jpg');}
+						  </style>
+		              background cho page:<style>
+						  body{background-image:url('img_girl.jpg');}
+						  </style>
+			      background-repear: no-repeat; (để hình ảnh không lặp lại)
+			      background-attachment: fixed; (để fix với tỉ lệ)
+			      background-size: cover; (để cover toàn bộ)
+
+IMG<picture>     :cho phép sử dụng linh hoạt hình ảnh, <picture> có thể chưa nhiều <source>, mỗi<source> chưa một media
+		 <picture>
+		   <source media="(min-witdh: 650px)" srcset="img_food.jpg">
+		   <source media="(min-width: 465px)" srcset=""img_car.jpg">
+		   <img src="img_girl.jpg">
+		 </picture>
+
+Favicon          :Hình ảnh yêu thích(logo) xuất hiện ở bên cạnh title trang web.
+		 <head>
+		    <title>My Page Title</title>
+		    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+		 </head>
+
+Table            :<tr></tr> mở 1 table(hàng trong bảng)
+		  <th> table heading(tiêu đề của bảng>
+		  <td> nội dung của bảng </td>
+                  <style>
+                  th,td{boder-style: .. ; (kiểu khung)
+                        boder-color:....; (màu bảng)
+                        border-collapse: collapse; (viền đơn)
+                        background-color:.....; (màu background)
+                  <table style="witdh:100%"> có kích thước = 100% so với body
+                  <th style="witdh:70%"> chiếm 70% kích thước bảng.
+                  text-align:...; để căn chỉnh văn bản trong bảng
+                  <th colspan="2">Name</th> gộp 2 cột trong bảng.
+                  <th rowspan="2">Name</tg> gộp 2 hàng trong bảng.
+                  nth-child(even): tạo màu số chẵn(dùng được cả tr,th)
+		  border-bottom: bảng không có kẻ ngang
+                  tr:hover (khi di chuột đến sẽ có highlight)
+		  visibility: collapse (dùng để ẩn cột)
+
+list             :<ul></ul> dánh sách không có thứ tự
+                  <li>mỗi mục trong danh sách</li>
+                  <ol><ol> danh sách có đánh số
+                  <dl> danh sách có mô tả
+                      <dt>item</dt>
+                          <dd>miêu tả item</dd>
+
+Block&Inline     :<p>&<div> giống nhau đều là block element, chiếm hết khoảng trắng 1 dòng và bắt đầu trên dòng mới.
+                  <p> xác định một đoạn văn
+                  <div> xác định một khối(dùng làm vùng chứa cho các element khác)
+                  <span> là inline element, chỉ chiếm khoảng trắng cần thiết (dùng đánh dấu một phần trong các văn bản)
+
+Class            : xác định thuộc tính chung, nhiều phần tử trong HTML có thể sử dụng chung class.
+                   .Nameclass{} : để tạo 1 class
+		   class="nameclass" : để gọi class
+                   một phần tử có thể trỏ đến nhiều class khác nhau, cách nhau = space.
+                   Phân biệt chữ hoa, chữ thường.
+                   JVS: geElementsByClassName() method
+
+ID               : xác định thuộc tính cho 1 phần tử đặc biệt trong html.
+                   chỉ có một phần tử có thể sử dụng ID
+                   #nameid{} : để tạo 1 ID
+                   id="nameid" : để gọi ID
+                   có thể dùng ID với Link để nhảy đến 1 vị trí. <p><a href="#C4">Jump to chapter 4</a></p>
+                                                                 <h2 id="C4">Chapter 4</h2>
+                   Phân biệt chữ hoa, chữ thường.
+                   JVS: getElementById() method
+
+Iframe            : dùng để display 1 trang web trong trang web của b bằng cách dùng khung nội tuyến
+                   <ỉframe src="demo_iframe.htm" name="iframe_a" title="Iframe Example"></iframe> (tạo iframe)
+                   <p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p> (gán link và target vào iframe đã tạo)
+
+File paths        : cách tốt nhất là sử dụng relative file paths
+                    có thể sử dung bằng cách link tới các external file: web pages, images, style sheets, JVS
+
+<head>            : chứa các phần từ: <title>,<style>,<meta>,<link>,<script>,<base>
+                    <head> chứa các siêu dữ liệu nằm giữa <html> và <body>
+                    <metadata> not displayed.
+                    <base> xác định địa chỉ mặc định hoặc thuộc tính chung cho tất cả liên kết trên trang.
+
+<meta>             : <meta charset="UTF-8"> để sử dụng tiếng việt có dấu
+                     <meta name="keywords" content="HTML,CSS,JVS"> keyword của web
+                     <meta name="description" content="free web"> miêu tả web
+                     <meta name="viewport" content="width=device-width, initial-scale=1"> để fix web với các device khác nhau
+
+JavaScript         : giúp trang web trở nên sinh động và tăng tương tác
+		     <script>  xác định script máy client
+                     <noscript> nội dung thay thế khi máy client ko hỗ trợ
+                     có thể dùng JVS changes text bằng: doctument.getElementById("nameid").innerHTML= " text want changes";
+
+Layout             : CSS framework, CSS float property, CSS flexbox, CSS grid
+                  
+
+                 
+							
+		 
+					     
+
+
+
+
+
+
+	  	
