@@ -7,5 +7,5 @@ font-size: 62.5%;
 font-family: 'Roboto', sans-serif;
 
 font-awesome:
-<link rel="stylesheet" href="/assets/CSS/fontawesome-free-6.2.0-web/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
