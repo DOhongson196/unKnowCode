@@ -1,0 +1,182 @@
+built-in:  Hàm có sẵn trên JS
+	   Alert (thông báo khi vào web, tên web hiện ra thông báo)
+	   Console.log (in ra thông báo ở Console) mục đích gỡ lỗi
+	          .warn (in ra cảnh báo ở Console)
+	          .error (in ra lỗi ở Console)
+	   Confirm (Thông báo khi vào web, hiện ra thông báo có xác nhận(cancel or ok)
+	   Prompt (giống confirm nhưng có input)
+	   Set timeout (Thực thi thông báo sau 1 khoảng thời gian được nhập vào, đơn vi mls, 1000mls=1s)
+                       setTimeout(function() {}, time)
+	   Set interval (Thực thi thông báo liên tục(vòng lặp) mỗi lân trong khoảng thời gian được nhập vào)
+                       setInterval(function() {}, time)
+           innerHTML               :sử dụng để thay đổi thuộc tính trong phần tử HTML
+	   window.print()          : để in ra 
+
+JS     : phân biệt chữ hoa với chữ thường
+      
+
+
+&& :Kiểm tra điều kiện đến cuối, trả về kết quả 
+|| :Kiểm tra chỉ cần 1 điều kiện đúng là dừng lại, trả về kết quả
+
+có 2 cách tạo chuỗi, dùng cách ngoặc đơn hoặc ngoặc kép vì đơn giản, nhanh và cách thứ 2 tạo thành object 
+
+muốn dùng ngoặc đơn hoặc ngoặc kép trong chuỗi thì dùng (\) hoặc dùng đóng mở ngoặc đơn và ngoặc kép ngược lại
+
+Template string  : để nối các chuỗi lại với nhau
+		  (`Toi la: ${string} ${string}`); = ('toi la: ' + string + ' ' + string);	
+                  
+
+.length  : kiểm tra độ dài 1 chuỗi
+
+.indexOf('string') : tìm kiếm ký tự đầu tiên
+                     (để tìm ký tự thứ 2 giống nhau thì bắt đầu đếm sau ký tự đầu tiên) (string.indexOf('JS',9))
+                     (lastIndexOf tìm ký tự đứng cuối cùng)
+
+.slice(điểm đầu và điểm cuối muốn cắt) : cắt chuỗi
+                                         cắt ngược bằng cách dùng số âm
+
+
+.replace('string muốn thay thế','string thay thế') : thay thế chuỗi, ký tự đầu tiên trong chuỗi, phân biệt in hoa thường,
+.replace(/string/g, 'string thay thế')             : thay thế tất cả 
+
+.toUpperCase() : chuyển thành chữ hoa
+.toLowerCase() : chuyển thành chữ thường
+
+.trim() : bỏ khoảng trắng thừa
+
+.split(điểm chung) : cắt chuỗi thành mảng
+
+.charAt(số vị trí ký tự)     : lấy ký tự trong chuỗi theo vị trí trả về string
+.charCodeAt(số vị trí ký tự) : lấy ký tự trong chuỗi theo vị trí trả về unicode
+[số vị trí ký tự]            : lấy ký tự trong chuỗi theo vị trí trả về undefine
+
+string.concat(string2)       : nối chuỗi stringstring2
+
+padStart(gioi han ky tu,'ky tu muon them') : Thêm ở trước  
+padEnd(gioi han ky tu,'ky tu muon them')   : Thêm ở sau
+
+ 
+isNaN(function) 			     : kiểm tra xem có phải NaN
+.toString()     			     : chuyển đổi thành string
+.toFixed(số muốn rút gọn sau số nguyên)      : làm tròn và string
+
+
+Array.isArray() 	               : kiểm tra xem là array hay OBJ
+array.join()        		       : chuyển đổi thành string khi ko muốn dùng dấu phẩy
+array.pop()          	               : xóa element cuối mảng và trả về phần tử đã xóa dưới dạng string
+array.push('phần tử cần thêm', )       : thêm phần tử vào cuối mảng
+array.shift()          	               : xóa element đầu mảng và trả về phần tử đã xóa dưới dạng string
+array.unShift('phần tử cần thêm', )    : thêm phần tử vào đầu mảng
+array.splice(vị trí chọn, muốn xóa bn phần tử, 'phần tử muốn thêm')
+array.splice(1,0,'Dart')               : JS,PHP,Ruby => JS, Dart, PHP, Ruby.
+array1.concat(array2)                  : nối 2 mảng theo thứ tự
+array.slice(vị trí muốn cắt, điểm kết thúc)  : cắt mảng
+array.sort()                                 : sắp xếp theo thứ tự tăng dần
+array.reverse()                              : sắp xếp theo thứ tự giảm dần
+arrat.sort(function(a, b){return a - b})     : sắp xếp số
+
+
+
+Nếu đặt một số trong dấu ngoặc kép phần còn lại sẽ được coi như chuỗi và nối với nhau
+
+Math.pow(x,2); == x**2;
+
+onchange     : thay đổi phần tử
+onclick      : người dùng ấn vào
+onmouseover  : người dùng di chuột vào
+onmouseout   : người dùng di chuột qua
+onkeydown    : ấn một phím
+onload       : khi trình duyệt tải xong
+
+\ dùng để xuống dòng khi viết nếu dài quá
+so sánh 2 objects luôn luôn trả về false
+
+object = {
+  name: "Son"
+  age: 26
+  address : "HBT"
+};
+
+Object constructor
+function User(firstname,lastname,avatar){
+	this.firstname = firstname;
+	this.lastname = lastname;
+	this.avatar = avatar;
+}
+
+var author = new User('son','do','avatar);
+var User = new User('vu','nguyen','avatar');
+
+author.title = 'title'
+user.cmt = 'cmt'
+
+User.prototype.(tên thuộc tính muốn thêm) = 'nội dung'
+User.prototype.get(tên phương thức) = function() {
+	return this.(ten phuong thuc); } (dùng cách này để thêm phương thức(method) để đạt performance tối ưu)
+
+
+
+
+for (var value of array)     : lấy ra value của mảng (value là giá trị của mảng vd: age:18 thì 18 là value)
+for (var key in array)       : lấy ra key của mảng (key là age)(array thi key la index)(duyệt cả qua thuộc tính chung(prototype))
+
+
+
+array.forEach(function() {        : dùng để duyệt qua từng phần tử của mảng
+	
+});
+
+array.every(function() {        : dùng để kiểm tra đúng hay sai nếu sai dừng lại luôn giống && (boolean)
+	return array.cần kiểm tra === 0;
+});
+
+array.some(function() {        : dùng để kiểm tra đúng hay sai chỉ cẩn 1 ĐK đúng là thỏa mãn || (boolean)
+	return array.cần kiểm tra === 0;
+});
+
+array.find(function() {        : dùng để tìm kiếm 1 phần tử (boolean)
+	return array.name === 'cần tìm kiem';
+});
+
+array.filter(function() {        : dùng để tìm kiếm tất cả phần tử (boolean)
+	return array.name === 'cần tìm kiem';
+});
+
+array.map(function()) : chạy qua tất cả phần tử của mảng rồi return lại kết quả
+
+var total= array.reduce(function(accumulator,currentValue) {      : 0 là giá trị khởi tạo, muốn giá trị 
+	return accumulator + currentValue;                         khởi tạo là loại gì thì dùng loại đấy
+},0};                                                             vd: number thì là 0;
+
+includes('muốn tìm',vị trí bắt đầu tìm) : để tìm kiếm có sẵn ở array và string trả về dạng boolean
+
+
+Math.PI      : số pi
+    .round() : làm tròn
+    .abs()   : giá trị tuyệt đối
+    .ceil()  : làm tròn lên phải lớn hơn 0
+    .floor() : làm tròn dưới
+    .random(): trả về số ngẫu nhiên nhỏ hơn 1 (vd: Math.floor(Math.random() * 10); để tạo random số <10)
+    .min()   : min
+    .max()   : max
+
+callback : là hàm, được truyền qua đối số và được gọi lại
+
+hasOwnProperty : kiểm tra xem là thuộc tính chung hay riêng, nếu chung thì là False, riêng là true.
+
+đệ quy : phải kiểm soát điểm dừng và phải có logic để tạo ra điểm dừng
+
+
+
+
+
+
+
+
+
+
+
+
+   
+	   

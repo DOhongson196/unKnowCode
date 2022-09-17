@@ -1,0 +1,14 @@
+%f: số thực
+double : scanf %lf : printf %f
+% 2: chia hết cho 2
+factorial : giai thừa
+answer : a mũ b
+maxValue : lớn nhất 
+%s: chuỗi ký tự
+%c: ky tu
+#string.h: lấy độ dài 1 xâu chuỗi ký tự
+'': đổi chữ
+a % b: hiển thị phần dư
+break; : kết thúc nếu đúng
+strlen(str): dem xem bn ky tu
+strcmp() Để kiểm tra xem 2 xâu có giống nhau hay không bạn có thể dùng hàm
