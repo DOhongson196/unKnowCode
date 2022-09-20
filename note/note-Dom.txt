@@ -75,23 +75,6 @@ toggle: có thì xóa, ko có thì thêm
 index(chỉ mục) = class,id
 value = giá trị dạng chuỗi của class="dasdas asdas" (value:dasdas asdas)
 
-This trong JS
-------------------------------------------------------------------------------------------------------------------
-This trỏ về đối tượng mà nó đang thuộc về
-đối tượng cần có thuộc tính(miêu tả) và phương thức(hành động) 
-hàm trong đối tượng được gọi là phương thức
-trong một phương thức, this tham chiếu tới đối tượng truy cập phương thức(trước dấu chấm)
-
-nếu this ko có đối tượng đứng trước thì nó sẽ trỏ về window
-
-this trong hàm tạo sẽ đại diện cho đối tượng được tạo
-
-=>(around function) ko có context nên nó sẽ lấy this gần nhất là đối tượng
-
-Phân biệt qua cách hàm/method được gọi. Được gọi qua object.method() thì this là object
-. Được gọi theo tenHam() thì this là window (strict mode là undefined).
-Mỗi hàm luôn có context riêng, hàm trong method cũng có context riêng của nó (trừ arrow function).
-
 
 Events (element node)
 ------------------------------------------------------------------------------------------------------------------
@@ -112,4 +95,72 @@ addEventListener: xử lý nhiều việc bằng cách gọi nhiều lần theo 
 addEventListener('tên event',funciton() {
 	
 });
+
+Debounce & Throttled
+------------------------------------------------------------------------------------------------------------------
+Debounce:  hoãn thực thi cho đến khi không có thay đổi đầu vào nào trong khoảng thời gian delay.
+Throttled: cho phép thực thi ngay nếu toThrottle = false. Sau khi thực thi, hàm này sẽ không được gọi cho đến hết khoảng thời gian delay
+
+function(hàm)
+------------------------------------------------------------------------------------------------------------------
+Hàm là 1 khối mã, làm việc cụ thể
+Hàm chỉ được thực thi khi hàm được gọi
+cách tạo hàm:  function nameFunction(Tham số){ console.log(tham số) }
+
+không giới hạn kiểu tham số
+
+arguments: là array chỉ đc định nghĩa trong hàm
+
+template string : ``
+
+biến và hàm trong function chỉ là local variable
+
+Declaration function : function showMessage(){}
+		       function phải được đặt tên
+		       có thể được gọi trước khi được định nghĩa
+
+Expresstion function : var showMessage = function(){}
+		       function được gán với 1 biến
+		       không thể được gọi trước khi được định nghĩa
+
+Arrow function       : var showMessage = () => {}
+
+
+
+This trong JS
+------------------------------------------------------------------------------------------------------------------
+This trỏ về đối tượng mà nó đang thuộc về
+đối tượng cần có thuộc tính(miêu tả) và phương thức(hành động) 
+hàm trong đối tượng được gọi là phương thức
+trong một phương thức, this tham chiếu tới đối tượng truy cập phương thức(trước dấu chấm)
+
+nếu this ko có đối tượng đứng trước thì nó sẽ trỏ về window
+
+this trong hàm tạo sẽ đại diện cho đối tượng được tạo
+
+=>(around function) ko có context nên nó sẽ lấy this gần nhất là đối tượng
+
+Phân biệt qua cách hàm/method được gọi. Được gọi qua object.method() thì this là object
+. Được gọi theo tenHam() thì this là window (strict mode là undefined).
+Mỗi hàm luôn có context riêng, hàm trong method cũng có context riêng của nó (trừ arrow function).
+
+
+Toán tử 3 ngôi
+------------------------------------------------------------------------------------------------------------------
+result > 0 ? 
+Điều kiện ? lệnh nếu đúng : lệnh nếu sai
+
+var , let , const
+------------------------------------------------------------------------------------------------------------------
+var       : global variable (hỗ trợ Hosting)
+let,const : local variable (ko hỗ trợ Hosting)
+cosnt     : ko gán được lần thứ 2
+
+Hosting   : có thể sử dụng trước khi khai báo
+
+
+
+
+
+
 
