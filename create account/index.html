@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <form id="signup" class="form">
+            <h2>Create Account</h2>
+            <p class="content">Get started with your free account</p>
+
+            <button class="btn twtter">
+                <i class="fa-brands fa-twitter icon-social"></i>
+                <span>Login via Twitter</span>
+            </button>
+
+            <button class="btn facebook">
+                <i class="fa-brands fa-facebook icon-social"></i>
+                <span>Login via Facebook</span>
+            </button>
+
+            <span class="space">OR</span>
+
+            <div class="form-field">
+                <div><i class="fa-solid fa-user icon-input"></i></div>
+                <input type="text" name="username" id="username" placeholder="Full name">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <div><i class="fa-solid fa-envelope icon-input"></i></div>
+                <input type="text" name="email" id="email" placeholder="Email address">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <div><i class="fa-solid fa-phone icon-input"></i></div>
+                <div>
+                    <select class="custom-select">
+                        <option selected="">+84</option>
+                        <option value="1">+1</option>
+                        <option value="2">+85</option>
+                        <option value="3">+86</option>
+                    </select>
+                </div>
+                <input type="text" name="phone" id="phone" placeholder="Phone number">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <div><i class="fa-solid fa-building icon-building"></i></div>
+                <select name="job" id="job">
+                    <option class="job-option" value="Select job type">Select job type</option>
+                    <option class="job-option" value="Police">Police</option>
+                    <option class="job-option" value="Doctor">Doctor</option>
+                    <option class="job-option" value="Dj">DJ</option>
+                </select>
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <div><i class="fa-solid fa-lock icon-input"></i></div>
+                <input type="password" name="password" id="password" placeholder="Create password">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <div><i class="fa-solid fa-lock icon-input"></i></div>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="Repeat password">
+                <small></small>
+            </div>
+
+            
+            <div class="form-field ">
+                <input class="btn-input" type="submit" value="Create Account">
+            </div>
+
+            <p class="signup">Have an account?<a href="#">Log In</a></p>
+
+
+
+
+        </form>
+    </div>
+
+    <script src="/form.js"></script>
+    
+</body>
+</html>

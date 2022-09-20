@@ -1,0 +1,209 @@
+:root {
+    --error-color: #dc3545;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+.container{
+    background-color: #f4f4f4;
+    padding: 1.4em;
+    width: 360px;
+}
+
+form h2{
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.content {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 14px;
+}
+
+.space {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.btn{
+    display: block;
+    width: 100%;
+    border: none;
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+    color: white;
+    padding: 8px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.twtter{
+    background-color: #1d9bf0;
+}
+
+.facebook{
+    background-color: #13509a;
+    opacity: 0.9;
+
+}
+
+.twtter:hover{
+    opacity: 0.8;
+}
+
+.facebook:hover{
+    opacity: 0.8;
+}
+
+.icon-social{
+    font-size: 1.6rem;
+    margin-right: 10px;
+}
+
+.form-field {
+    margin-bottom: 8px;
+    display: flex;
+
+}
+
+.form-field input {
+    border: solid 2px #f0f0f0;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+}
+
+#username{
+    width: 100%;
+}
+
+.icon-input{
+    padding: 12px 18px;
+    background-color: #e8e5e5;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 2px;
+
+}
+
+.phone-number{
+    padding: 10px 50px 10px 10px;
+    background-color: white;
+    font-size: 1.4rem;
+    font: #777;
+    margin: 2px 0px 7px 0px;
+    margin-left: 2px;
+}
+
+.form-field input:focus {
+    outline: none;
+}
+
+.form-field.error input {
+    border-color: var(--error-color);
+}
+
+.form-field.success input {
+    border-color: var(--success-color);
+}
+
+
+.form-field small {
+    color: var(--warning-color);
+}
+
+.signup{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: 14px;
+}
+
+.signup a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin-left: 2px;
+    color: #1d9bf0;
+}
+
+.btn-input {
+    width: 100%;
+    padding: 3%;
+    background: #007bff;
+    border-bottom: 2px solid #007bff;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-input:hover {
+    background: #0069d9;
+    
+}
+
+.btn-input:focus {
+    outline: none;
+}
+
+#job{
+    padding: 10px;
+    width: 100%;
+    border: none;
+    margin-left: 3px;
+
+}
+
+.job-option{
+    font: #777;
+}
+
+.icon-building{
+    padding: 10px 20px;
+    background-color: #e8e5e5;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 2px;
+}
+
+.custom-select{
+    margin-top: 2px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 2px;
+    margin-left: 2px;
+}
