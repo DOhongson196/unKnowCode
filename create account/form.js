@@ -108,7 +108,7 @@ const isRequired = value => value === '' ? false : true;
 const isBetween = (length,min,max) => length < min || length > max ? false : true;
 
 const showError = (input,message) => {
-    const formField = input.parentElement;
+    const formField = input.parentElement.parentElement;
     formField.classList.remove('success');
     formField.classList.add('error');
 
@@ -117,7 +117,7 @@ const showError = (input,message) => {
 };
 
 const showSuccess = (input) => {
-    const formField = input.parentElement;
+    const formField = input.parentElement.parentElement;
     formField.classList.remove('error');
     formField.classList.add('success');
     const error = formField.querySelector('small');

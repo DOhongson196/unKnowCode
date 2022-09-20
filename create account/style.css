@@ -1,7 +1,6 @@
 :root {
     --error-color: #dc3545;
     --success-color: #28a745;
-    --warning-color: #ffc107;
 }
 
 * {
@@ -13,11 +12,12 @@
 html{
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
+    color: #5f6368;
 }
 
 body{
     font-size: 1.6rem;
-    background-color: #f4f4f4;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,7 +28,9 @@ body{
 }
 
 .container{
-    background-color: #f4f4f4;
+    border-radius: 3px;
+    border: 1px solid rgb(210, 210, 210);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
     padding: 1.4em;
     width: 360px;
 }
@@ -58,7 +60,7 @@ form h2{
     font-size: 12px;
     position: relative;   
     z-index: 2;
-    background-color: #f4f4f4;
+    background-color: #fff;
 }
 .divider-text:after {
     content: "";
@@ -101,8 +103,9 @@ form h2{
 }
 
 .icon-social{
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin-right: 10px;
+    transform: translateY(10%);
 }
 
 .form-field {
@@ -113,24 +116,23 @@ form h2{
 
 .form-field input {
     border: solid 2px #f0f0f0;
-    border-radius: 3px;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
     padding: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-size: 14px;
     display: block;
     width: 100%;
 }
 
-#username{
-    width: 100%;
-}
 
 .icon-input{
     padding: 12px 18px;
-    background-color: #e8e5e5;
+    background-color: #e9ecef;
     font-size: 1.6rem;
     border: none;
-    border-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
 
 }
 
@@ -157,7 +159,7 @@ form h2{
 
 
 .form-field small {
-    color: var(--warning-color);
+    color: var(--error-color);
 }
 
 .signup{
@@ -175,13 +177,12 @@ form h2{
 }
 
 .btn-input {
+    margin-top: 5px;
     width: 100%;
     padding: 3%;
     background: #007bff;
-    border-bottom: 2px solid #007bff;
-    border-top-style: none;
-    border-right-style: none;
-    border-left-style: none;
+    border: none;
+    border-radius: 3px;
     color: #fff;
     cursor: pointer;
 }
@@ -199,26 +200,40 @@ form h2{
     padding: 10px;
     width: 100%;
     border: none;
-    margin-left: 3px;
-
+    border: solid 2px #f0f0f0;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    margin-bottom: 8px;
+    color: #5f6368;
+    outline: none;
+    cursor: pointer;
 }
 
-.job-option{
-    font: #777;
-}
 
 .icon-building{
-    padding: 10px 20px;
-    background-color: #e8e5e5;
+    padding: 12px 20px;
+    background-color: #e9ecef;
     font-size: 1.6rem;
     border: none;
-    border-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    
 }
 
 .custom-select{
-    margin-top: 2px;
     padding: 10px 10px;
     border: none;
     border-radius: 2px;
-    margin-left: 2px;
+    border: solid 2px #f0f0f0;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    color: #5f6368;
 }
+
+
+.form-group{
+    width: 100%;
+}
+
