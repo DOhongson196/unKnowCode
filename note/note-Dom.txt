@@ -158,6 +158,53 @@ cosnt     : ko gán được lần thứ 2
 
 Hosting   : có thể sử dụng trước khi khai báo
 
+JSON
+------------------------------------------------------------------------------------------------------------------
+Là 1 một định dạng dữ liệu (không phải kiểu)
+vì nó là một định dạng nên có thể sử dụng trong tất cả ngôn ngữ lập trình
+
+bắt đầu bằng dấu : ''.
+
+stringify / parse
+mã hóa   / Giải mã
+
+Promise
+------------------------------------------------------------------------------------------------------------------
+Sync : Đồng bộ là chạy theo quy luật (1 luồng chạy từ trên xuống)
+Async: Bất đồng bộ chạy ko theo quy luật (setTimeout, setInterVal, fetch, XMLHttpRequest, file reading,
+                                          request animation frame)
+
+promise : sử dụng để giải quyết các vấn đề async sẽ dẫn đến callback hell
+
+var promise = new Promise( function(resolve,reject) {}) : tạo 1 promise
+
+3 trạng thái : pendding, fullfil, reject
+
+promise: .then()    (resolve được gọi)
+         .catch()   (reject được gọi)
+	 .finally() (1 trong 2 được gọi)
+
+API-FETCH
+------------------------------------------------------------------------------------------------------------------
+Cổng giao tiếp giữa các phần mềm
+đơn giản chỉ là những url
+backend -> API -> Fetch -> JSON/XML -> JSON.parse -> render ra giao diện vs HTML
+fetch bản thân là một promise
+fake api = moc api
+CRUD : create (tạo mới vd:cmt) ->  POST
+       read(lấy dữ liệu để hiển thị) -> Get
+       update(chỉnh chửa) -> PUT/PATCH
+       delete(xóa) -> DELETE
+Postman : dùng để test
+Giao thức(truyền tải giữ liệu qua Internet): HTTP phương thức là thuộc tính năm trong giao thức
+render: tạo ra view
+
+Callback
+------------------------------------------------------------------------------------------------------------------
+callback là định nghĩa ra 1 function, rồi lấy function đấy là đối số của 1 function khác.
+là 1 hàm , truyền qua đối số và được gọi lại trong hàm nhận đối số
+
+
 
 
 

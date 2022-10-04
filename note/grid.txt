@@ -1,0 +1,16 @@
+Có 4 hệ thống lưới thường gặp:
+Mutilcolumn grid (lưới nhiều cột)
+single column grid (lưới một cột)
+modular grid (lưới module)
+baseline grid (lưới đường cơ sở)
+
+Responsive Design:
+-Grid: Thành phần cha
+-Row : Dòng - chiều ngang - chứa cột
+-Column: cột (cột thường để % để linh động thay đổi,PC 12/16, tablet 8. mobile 4)
+-Gutter: khoảng cách 2 phía của column
+-Margin: khoảng 2 bên trái phải của bố cục chính website
+
+Chọn 1200px vì phần lớn máy tính ngày hỗ trợ độ phân giải 1280px
+1200px chia hết cho 2,3,4,5,6,8,10,12,14,16..... (phần lớn đều chia cột theo số chia hết)
+

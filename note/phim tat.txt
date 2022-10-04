@@ -1,0 +1,3 @@
+ctrl + d : ấn nhiều lần để chọn các thành phần giống nhau
+alt + shift + mũi tên: để chọn nhiều thành phần
+alt + click : để chọn nhiều thành phần
