@@ -1,0 +1,12 @@
+SPA(Single-page application)
+----------------------------------------------------------------------------------------------------------
+-CSR: Client side rendering
+-ReactJS là 1 trong những thư viện tạo ra SPA
+-các ông lớn sử dụng SPA: GG, FB , TW...
+-trending trong vòng 10 năm
+-không yêu cầu tải lại trong quá trình sử dụng
+
+MPA(Multi-page application)
+----------------------------------------------------------------------------------------------------------
+-Tải lại trang trong quá trình sử dụng(click vào đường link, vào nav)
+-SSR: Server side rederring
