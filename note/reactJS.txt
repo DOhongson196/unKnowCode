@@ -10,3 +10,24 @@ MPA(Multi-page application)
 ----------------------------------------------------------------------------------------------------------
 -Tải lại trang trong quá trình sử dụng(click vào đường link, vào nav)
 -SSR: Server side rederring
+
+document.createElement()
+----------------------------------------------------------------------------------------------------------
+document.createElement('Name tag') : tạo thẻ tên
+nameTag.innerText: viết chữ
+nameTag.id       : thêm id
+nameTag.className: thêm class
+object.assign(nameTag.style,{
+	thêm nhiều thuộc tính
+})
+
+root.appendChild(nameTag): add nameTag làm thẻ con của root
+
+CDN(content delivery network)
+----------------------------------------------------------------------------------------------------------
+Có mạng lưới phân bố rộng rãi trên thế giới, vì thế khi người dùng truy cập sẽ lấy vị trí gần người dùng nhất
+
+Phiên bản
+----------------------------------------------------------------------------------------------------------
+development: cho dev (có nhiều cảnh báo giúp thuận tiện debug)
+production : khi nào hoàn thành xong sản phẩm, up lên cho người dùng (giảm những thứ k cần thiết, nhẹ đê tải nhanh)

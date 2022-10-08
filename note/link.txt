@@ -14,3 +14,6 @@ check password: new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]
 
 icon:
 https://themify.me/themify-icons
+
+reactjs version 17
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
