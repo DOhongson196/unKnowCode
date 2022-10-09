@@ -75,9 +75,10 @@ SELECT * FROM NhanVien WHERE GioiTinh like 'f'
 SELECT MaDA FROM LuongDA
 
 --5. Hiển thị tổng lương của từng nhân viên (dùng mệnh đề GROUP BY).
-SELECT MaDA, SUM(SoTien) AS 'Tong'
-FROM LuongDA
-GROUP BY MADA
+SELECT TenNV, SUM(SoTien) AS 'Tong'
+FROM LuongDA, NhanVien
+where TenNV like 'son'
+GROUP BY TenNV
 
 --6. Hiển thị tất cả các nhân viên trên một phòng ban cho trước (VD: ‘Hành chính’).
 SELECT * FROM NhanVien WHERE MaPB
@@ -103,27 +104,35 @@ IN
 (SELECT MaNV FROM LuongDA)
 
 --10. Viết một query hiển thị phòng ban có số lượng nhân viên nhiều nhất.
-
+SELECT TenPB FROM PhongBan WHERE MaPB
+IN
+(SELECT MaPB FROM NhanVien WHERE MaPB = (SELECT max(MaPB) FROM NhanVien))
 --11. Tính tổng số lượng của các nhân viên trong phòng Hành chính.
-
+SELECT SUM(SoTien) as'tong luong phong quang cao' FROM LuongDA where MaNV
+IN
+(SELECT MaNV FROM NhanVien WHERE MaPB 
+IN
+(SELECT MaPB FROM PhongBan WHERE TenPB like '%quang cao%'))
 --12. Hiển thị tống lương của các nhân viên có số CMND tận cùng bằng 9.
-
+SELECT SUM(SoTien) as'tong luong NV co so CMND cuoi la 9' FROM LuongDA where MaNV
+IN
+(SELECT MaNV FROM NhanVien WHERE SoCMND like '%9')
 --13. Tìm nhân viên có số lương cao nhất.
-
-CREATE VIEW v_NV_LDA
-AS
-SELECT  TenNV,SoTien FROM NhanVien
-left Join  LuongDA ON
-NhanVien.MaNV = LuongDA.MaNV
-
-SELECT max(SoTien) 'max'
-FROM v_NV_LDA 
+SELECT TenNV FROM NhanVien WHERE MaNV
+IN
+(SELECT MaNV FROM LuongDA WHERE SoTien = (SELECT MAX(SoTien) FROM LuongDA))
 
 --14. Tìm nhân viên ở phòng Hành chính có giới tính bằng ‘F’ và có mức lương > 1200000.
+SELECT TenNV FROM NhanVien WHERE GioiTinh = 'F' and MaPB
+IN
+(SELECT MaPB FROM PhongBan WHERE TenPB like '%xay dung%') and MaNV
+IN
+(SELECT MaNV FROM LuongDA WHERE SoTien > 100)
 
 --15. Tìm tổng lương trên từng phòng.
 
 --16. Liệt kê các dự án có ít nhất 2 người tham gia.
+SELECT MaDA FROM LuongDA WHERE (SELECT COUNT(MaNV) FROM LuongDA) > 2
 
 --17. Liệt kê thông tin chi tiết của nhân viên có tên bắt đầu bằng ký tự ‘N’.
 SELECT * FROM NhanVien WHERE TenNV like 'N%'
@@ -149,14 +158,12 @@ DELETE FROM LuongDA WHERE SoTien = 10
 --23. Xoá các bản ghi tương ứng từ bảng NhanVien đối với những nhân viên không có mã nhân viên
 --tồn tại trong bảng LuongDA.
 
-delete from NhanVien from LuongDA where LuongDA.MaNV =
-(SELECT i.MaNV FROM LuongDA i
-inner Join  NhanVien od ON
-i.MaNV = od.MaNV  WHERE MaDA is null)
+delete from NhanVien WHERE TenNV = 
+(SELECT TenNV FROM NhanVien
+left Join  LuongDA ON
+NhanVien.MaNV = LuongDA.MaNV  WHERE MaDA is null)
 
 --24. Viết một truy vấn đặt lại ngày vào làm của tất cả các nhân viên thuộc phòng hành chính là ngày
 --12/02/1999
-UPDATE NhanVien SET DiaChi= 'HP' FROM NhanVien WHERE MaPB
-IN
-(SELECT MaPB FROM PhongBan WHERE TenPB like 'PB1' )
+UPDATE NhanVien SET DiaChi = 'HP'  WHERE MaPB = (SELECT MaPB FROM PhongBan WHERE TenPB like '%xay dung%' )
 
