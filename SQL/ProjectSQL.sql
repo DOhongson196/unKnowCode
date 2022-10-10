@@ -118,9 +118,10 @@ SELECT SUM(SoTien) as'tong luong NV co so CMND cuoi la 9' FROM LuongDA where MaN
 IN
 (SELECT MaNV FROM NhanVien WHERE SoCMND like '%9')
 --13. Tìm nhân viên có số lương cao nhất.
-SELECT TenNV FROM NhanVien WHERE MaNV
+SELECT MaNv,TenNV FROM NhanVien WHERE MaNV
 IN
 (SELECT MaNV FROM LuongDA WHERE SoTien = (SELECT MAX(SoTien) FROM LuongDA))
+
 
 --14. Tìm nhân viên ở phòng Hành chính có giới tính bằng ‘F’ và có mức lương > 1200000.
 SELECT TenNV FROM NhanVien WHERE GioiTinh = 'F' and MaPB
@@ -130,9 +131,13 @@ IN
 (SELECT MaNV FROM LuongDA WHERE SoTien > 100)
 
 --15. Tìm tổng lương trên từng phòng.
+	select TenPB,sum(sotien) as 'Tong luong cua tung phong ban'
+	from (LuongDA inner join NhanVien on LuongDA.MaNV = NhanVien.MaNV) 
+	right join PhongBan on NhanVien.MaPB=PhongBan.MaPB group by TenPB
 
 --16. Liệt kê các dự án có ít nhất 2 người tham gia.
-SELECT MaDA FROM LuongDA WHERE (SELECT COUNT(MaNV) FROM LuongDA) > 2
+	select LuongDA.MaDA,count(LuongDA.MaDA) as 'So nguoi tham gia' from LuongDA 
+	group by LuongDA.MaDA having count(LuongDA.MaDA)>1
 
 --17. Liệt kê thông tin chi tiết của nhân viên có tên bắt đầu bằng ký tự ‘N’.
 SELECT * FROM NhanVien WHERE TenNV like 'N%'

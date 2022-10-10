@@ -31,3 +31,8 @@ Phiên bản
 ----------------------------------------------------------------------------------------------------------
 development: cho dev (có nhiều cảnh báo giúp thuận tiện debug)
 production : khi nào hoàn thành xong sản phẩm, up lên cho người dùng (giảm những thứ k cần thiết, nhẹ đê tải nhanh)
+
+
+React.createElement
+----------------------------------------------------------------------------------------------------------
+React.createElement(type,pros,children1,children2,childrenN..)
