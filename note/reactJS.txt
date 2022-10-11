@@ -36,3 +36,7 @@ production : khi nào hoàn thành xong sản phẩm, up lên cho người dùng
 React.createElement
 ----------------------------------------------------------------------------------------------------------
 React.createElement(type,pros,children1,children2,childrenN..)
+
+JSX - Javascript XML
+----------------------------------------------------------------------------------------------------------
+Có thể tạo ra biến và gán biến cho JSX
