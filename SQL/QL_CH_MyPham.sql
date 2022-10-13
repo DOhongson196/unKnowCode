@@ -14,6 +14,15 @@ CREATE TABLE CuaHang(
 	SDT_CH char(10) check (SDT_CH not like '%[^0-9]%') 
 )
 
+CREATE TABLE PhongBan(
+	Ma_PB varchar(7) primary key,
+	Ten_PB nvarchar(50) NOT NULL,
+	Ten_CH char(20),
+	CONSTRAINT FK_PB_CH
+    FOREIGN KEY (Ten_CH)
+    REFERENCES CuaHang(Ten_CH),
+)
+
 CREATE TABLE NhanVien(
 	Ma_NV char(8) primary key,
 	Ten_NV nvarchar(50) NOT NULL,
@@ -21,11 +30,23 @@ CREATE TABLE NhanVien(
 	SoCMND char(9) check (SoCMND not like '%[^0-9]%'),
 	GioiTinh char(1) check(GioiTinh not like '%[^F,M]%' )  DEFAULT 'M',
 	DiaChi nvarchar(100),
+	Ma_PB varchar(7),
+	CONSTRAINT FK_NV_PB
+    FOREIGN KEY (Ma_PB)
+    REFERENCES PhongBan(Ma_PB),
+)
+
+
+CREATE TABLE KhoHang(
+	Ma_KhoH char(10) primary key,
+	DiaChi_KH nvarchar(50),
 	Ten_CH char(20),
-	CONSTRAINT FK_NV_CH
+	CONSTRAINT FK_KH_CH
     FOREIGN KEY (Ten_CH)
     REFERENCES CuaHang(Ten_CH),
+	
 )
+
 
 CREATE TABLE SanPham(
 	Ma_SP char(10) primary key,
@@ -34,10 +55,10 @@ CREATE TABLE SanPham(
 	HSD_SP DATE CHECK (HSD_SP < getdate()),
 	SoLuong_SP int NOT NULL,
 	Gia_SP MONEY,
-	Ten_CH char(20),
-	CONSTRAINT FK_SP_CH
-    FOREIGN KEY (Ten_CH)
-    REFERENCES CuaHang(Ten_CH),
+	Ma_KhoH char(10),
+	CONSTRAINT FK_SP_KhoH
+    FOREIGN KEY (Ma_KhoH)
+    REFERENCES KhoHang(Ma_KhoH),
 
 )
 
