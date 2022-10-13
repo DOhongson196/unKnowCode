@@ -70,11 +70,11 @@ CREATE TABLE HoaDon(
 	NgayXuat_HD DATE,
 	GiaBan money,
 	SoLuongBan int check(SoLuongBan>1),
-	Ma_SP char(10),
+	MaLoai_SP char(10),
 	Ma_KH int,
-	CONSTRAINT FK_HD_SP
-    FOREIGN KEY (Ma_SP)
-    REFERENCES SanPham(Ma_SP),
+	CONSTRAINT FK_HD_LSP
+    FOREIGN KEY (MaLoai_SP)
+    REFERENCES LoaiSanPham(MaLoai_SP),
 	CONSTRAINT FK_HD_KH
     FOREIGN KEY (Ma_KH)
     REFERENCES KhachHang(Ma_KH),
