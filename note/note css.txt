@@ -57,7 +57,9 @@ BEM:  -Block element modifier
        lòng tên block vào biến global variable
 
 
-point-event: ko ấn vào được
+point-event: none ko ấn vào được
+
+text-align: justify chữ căn vừa khung
 
 
 
