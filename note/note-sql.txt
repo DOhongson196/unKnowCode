@@ -1,0 +1,57 @@
+4 bước
+---------------------------------------------------------------------------------------------------------------------------
+Khảo sát yêu cầu, nghiệp vụ => Thiết kế E/R => Lược đồ quan hệ => Hệ quản trị CSDL quan hệ
+
+Mô hình
+---------------------------------------------------------------------------------------------------------------------------
+Mô hình khái niệm => mô hình logic(chuẩn hóa được thực hiện ở đây) => mô hình vật lý
+
+
+Entity Relationship
+---------------------------------------------------------------------------------------------------------------------------
+thực thể độc lập nhưng có kết nối với nhau khi cần
+1-1
+1-n
+n-1(1 nhiều với nhiều 1 khác nhau)
+n-n(phải chuyển thành 2 1-n)
+
+symbol
+---------------------------------------------------------------------------------------------------------------------------
+entity(thực thể) : hình chữ nhật
+weak entity      : 2 hình chữ nhật lồng nhau
+attribute        : hình elip
+relationship     : hình bình hành
+key atribute     : có gạch chân
+
+
+3NF(tiêu chuẩn)
+---------------------------------------------------------------------------------------------------------------------------
+1NF : QUan hệ R(bảng R) được gọi là dạng chuẩn 1 NF nếu tất cả các thuộc tính chỉ nhận 1 giá trị tại 1 bản ghi(hay nói
+1 cách khác mọi thuộc tính đều là đơn trị)
+có 2 cách để đưa về chuẩn 1NF: C1-tách đa trị thành nhiều hàng
+			       C2-tách thuộc tính đa trị thành 1 bảng 
+
+2NF : Quan hệ R(bảng R) trước đó đạt chuẩn 1
+      Ngoài ra các thuộc tính không khóa phụ thuộc hoàn toàn vào khóa chính, có nghĩa là không tồn tại trường hợp thuộc tính không khóa
+      phụ thuộc vào một tập con thực sự của khóa
+
+3NF : Quan hệ R(bảng R) trước đó đạt chuẩn 2
+      các thuộc tính không khóa không phụ thuộc bắc cầu vào khóa chính
+
+INSERT INTO Customers (CustomerName, City, Country)
+SELECT SupplierName, City, Country FROM Suppliers; 
+
+SubQuery: là câu lệnh truy vấn nằm trong câu lệnh truy vấn
+
+INDEX
+---------------------------------------------------------------------------------------------------------------------------
+clustered: sắp xếp và lưu trữ dữ liệu trực tiếp trên bảng, thường được đánh cho khóa chính(unique)
+nonclustered: sắp xếp và lưu trữ dữ liệu trên 1 bản sao
+
+between + and
+
+not in ko show duoc 2 function
+
+
+SELECT DISTINCT lệnh chỉ được sử dụng để trả về các giá trị riêng biệt (khác nhau).(liệt kê các giá trị khác nhau(riêng biệt))
+
