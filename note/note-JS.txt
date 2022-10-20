@@ -167,6 +167,17 @@ hasOwnProperty : kiểm tra xem là thuộc tính chung hay riêng, nếu chung 
 
 đệ quy : phải kiểm soát điểm dừng và phải có logic để tạo ra điểm dừng
 
+type of: luôn trả về string
+
+!!         : luôn true
+!==,===    :so sánh value và type of
+toán tử logic && lấy giá trị đúng cuối cùng gán vào biến
+toán tử logic || lấy giá trị đầu tiên gán vào biến
+
+nếu 2 function trùng tên thì sẽ bị ghi đè (tức là function cuối cùng được viết sẽ function được giữ lại)
+đặt tên cho function thì là declaration function có thể gọi trước khi được định nghĩa
+gán function cho 1 biến thì là expression function
+
 
 
 
