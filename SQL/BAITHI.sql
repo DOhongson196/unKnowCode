@@ -51,6 +51,7 @@ SELECT * FROM CustomerAccount
 INSERT INTO CustomerTransaction VALUES(1,'CA1','2019-07-17',2000,3)
 INSERT INTO CustomerTransaction VALUES(2,'CA1','2022-07-12',100000,5)
 INSERT INTO CustomerTransaction VALUES(3,'CA2','2021-02-12',6000,3)
+INSERT INTO CustomerTransaction VALUES(4,'CA2','2021-02-12',6000,10000)
 SELECT * FROM CustomerTransaction
 
 --4. Write a query to get all customers from Customer table who live in ‘Hanoi’.
