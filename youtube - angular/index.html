@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube API for rest time</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body ng-app="myApp" ng-controller="mainController">
+    <header>
+        <div class="logo"><img src="/img/youtube.png"></div>
+        <div class="search-box">
+            Type and hit enter <input type="text" name="keyword" id="keyword" ng-model="main.searchInput">
+        </div>
+    </header>
+    
+    <div class="modal" id="myModal">
+        <span class="close">&times;</span>
+        <iframe class="modal-content" id="video-frame" src="" frameborder="0"
+        width="700" height="415" allowfullscreen></iframe>
+        <div id="caption"></div>
+    </div>
+    <div id="list-video"></div>
+
+    <footer>
+        <span>Working with Youtube API - FPT Aptech &copy; 2021</span>
+    </footer>
+    
+
+    
+</body>
+    <script type="text/javascript" src="/js/script.js"></script>
+</html>
