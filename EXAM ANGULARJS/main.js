@@ -104,14 +104,11 @@ myApp.controller("RegisterController" , function($scope , RegisterService){
             alert('form is Valid')
         }
     }
-});
 
-validationApp.controller('mainController',function($scope){
     $scope.submitForm = function(isValid){
         if(isValid){
             alert('form is Valid')
         }
     }
-})
-
+});
 
