@@ -163,7 +163,7 @@ Math.PI      : số pi
 
 callback : là hàm, được truyền qua đối số và được gọi lại
 
-hasOwnProperty(key) : kiểm tra xem là thuộc tính chung hay riêng, nếu chung thì là False, riêng là true.
+hasOwnProperty : kiểm tra xem là thuộc tính chung hay riêng, nếu chung thì là False, riêng là true.
 
 đệ quy : phải kiểm soát điểm dừng và phải có logic để tạo ra điểm dừng
 

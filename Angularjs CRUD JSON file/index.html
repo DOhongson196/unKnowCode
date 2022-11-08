@@ -6,25 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angularjs CRUD JSON file</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-     crossorigin="anonymous">
-     <script src="/main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+     <script src="/data.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body ng-app="App" ng-controller="ContactController ">
-    <div class="container">
-        <input type="text" class="form-control" ng-model="searchInput">
-        <br>
+<body>
+    <br />
+    <div ng-app="App" ng-controller="ContactController as main">
+        <div class="input-group">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-search"></span>
+            </span>
+            <input type="text" class="form-control" ng-model="main.searchInput">
+        </div>
+        <br />
         <form class="well">
             <label>Name</label>
-            <input type="text" name="name" ng-model="newcontact.name">
+            <input type="text" name="name" ng-model="main.newcontact.name">
             <label>Email</label>
-            <input type="text" name="name" ng-model="newcontact.email">
+            <input type="text" name="name" ng-model="main.newcontact.email">
             <label>Phone</label>
-            <input type="text" name="name" ng-model="newcontact.phone">
+            <input type="text" name="name" ng-model="main.newcontact.phone">
             <br />
-            <input type="hidden" ng-model="newcontact.id">
+            <input type="hidden" ng-model="main.newcontact.id">
             <br />
             <input type="button" value="Save" ng-click="saveContact()" class="btn btn-primary" >
         </form>
@@ -39,7 +43,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="contact in contacts | filter:searchInput">
+            <tr ng-repeat="contact in main.contacts |
+            filter:main.searchInput | orderBy:main.order.key:main.order.reverse">
                 <td>{{ contact.name }}</td>
                 <td>{{ contact.email }}</td>
                 <td>{{ contact.phone }}</td>

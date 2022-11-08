@@ -2,6 +2,7 @@ var app = angular.module('App',[])
 
 app.controller('ContactController', function($scope){
     this.searchInput = ''
+
     var uid = 1;
     $scope.contacts = [
         {id: 0, 'name' : 'Ngo Anh Tuan', 'email' : 'TAN@gmail.com','phone' : '111-222-333'}
