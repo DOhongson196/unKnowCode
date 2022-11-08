@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angularjs CRUD JSON file</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+     <script src="/data.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <br />
+    <div ng-app="App" ng-controller="ContactController as main">
+        <div class="input-group">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-search"></span>
+            </span>
+            <input type="text" class="form-control" ng-model="main.searchInput">
+        </div>
+        <br />
+        <form class="well">
+            <label>Name</label>
+            <input type="text" name="name" ng-model="main.newcontact.name">
+            <label>Email</label>
+            <input type="text" name="name" ng-model="main.newcontact.email">
+            <label>Phone</label>
+            <input type="text" name="name" ng-model="main.newcontact.phone">
+            <br />
+            <input type="hidden" ng-model="main.newcontact.id">
+            <br />
+            <input type="button" value="Save" ng-click="saveContact()" class="btn btn-primary" >
+        </form>
+    <br />
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="contact in main.contacts |
+            filter:main.searchInput | orderBy:main.order.key:main.order.reverse">
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.phone }}</td>
+                <td>
+                    <a href="#" ng-click="edit(contact.id)">edit</a>
+                    <a href="#" ng-click="delete(contact.id)">delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    
+</body>
+</html>
