@@ -1,0 +1,30 @@
+1. JS là ngôn ngữ đơn luồng, chạy từ trên xuống
+2. sync: đồng bộ chạy theo thứ tự viết code
+3. async: bát đồng bộ, chạy đảo ngược thứ tự viết code (set timeout, set interval, fetch, file reading...)
+4. callback dùng để giải quyết viêc async
+5. promise dùng để giải quyết vấn đề callback hell(phải chờ value của hàm khác trả về)
+
+--------------------------------------------------------------------------------------------------------------
+Cách tạo promise 
+b1: new promise
+b2: executor (một function trong đó có 2 tham số là resolve(thành công), reject(thất bại) và logic )
+
+--------------------------------------------------------------------------------------------------------------
+trả ra 3 phương thức
+then(cb)    : khi thành công
+catch(cb)   : khi thất bại
+finally(cb) : 1 trong 2 được gọi
+
+--------------------------------------------------------------------------------------------------------------
+3 trạng thái
+1.pendding (đang chờ) memory leak
+2.fulfilled thành công
+3. rejected thất bại
+
+--------------------------------------------------------------------------------------------------------------
+cách tạo nhanh
+var promise = Promise.resolve() tạo ra promise luôn thành công
+var promise = Promise.reject() tạo ra promise luôn thất bại
+Promise.all([promise1,promise2]) chờ promise 1 và promise 2 chạy xong rồi thực thi, nếu 1 trong 2 mà reject sẽ catch
+
+

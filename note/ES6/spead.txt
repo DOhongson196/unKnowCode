@@ -1,0 +1,9 @@
+var array1 = ['JS','PHP','Ruby']
+
+var array2 = ['ReactJS','Dart']
+
+var array3 = [...array2, ...array1]
+
+
+speard trong function là đối số
+rest trong function là tham số

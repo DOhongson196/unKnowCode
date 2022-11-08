@@ -1,0 +1,14 @@
+var: global variable
+let,const: local variable
+
+var: hosting (gán giá trị trước rồi mới khai báo)
+let,const: không có hosting
+
+var,let : có thể gán lại
+const   : chỉ có thể gán giá trị 1 lần (lưu ý có thể thay đổi thuộc tính)
+
+VD: const = {
+	name: 'Son'
+}
+
+const.name = 'Hong Son' (chỉ thay đổi thuộc tính của name)

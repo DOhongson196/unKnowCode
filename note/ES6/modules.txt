@@ -1,0 +1,5 @@
+export: để xuất 
+import: để nhận
+
+export default: export mặc định tất cả, khi import có thể đổi tên
+export: chỉ export những gì cần lấy trong file vì thế phải đúng tên ( có thể dùng as để đổi tên, * import tất cả)

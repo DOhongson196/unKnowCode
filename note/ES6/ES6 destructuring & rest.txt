@@ -1,0 +1,43 @@
+Destructuring
+-------------------------------------------------------------
+ARRAY
+-------------------------------------------
+var array = ['PHP','JS','ReactJs']
+var [a,b,c] = array => lấy theo thứ tự
+var [a, ,c] = array => ko lấy b
+
+OBJECT
+-------------------------------------------
+var course = {
+	name: 'JS'
+	price: 1000
+}
+var {name,price} = course
+
+var  {name, description = 'default description'} = course
+
+Rest khi kết hợp với Destructuring, là tham số của function
+-------------------------------------------------------------
+rest là lấy ra phần còn lại 
+ARRAY
+-------------------------------------------
+var array = ['PHP','JS','ReactJs']
+var [a, ...rest] = array
+a = PHP
+rest = ['JS','ReactJs']
+
+OBJECT
+-------------------------------------------
+var course = {
+	name: 'JS'
+	price: 1000
+}
+var {name,...rest} = course
+rest = {price:1000}
+
+Function
+-------------------------------------------
+function logger(...params){}
+
+params sẽ trả về giá trị theo dạng mảng nên có thể nhận được nhiều đối số
+

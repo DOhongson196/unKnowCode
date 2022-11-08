@@ -1,0 +1,9 @@
+class Name {
+	constructor(value1,value2){
+	     this.name = name
+	     this.price = price
+	}
+	getName() {
+	     return this.name
+	}
+}
