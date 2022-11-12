@@ -128,6 +128,61 @@
     background-color: #f8f8f8;
 }
 
+.header-user{
+    position: relative;
+}
+
+.header-user::before{
+    background-color: transparent;
+    width: 200px;
+}
+.header-user-subnav{
+    position: absolute;
+    background-color: white;
+    min-width: 300px;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+    padding: 0px 0px;
+    text-align: center;
+    top: 102%;
+    left: -550%;
+    display: none;
+}
+
+.header-user:hover .header-user-subnav{
+    display: block;
+}
+
+.header-user-login > a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    border-radius: 3px;
+    background-color: black;
+    font-weight: 400;
+    padding: 6px 80px;
+    margin-top: 10px;
+    border: 2px solid black;
+}
+
+.header-user-login a:hover{
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    border: 2px solid black;
+}
+
+.header-user-regis {
+    font-size: 1.3rem;
+    margin-top: -20px;
+    margin-bottom: -16px;
+}
+
+.header-user-regis  a{
+    color: black;
+    text-decoration:underline;
+    display: inline-block;
+}
+
 /* slider */
 .slider{
     margin-top: 60px;
@@ -151,10 +206,17 @@
     background-color: black;
     padding: 12px;
     font-weight: 500;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+.slider-link:hover{
+    color: black;
+    background-color: white;
+    border: 2px solid black;
 }
 
 .carousel-inner img {
     height: 94vh;
     width: 100%;
-    object-fit: cover; // here
+    object-fit: cover;
 }
