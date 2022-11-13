@@ -132,10 +132,6 @@
     position: relative;
 }
 
-.header-user::before{
-    background-color: transparent;
-    width: 200px;
-}
 .header-user-subnav{
     position: absolute;
     background-color: white;
@@ -183,6 +179,100 @@
     display: inline-block;
 }
 
+/* header mobile */
+.nav-bar-mobile{
+    font-size: 2rem;
+    color: black;
+    display: none;
+    line-height: 60px;
+    width: 100%;
+    margin: 0 20px;
+}
+
+.nav-bar-mobile-logo{
+    float: right;
+}
+.nav-bar-mobile-icon{
+    float: left;
+}
+
+.nav__overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+    animation: fadeIn linear 0.25s;
+}
+
+.header-nav-mobile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    background-color: #fff;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all linear 0.25s;
+}
+.header-nav-list-mobile{
+    margin-top: 24px;
+    list-style-type: none;
+}
+.header-nav-link-mobile{
+    text-decoration: none;
+    display: block;
+    color: var(--text-color);
+    padding: 8px 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.header-nav-link-mobile:hover{
+    color: rgb(177, 68, 68);
+    text-decoration: none;
+}
+
+.nav-mobile-close{
+    font-size: 2rem;
+    color: var(--text-color);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.nav-input:checked ~ .nav__overlay{
+    display: block;
+}
+
+.nav-input:checked ~ .header-nav-mobile{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1420px){
+    .nav-bar-mobile{
+        display: block;
+    }
+    .header-nav,
+    .header-icon{
+        display: none;
+    }
+}
+
 /* slider */
 .slider{
     margin-top: 60px;
@@ -213,10 +303,140 @@
     color: black;
     background-color: white;
     border: 2px solid black;
+    text-decoration: none;
 }
 
 .carousel-inner img {
     height: 94vh;
     width: 100%;
     object-fit: cover;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    top: 20%;
+    max-height: 500px;
+}
+
+/* designers */
+.desiner-content{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.grid{
+}
+
+.product-item{
+    margin: 0 20px;
+    transition: transform ease-out 0.3s;
+    will-change: transform;
+    
+}
+
+.product-item:hover{
+    opacity: 0.9;
+    transform: translateY(-10px);
+}
+.product-item-img {
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+}
+
+/* banner */
+.banner{
+    padding-top: 50%; /*khi đặt kích thước là % thì là kích thước % của chiều rộng
+                      chính nó */
+    background: url('/assets/img/banner.webp') top center/ cover no-repeat;
+}
+
+
+/* collection */
+.collection-item{
+    margin: 0 20px;
+    transition: transform ease-out 0.3s;
+    will-change: transform;
+    
+}
+
+.collection-item:hover{
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+
+
+/* footer */
+.footer{
+    margin-top: 40px;
+    font-size: 1.4rem;
+    background-color: #1b1b1b;
+    min-height: 410px;
+}
+
+
+.footer-list{
+    list-style-type: none;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 0;
+    
+}
+
+.footer-heading-map{
+    color: #999;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+
+}
+
+.footer-map{
+    text-align: center;
+}
+
+.footer-list > li{
+    margin-bottom: 8px;
+}
+
+.footer-list li a{
+    color: rgb(211, 209, 209);
+    text-decoration: none;
+}
+
+.footer-list li:hover{
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.footer-heading{
+    color: #999;
+    font-size: 1.6rem;
+}
+
+.icon-socials{
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.footer-help{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin-top: 25px;
+
+}
+
+.footer-socials{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin-top: 25px;
+
 }

@@ -16,4 +16,5 @@ html{
     font-family: 'Roboto', sans-serif;
     /*sans-serif chữ ko có đuôi */
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
