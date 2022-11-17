@@ -378,9 +378,13 @@
 }
 
 @media (max-width: 740px){
-    .footer-help,.footer-socials{
-        margin-left: 90px;
+    .footer-help{
+        margin-left: 20px;
         font-size: 1rem;
+    }
+    .footer-socials{
+        float: right;
+        margin-right: 24px;
     }
     .row{
         display: flex;
@@ -391,6 +395,24 @@
     }
     .footer-logobrand{
         display: none;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .footer-help{
+        margin-left: 20px;
+        font-size: 1rem;
+    }
+    .footer-socials{
+        float: right;
+        margin-right: 24px;
+    }
+    .row{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .footer{
+        min-height: 300px;
     }
 }
 
@@ -546,5 +568,47 @@ input:focus{
 
 .form-field small {
     color: var(--error-color);
+}
+
+/* bredcrumb */
+.bredcrumb{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #f9f9f9;
+    margin: 0 auto;
+}
+
+.bredcrumb-wrap{
+    display: flex;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.bredcrumb-wrap a{
+    text-decoration: none;
+    color: var(--text-color);
+    margin-right: 14px
+}
+
+.bredcrumb-wrap span{
+    margin-right: 14px;
+}
+
+.bredcrumb-wrap p{
+    margin: 0;
+    font-weight: bold;
+}
+
+@media (max-width: 740px){
+    .bredcrumb-wrap{
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .bredcrumb-wrap{
+        margin-left: -32px;
+
+    }
 }
 

@@ -4,7 +4,7 @@
     background-color: white;
     display: flex;
     justify-content: space-between;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -273,87 +273,6 @@
     }
 }
 
-/* slider */
-.slider{
-    margin-top: 60px;
-}
-
-.slider-heading{
-    font-size: 3rem;
-}
-.slider-content{
-    font-size: 1.6rem;
-    margin-top: 25px;
-    margin-bottom: 40px;
-}
-
-.slider-link{
-    color: white;
-    text-decoration: none;
-    font-size: 1.6rem;
-    border-radius: 3px;
-    border: 1px solid black;
-    background-color: black;
-    padding: 12px;
-    font-weight: 500;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
-}
-
-.slider-link:hover{
-    color: black;
-    background-color: white;
-    border: 2px solid black;
-    text-decoration: none;
-    transition: all .3s ease-in-out;
-}
-
-.carousel-inner img {
-    height: 94vh;
-    width: 100%;
-    object-fit: cover;
-}
-
-.carousel-control-next, .carousel-control-prev {
-    top: 15%;
-    max-height: 500px;
-}
-
-/* designers */
-.desiner-content{
-    margin-top: 40px;
-    margin-bottom: 40px;
-    text-align: center;
-    color: var(--text-color);
-    font-size: 3rem;
-    font-weight: 600;
-}
-
-.product-item{
-    margin: 0 20px;
-    overflow: hidden;
-}
-
-.product-item-img:hover{
-    opacity: 0.9;
-    transform: scale(1.1);
-}
-.product-item-img {
-    padding-top: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    object-fit: cover;
-    transition: transform ease-out 0.3s;
-    will-change: transform;
-
-}
-
-/* banner */
-.banner{
-    padding-top: 50%; /*khi đặt kích thước là % thì là kích thước % của chiều rộng
-                      chính nó */
-    background: url('/assets/img/banner.webp') top center/ cover no-repeat;
-}
 
 
 /* collection */
@@ -377,9 +296,93 @@
     transition: transform ease-out 0.3s;
     will-change: transform;
 }
+/* content*/ 
+
+.content-about{
+    margin-top: 11.9rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+
+}
+.content-about__left-img{
+    margin-right: 12rem;
+}
+
+.content-about__main-img{
+    width: 100%;
+    *zoom: 1;
+    outline: 0!important;
+}
+
+.content-about__right-img{
+    width: 100%;
+    height: 9.2rem;
+    position: relative;
+    right: 0;
+    display: block;
+}
+.content-about__secondary-img{
+    width: 55%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
 
 
-/* footer */
+.content-about__sub-heading{
+    display: block;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin: 1.6rem 0;
+    font-family: Gt-Light, sans-serif;
+    letter-spacing: 0.3rem;
+    color: var(--text-color);
+}
+
+.content-about__right{
+    margin-left: 10rem;
+    margin-top: 6.8rem;
+}
+
+.content-about__disc{
+    margin-bottom: 4.6rem;
+}
+/* Mobile & Tablet */
+@media (max-width: 1023px) {  
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+    .row no-gutters{
+        display: none;
+    }
+    .content-about{
+        margin-top: 10rem;
+    }
+    .content-about__right{
+        margin-left: 0;
+        margin-top: 4rem;
+    }
+
+    .content-about__sub-heading,
+    .content-about__heading{
+        text-align: center;
+    }
+
+    .content-about__right{
+        text-align: center;
+    }
+}
+    /* Tablet */
+@media (min-width: 790px) and (max-width: 1023px) {
+    :root{
+        --header-height: 70px;
+        --navbar-height: 0px;
+    }
+   
+}
+
+
+/*footer*/
 .footer{
     margin-top: 40px;
     font-size: 1.4rem;
@@ -477,13 +480,9 @@
 }
 
 @media (max-width: 740px){
-    .footer-help{
-        margin-left: 20px;
+    .footer-help,.footer-socials{
+        margin-left: 90px;
         font-size: 1rem;
-    }
-    .footer-socials{
-        float: right;
-        margin-right: 24px;
     }
     .row{
         display: flex;
@@ -494,23 +493,5 @@
     }
     .footer-logobrand{
         display: none;
-    }
-}
-
-@media (min-width: 740px) and (max-width: 1023px) {
-    .footer-help{
-        margin-left: 20px;
-        font-size: 1rem;
-    }
-    .footer-socials{
-        float: right;
-        margin-right: 24px;
-    }
-    .row{
-        display: flex;
-        flex-wrap: nowrap;
-    }
-    .footer{
-        min-height: 300px;
     }
 }
