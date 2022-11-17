@@ -400,6 +400,7 @@
     color: var(--text-color);
     margin: 30px 0;
     text-align: center;
+    font-weight: bold;
 }
 
 .form-login{
@@ -425,6 +426,7 @@
 .form-login-heading,.content-heading{
     font-size: 1.6rem;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 .form-login-content{
     font-size: 1.4rem;
@@ -442,7 +444,7 @@
 .btn-login{
     text-align: center;
 }
-.form-btn-login,.btn-register{
+.form-btn-login,.btn-register,.form-btn-forgot{
     margin-top: 6px;
     margin-bottom: 14px;
     font-weight: 400;
@@ -464,9 +466,10 @@ input:focus{
 
 }
 
-.form-btn-login:hover,.btn-register:hover{
+.form-btn-login:hover,.btn-register:hover,.form-btn-forgot:hover{
     background-color: #fff;
     color: #111;
+    cursor: pointer;
 }
 
 .form-login-forgot a{
@@ -491,6 +494,20 @@ input:focus{
     display: block;
     max-width: 376px;
 }
+
+.form-btn-cancel{
+    font-size: 1.4rem;
+    padding: 0 10px;
+}
+
+.form-btn-cancel:hover{
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
 
 @media (max-width: 740px){
     .form-login{

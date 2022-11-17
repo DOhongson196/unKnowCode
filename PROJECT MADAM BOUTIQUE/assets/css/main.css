@@ -304,6 +304,7 @@
     background-color: white;
     border: 2px solid black;
     text-decoration: none;
+    transition: all .3s ease-in-out;
 }
 
 .carousel-inner img {

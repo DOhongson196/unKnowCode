@@ -87,3 +87,23 @@ form.addEventListener('input',debounce(function(e){
             break;
     }
 }));
+
+
+const btnForgot = css('.form-login-forgot')
+const btnCancel = css('.form-btn-cancel')
+const login = css('.login')
+const forgot = css('.forgot')
+
+btnForgot.addEventListener('click',(e) => {
+    login.classList.add('hidden')
+    forgot.classList.remove('hidden')
+    e.preventDefault();
+})
+
+btnCancel.addEventListener('click',() => {
+    login.classList.remove('hidden')
+    forgot.classList.add('hidden')
+    e.preventDefault();
+})
+
+
