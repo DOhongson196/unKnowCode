@@ -457,3 +457,348 @@
 
     }
 }
+
+/* scroll button */
+.scroll-btn{
+    position: fixed;
+    color: #fff;
+    line-height: 33px;
+    cursor: pointer;
+    font-size: 20px;
+    height: 35px;
+    right: 20px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all .3s ease 0s;
+    width: 35px;
+    bottom: 40px;
+    z-index: 444;
+    background: #000000;
+    display: none;
+}
+
+.scroll-btn i{
+    font-size: 1.4rem;
+}
+.scroll-btn:hover{
+    opacity: 0.8;
+}
+/* category */
+.category-heading{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.category-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+.category-list p{
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.category-list li{
+    margin-bottom: 6px;
+}
+.category-list a{
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 16px;
+    padding: 6px 6px;
+}
+
+.category-list a:hover{
+    opacity: 0.8;
+}
+
+/* product heading */
+.product-heading{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* product banner */
+
+.product-banner img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+
+}
+
+/* product sort + filter */
+.product-sort{
+    width: 100%;
+    background-color: #f9f9f9;
+    display: flex;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: var(--text-color);
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.product-sort-filter{
+    display: flex;
+}
+
+.select-sort,.select-filter{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.select-sort >span,.select-filter >span{
+    margin-right: 10px;
+}
+
+.select-sort >i,.select-filter >i{
+    font-size: 1rem;
+}
+
+.select-sort:hover,.select-filter:hover{
+    cursor: pointer;
+}
+
+.menu{
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    left: -30%;
+    right: 0;
+    top: 100%;
+    border-radius: 3px;
+    background-color: white;
+    min-width: 150px;
+    display: none;
+}
+
+.menu a{
+    color: var(--text-color);
+    display: block;
+    text-decoration: none;
+    padding: 8px 16px;
+    font-size: 1.1rem;
+}
+
+.menu a:hover{
+    background-color: #e7e7e7;
+}
+
+.select-sort:hover  .menu,.select-filter:hover  .menu{
+    display: block;
+}
+
+/* product item */
+.product-item-list{
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+    
+}
+.product-item-list_img {
+    position: relative;
+    overflow: hidden;
+}
+.product-item-list_img a img{
+    width: 100%;
+    vertical-align: middle; 
+}
+
+.product-item-list_img a:hover{
+    opacity: 0.8;
+}
+
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* z-index: 2; */
+    transform: translate(-50%,-50%);
+}
+
+.product-item-list_img:hover .product-item-list_btn {
+    bottom: 0;
+}
+
+.product-item-list_btn{
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+
+}
+.product-item-list_btn button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.product-item-list_btn button{
+    display: inline-block;
+    border: 0;
+    background-color: #363232;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 2px;
+    line-height: 35px;
+    width: 100%;
+    height: 36px;
+    width: 38px;
+    text-align: center;
+    border-radius: 4px;
+    color: white;
+}
+.product-item-list_btn button i{
+    margin-top: 11px;
+}
+.product-item-list_name{
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.product-item-list_name a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+.product-item-list_price{
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+@media (max-width: 740px){
+    .product-heading{
+        margin: 20px;
+    }
+    .product-banner img{
+        margin: 20px;
+        max-width: auto;
+    }
+    .product-sort{
+        margin: 20px;
+        max-width: auto;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .product-items{
+        margin: 20px 20px;
+    }
+    .product-item-list_img a img{
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    .product-item-list_btn{
+        bottom: -14%;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .product-heading{
+        margin: 20px;
+    }
+    .product-banner img{
+        margin: 20px;
+    }
+    .product-sort{
+        margin: 20px;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .product-items{
+        margin: 20px 0;
+        margin-left: 70px;
+        margin-right: -20px;
+    }
+    .product-item-list_img a img{
+        width: 100%;
+        vertical-align: middle; 
+    }
+    .product-item-list_btn{
+        bottom: -14%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1239px){
+    .product-item-list_btn{
+        bottom: -14%;
+    }
+}
+
+/* Toast msg */
+#toast{
+    position: fixed;
+    top: 13%;
+    right: 32px;
+    z-index: 444;
+}
+.toast{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    border-left: 4px solid #53a653;;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.08);
+    padding: 20px 0;
+    max-width: 300px;
+    transition: all linear 0.3s;
+    margin-bottom: 20px;
+}
+@keyframes slideInLeft{
+    from{
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut{
+    to{
+        opacity: 0;
+    }
+}
+.toast_icon {
+    font-size: 2.4rem;
+    color: #53a653;
+}
+.toast_icon,.toast_close{
+    padding: 0 16px;
+}
+.toast_body{
+    flex-grow: 1;
+}
+.toast_title{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-top: 5px;
+
+}
+.toast_close{
+    font-size: 2rem;
+    color: rgba(0,0,0,0.4);
+}
