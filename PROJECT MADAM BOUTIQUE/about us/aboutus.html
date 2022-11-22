@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
-    <link rel="shortcut icon" href="/assets/img/cropped-favicon-180x180.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/cropped-favicon-180x180.jpg" type="image/x-icon">
     <!-- link font chu + icon + reset thuoc tinh co ban -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -20,74 +20,80 @@
         <!-- header -->
         <div class="header">
             <!-- PC -->
-                    <div class="header-nav">
-                        <a href="/index.html"><img src="/assets/img/logo.png" alt="Logo" srcset="" width="200px"></a>
-                        <ul class="header-nav-list">
-                            <li>
-                                <a href="">Collection</a>
-                                <i class="fa-solid fa-angle-down icon-down"></i>
-                                <ul class="subnav">
-                                    <li><a href="#">Summer</a></li>
-                                    <li><a href="#">Winter</a></li>
-                                    <li><a href="#">NewArrival</a></li>
-                                    <li><a href="#">Best Saler</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="">brand</a>
-                                <i class="fa-solid fa-angle-down icon-down"></i>
-                                <ul class="subnav">
-                                    <li><a href="#">Summer1</a></li>
-                                    <li><a href="#">Winter1</a></li>
-                                    <li><a href="#">NewArrival1</a></li>
-                                    <li><a href="#">Best Saler1</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="">DESIGNERS</a>
-                                <i class="fa-solid fa-angle-down icon-down"></i>
-                                <ul class="subnav">
-                                    <li><a href="#">Summer2</a></li>
-                                    <li><a href="#">Winte2r</a></li>
-                                    <li><a href="#">NewArrival2</a></li>
-                                    <li><a href="#">Best Saler2</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="">ACCESSORIES</a>
-                                <i class="fa-solid fa-angle-down icon-down"></i>
-                                <ul class="subnav">
-                                    <li><a href="#">Summer3</a></li>
-                                    <li><a href="#">Winter3</a></li>
-                                    <li><a href="#">NewArrival3</a></li>
-                                    <li><a href="#">Best Saler3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="">News & Promotion</a></li>
-                            <li><a href="./aboutus.html">about us</a></li>
-                        </ul>
-                    </div>
-                    <div class="header-icon">
-                        <div class="icon-search">
-                            <a href=""><i class="fa-solid fa-magnifying-glass icon-search header-icon-link label-search"></i></a>
-                            <input type="input" id="search" name="search">
-                        </div>
-                        <div class="header-user">
-                            <a href=""><i class="fa-regular fa-user header-icon-link"></i></a>
-                            <div class="header-user-subnav">
-                                <div class="header-user-login">
-                                    <a href="/form login/login.html" >LOGIN</a>
+            <div class="header-nav">
+                <a href="/index.html"><img src="./img/logo.png" alt="Logo" srcset="" width="200px"></a>
+                <ul class="header-nav-list">
+                    <li>
+                        <a href="#" class="sub-nav-collection">Collection</a>
+                        <i class="fa-solid fa-angle-down icon-down"></i>
+                        <ul class="subnav">
+                            <div class="subnav-item">
+                                <div class="subnav-collection">
+                                    <li>
+                                        <a href="/product collection/product.html">Fall 2022</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Winter 2022</a>
+                                    </li>
                                 </div>
-                                <div class="header-user-regis">
-                                    <p>NEW USER? <a href="/form register/register.html">REGISTER NOW</a></p>
+                                <div class="subnav-img">
+                                    <img src="./img/collectionIMG1.jpg" alt="Collection IMG">
+                                    <img src="./img/collectionimg3.webp" alt="Collection IMG">
                                 </div>
                             </div>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="sub-nav-accesorries">ACCESSORIES</a>
+                        <i class="fa-solid fa-angle-down icon-down"></i>
+                        <ul class="subnav">
+                            <div class="subnav-item">
+                                <div class="subnav-collection">
+                                    <li>
+                                        <a href="#">COLLECTION WATCH</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">COLLECTION HAT</a>
+                                    </li>
+                                </div>
+                                <div class="subnav-img">
+                                    <img src="./img/DIOR_AUTUMN-WINTER_2019-2020_CAMPAIGN_©Janette Beckman_8.png.crdownload" alt="Collection IMG">
+                                    <img src="./img/patek-main.webp" alt="Collection IMG">
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">brand</a>
+                    </li>
+                    <li>
+                        <a href="">DESIGNERS</a>
+                    </li>
+                    <li><a href="">News & Promotion</a></li>
+                    <li><a href="#">about us</a></li>
+                </ul>
+            </div>
+            <div class="header-icon">
+                <div class="icon-search">
+                    <a href=""><i class="fa-solid fa-magnifying-glass icon-search header-icon-link label-search"></i></a>
+                    <input type="input" id="search" name="search">
+                </div>
+                <div class="header-user">
+                    <a href=""><i class="fa-regular fa-user header-icon-link"></i></a>
+                    <div class="header-user-subnav">
+                        <div class="header-user-login">
+                            <a href="/form login/login.html" >LOGIN</a>
                         </div>
-                        <div class="header-shoppingcart">
-                            <a href=""><i class="fa-solid fa-bag-shopping header-icon-link"></i></a>
-
+                        <div class="header-user-regis">
+                            <p>NEW USER? <a href="/form register/register.html">REGISTER NOW</a></p>
                         </div>
                     </div>
+                </div>
+                <div class="header-shoppingcart">
+                    <a href=""><i class="fa-solid fa-bag-shopping header-icon-link"></i></a>
+
+                </div>
+            </div>
             <!-- Mobile -->
             <div class="nav-bar-mobile">
                 <div class="nav-bar-mobile-logo">
@@ -198,16 +204,16 @@
                         <li><a href=""><i class="fa-brands fa-pinterest icon-socials  icon-m"></i>Pinterest</a></li>
                     </ul>
                     <div class="footer-logobrand">
-                        <div class="footer-logobrand-item1"><img src="/assets/img/png01.jpg" alt="logo VS"></div>
-                        <div class="footer-logobrand-item2"><img src="/assets/img/pn02.jpg" alt="logo LV"></div>
-                        <div class="footer-logobrand-item3"><img src="/assets/img/pn03.jpg" alt="logo CN"></div>
+                        <div class="footer-logobrand-item1"><img src="./img/png01.jpg" alt="logo VS"></div>
+                        <div class="footer-logobrand-item2"><img src="./img/pn02.jpg" alt="logo LV"></div>
+                        <div class="footer-logobrand-item3"><img src="./img/pn03.jpg" alt="logo CN"></div>
                     </div>      
                 </div>
             </div>
             <div class="col l-4 m-0 c-0">
                 <div class="footer-heading-map">STORE ADDRESSES</div>
                 <div class="footer-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.097074056706!2d105.78010051488337!3d21.0288014859983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b32b842a37%3A0xe91a56573e7f9a11!2zOGEgVMO0biBUaOG6pXQgVGh1eeG6v3QsIE3hu7kgxJDDrG5oLCBD4bqndSBHaeG6pXksIEjDoCBO4buZaSAxMDAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1668224301584!5m2!1svi!2s" width="380" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.097074056706!2d105.78010051488337!3d21.0288014859983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b32b842a37%3A0xe91a56573e7f9a11!2zOGEgVMO0biBUaOG6pXQgVGh1eeG6v3QsIE3hu7kgxJDDrG5oLCBD4bqndSBHaeG6pXksIEjDoCBO4buZaSAxMDAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1668224301584!5m2!1svi!2s"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
