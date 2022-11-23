@@ -14,28 +14,28 @@ const app = {
       name: 'MODIZ LONG WALLETS',
       image1: './img/vifall2.webp',
       image2: './img/vi fall1.webp',
-      price: '1000$'
+      price: 1000
     },
     {
       id:2,
       name: 'FLORENCE HANDBAGS',
       image1: './img/tui2.webp',
       image2: './img/tui1.webp',
-      price: '1300$'
+      price: 1300
     },
     {
       id:3,
       name: 'DIMENSION S HANDBAGS',
       image1: './img/tuixanh1.webp',
       image2: './img/tuixanh2.webp',
-      price: '1500$'
+      price: 1500
     },
     {
       id:4,
       name: 'DIMENSION S HANDBAGS',
       image1: './img/tuixanh1.webp',
       image2: './img/tuixanh2.webp',
-      price: '1500$'
+      price: 1500
     },
   ],
   render: function(){
@@ -49,7 +49,7 @@ const app = {
                   <img class="item-img2 hidden" src="${product.image2}"  alt="">
                   </a>           
               <div class="product-item-list_btn">
-                  <button onclick="addShoppingCart(\'${product.id}\')"><i class="fa-solid fa-cart-shopping"></i></button>
+                  <button onclick="addShoppingCart(${product.id})"><i class="fa-solid fa-cart-shopping"></i></button>
                   <button ><i class="fa-solid fa-heart"></i></button>
                   </div>
                   </div>
@@ -57,7 +57,7 @@ const app = {
               <a href="">${product.name}</a>
           </div>
           <div class="product-item-list_price">
-          ${product.price}
+          ${product.price} $
           </div>
           </div>
           </div>
