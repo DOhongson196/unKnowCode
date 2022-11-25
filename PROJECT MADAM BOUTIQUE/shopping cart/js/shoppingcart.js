@@ -5,6 +5,7 @@ function showListItemShoppingCart(){
 
     const cartItem = document.querySelector('.cart-item')
     cartItem.innerHTML = html
+    subtotal()
 }
 
 function getItemShoppingCart(){
@@ -44,17 +45,6 @@ function getItemById(id){
     return productItem
 }
 
-// let data = [{}];
-// let deleteTask = (e) => {
-//         e.parentElement.parentElement.remove();
-//         data.splice(e.parentElement.parentElement.id,1);
-//         localStorage.setItem('listItemShoppingCart',JSON.stringify(data));
-//         console.log(data)
-//     };
-
-// function saveListItemInLocalStorage(){
-//     data = JSON.parse(localStorage.getItem('listItemShoppingCart')) || []
-// }
 
 
 function switchItemshoppingCartToHTML(itemShoppingCart) {
@@ -79,7 +69,8 @@ function switchItemshoppingCartToHTML(itemShoppingCart) {
             <span>${product.price} $</span>
         </th>
         <th class="product-total-price">
-            <p>${priceTotal}$</p>
+            <p class="price-total">${priceTotal}</p>
+            <span>$</span>
         </th>
     </tr>
 </tbody>
@@ -88,7 +79,6 @@ function switchItemshoppingCartToHTML(itemShoppingCart) {
 }
 
 showListItemShoppingCart()
-// saveListItemInLocalStorage()
 
 function saveListItemInLocalStorage(listItemShoppingCart){
     var jsonlistItemShoppingCart = JSON.stringify(listItemShoppingCart)
@@ -102,10 +92,39 @@ function deleteTask(id){
       for(var i=0; i<listItemShoppingCart.length; i++){
         var currentItemShoppingCart = listItemShoppingCart[i]
         if(currentItemShoppingCart.id == id){
-            listItemShoppingCart.splice(listItemShoppingCart[i].id,1)
+            var index = listItemShoppingCart.indexOf(listItemShoppingCart[i])
+            listItemShoppingCart.splice(index,1)
         }
       }
     
       saveListItemInLocalStorage(listItemShoppingCart)
-    
+      
+      location.reload();
     }
+
+function subtotal(){
+    var total = document.querySelector('.sub-total')
+    var subtotal = 0
+    var listPrice = document.querySelectorAll('.price-total')
+    for(var i=0; i<listPrice.length; i++){
+      var listPriceTotal = listPrice[i]
+      var listPriceTotalvalue = listPriceTotal.textContent
+      subtotal += Number(listPriceTotalvalue)
+    }
+    total.innerHTML = `${subtotal} $`
+}
+
+const checkBox = document.getElementById('checkbox')
+const checkBtn = document.querySelector('.cart-footer-box__btn')
+
+checkBox.addEventListener('change', function() {
+    if (this.checked) {
+        checkBtn.style.pointerEvents = 'auto'
+        document.getElementById("checkbox-content").innerText = ''
+    } else {
+        document.getElementById("checkbox-content").innerText = "Please agree to the Terms of Service and Privacy Policy"
+        checkBtn.style.pointerEvents = 'none'
+    }
+  });
+
+
