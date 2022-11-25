@@ -2,7 +2,7 @@
 .bredcrumb{
     padding-top: 8px;
     padding-bottom: 8px;
-    background-color: #f9f9f9;
+    background-color: #f0f0f0;
     margin: 0 auto;
 }
 
@@ -10,6 +10,7 @@
     display: flex;
     font-size: 1.4rem;
     color: var(--text-color);
+    margin-left: 10px;
 }
 
 .bredcrumb-wrap a{
@@ -115,7 +116,7 @@ form input:focus + .label{
 }
 
 .input-mini{
-    width: 284px;
+    width: 282px;
 }
 
 .name{
@@ -148,4 +149,69 @@ form input:focus + .label{
 .payment-btn-link{
     display: block;
     margin-top: 40px;
+}
+
+.payment-left{
+    border-right: 1px solid #999;
+    margin-top: 20px;
+}
+.payment-right{
+    margin-top: 20px;
+}
+form{
+    max-width: 97%;
+}
+
+
+.promo-code input{
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 3px;
+    cursor: text;
+    padding-left: 10px;
+    height: 44px;
+    outline: none;
+    width: 440px;
+    font-size: 1.6rem;
+}
+
+.promo-code button{
+    float: right;
+    outline: none;
+    border: none;
+    font-size: 1.6rem;
+    padding: 14px 20px;
+    border-radius: 3px;
+    background-color: rgb(22,56,91);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 55px;
+}
+
+.promo-code button:hover{
+    opacity: 0.8;
+}
+
+.information-order{
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    margin-top: 20px;
+    max-width: 537px;
+}
+
+.information-order__heading{
+    text-align: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #999;
+}
+.information-order__total,.information-order__Shipping,.information-order__subtotal{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+}
+
+.information-order__subtotal{
+    border-top: 1px solid #999;
+    padding-top: 10px;
+    font-weight: 600;
 }
