@@ -1,44 +1,44 @@
-function showListItemShoppingCart(){
+function showListItemShoppingCart() {
     var listItems = getItemShoppingCart()
 
-    var html  = switchListItemShoppingcartToHTML(listItems)
+    var html = switchListItemShoppingcartToHTML(listItems)
 
     const cartItem = document.querySelector('.cart-item')
     cartItem.innerHTML = html
     subtotal()
 }
 
-function getItemShoppingCart(){
+function getItemShoppingCart() {
     var listItemShoppingCart = []
     var jsonlistItemShoppingCart = localStorage.getItem('listItemShoppingCart')
 
-    if(jsonlistItemShoppingCart != null){
+    if (jsonlistItemShoppingCart != null) {
         listItemShoppingCart = JSON.parse(jsonlistItemShoppingCart)
     }
     return listItemShoppingCart
 }
 
 
-function switchListItemShoppingcartToHTML(listItemShoppingCart){
+function switchListItemShoppingcartToHTML(listItemShoppingCart) {
     var htmls = ''
-    for(var i=0; i<listItemShoppingCart.length; i++){
+    for (var i = 0; i < listItemShoppingCart.length; i++) {
         htmls = htmls + switchItemshoppingCartToHTML(listItemShoppingCart[i])
     }
     return htmls
 }
 
-function getProductList(){
+function getProductList() {
     var jsonProductList = localStorage.getItem('productFall2022')
     var productList = JSON.parse(jsonProductList)
     return productList
 }
 
-function getItemById(id){
+function getItemById(id) {
     var productItem = {}
     var productList = getProductList()
-    for(var i=0; i<productList.length; i++){
+    for (var i = 0; i < productList.length; i++) {
         var currentProduct = productList[i]
-        if(currentProduct.id == id){
+        if (currentProduct.id == id) {
             productItem = currentProduct
         }
     }
@@ -50,7 +50,7 @@ function getItemById(id){
 function switchItemshoppingCartToHTML(itemShoppingCart) {
     var product = getItemById(itemShoppingCart.id)
     var priceTotal = itemShoppingCart.quantity * product.price
-    var html =`
+    var html = `
     <tbody>
     <tr>
         <th class="product-detele">
@@ -63,7 +63,7 @@ function switchItemshoppingCartToHTML(itemShoppingCart) {
             <p>${product.name}</p>
         </th>
         <th class="product-quantity">
-            <p>${itemShoppingCart.quantity}</p>
+            <input type="number" id="quantity" value="${itemShoppingCart.quantity}"min="1">
         </th>
         <th class="product-price">
             <span>${product.price} $</span>
@@ -80,36 +80,36 @@ function switchItemshoppingCartToHTML(itemShoppingCart) {
 
 showListItemShoppingCart()
 
-function saveListItemInLocalStorage(listItemShoppingCart){
+function saveListItemInLocalStorage(listItemShoppingCart) {
     var jsonlistItemShoppingCart = JSON.stringify(listItemShoppingCart)
 
     localStorage.setItem('listItemShoppingCart', jsonlistItemShoppingCart)
 }
 
-function deleteTask(id){
+function deleteTask(id) {
     //lay danh sach gio hang trong localStorage
-      var listItemShoppingCart = getItemShoppingCart()
-      for(var i=0; i<listItemShoppingCart.length; i++){
+    var listItemShoppingCart = getItemShoppingCart()
+    for (var i = 0; i < listItemShoppingCart.length; i++) {
         var currentItemShoppingCart = listItemShoppingCart[i]
-        if(currentItemShoppingCart.id == id){
+        if (currentItemShoppingCart.id == id) {
             var index = listItemShoppingCart.indexOf(listItemShoppingCart[i])
-            listItemShoppingCart.splice(index,1)
+            listItemShoppingCart.splice(index, 1)
         }
-      }
-    
-      saveListItemInLocalStorage(listItemShoppingCart)
-      
-      location.reload();
     }
 
-function subtotal(){
+    saveListItemInLocalStorage(listItemShoppingCart)
+
+    location.reload();
+}
+
+function subtotal() {
     var total = document.querySelector('.sub-total')
     var subtotal = 0
     var listPrice = document.querySelectorAll('.price-total')
-    for(var i=0; i<listPrice.length; i++){
-      var listPriceTotal = listPrice[i]
-      var listPriceTotalvalue = listPriceTotal.textContent
-      subtotal += Number(listPriceTotalvalue)
+    for (var i = 0; i < listPrice.length; i++) {
+        var listPriceTotal = listPrice[i]
+        var listPriceTotalvalue = listPriceTotal.textContent
+        subtotal += Number(listPriceTotalvalue)
     }
     total.innerHTML = `${subtotal} $`
 }
@@ -117,7 +117,7 @@ function subtotal(){
 const checkBox = document.getElementById('checkbox')
 const checkBtn = document.querySelector('.cart-footer-box__btn')
 
-checkBox.addEventListener('change', function() {
+checkBox.addEventListener('change', function () {
     if (this.checked) {
         checkBtn.style.pointerEvents = 'auto'
         document.getElementById("checkbox-content").innerText = ''
@@ -125,6 +125,30 @@ checkBox.addEventListener('change', function() {
         document.getElementById("checkbox-content").innerText = "Please agree to the Terms of Service and Privacy Policy"
         checkBtn.style.pointerEvents = 'none'
     }
-  });
+});
+
+
+const quantity = document.querySelector('#quantity')
+function getQuantity() {
+    var listItemShoppingCart = getItemShoppingCart()
+    for (var i = 0; i < listItemShoppingCart.length; i++) {
+        listItemShoppingCart[i].quantity = quantity.value
+    }
+    saveListItemInLocalStorage(listItemShoppingCart)
+
+}
+
+quantity.oninput = function(){
+    getQuantity()
+}
+
+const update = document.querySelector('#update')
+
+update.onclick = function(){
+    location.reload();
+}
+
+
+
 
 
