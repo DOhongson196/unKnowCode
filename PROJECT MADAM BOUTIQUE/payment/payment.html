@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +16,7 @@
     <link rel="stylesheet" href="./css/grid-payment.css">
     <link rel="stylesheet" href="./css/payment.css">
 </head>
+
 <body>
     <div class="grid wide">
         <div class="payment-heading">Madam's Boutique</div>
@@ -33,45 +35,45 @@
         <!-- payment -->
         <div class="row">
             <div class="col l-6 m-6 c-12 payment-left">
-                    <form>
-                        <div class="payment-info">
-                            <p class="content-bold">Contact Info</p>
-                            <p>Already have an account? <a href="">Log in</a></p>
+                <form>
+                    <div class="payment-info">
+                        <p class="content-bold">Contact Info</p>
+                        <p>Already have an account? <a href="">Log in</a></p>
+                    </div>
+                    <div class="username rela">
+                        <input type="text" name="username">
+                        <span class="label">Email</span>
+                        <span class="label-1">@gmail.com</span>
+                    </div>
+                    <p class="content-bold">Delivery address</p>
+                    <div class="name">
+                        <div class="name-firstname rela">
+                            <input type="text" name="firstname" class="input-mini">
+                            <span class="label">First Name</span>
                         </div>
-                        <div class="username rela">
-                            <input type="text" name="username">
-                            <span class="label">Email</span>
-                            <span class="label-1">@gmail.com</span>
+                        <div class="name-lastname rela">
+                            <input type="text" name="lastname" class="input-mini">
+                            <span class="label">Last Name</span>
                         </div>
-                        <p class="content-bold">Delivery address</p>
-                        <div class="name">
-                            <div class="name-firstname rela">
-                                <input type="text" name="firstname" class="input-mini" >
-                                <span class="label">First Name</span>
-                            </div>
-                            <div class="name-lastname rela">
-                                <input type="text" name="lastname"  class="input-mini">
-                                <span class="label">Last Name</span>
-                            </div>
-                        </div>
-                        <div class="username rela">
-                            <input type="text" name="username">
-                            <span class="label">Delivery address</span>
-                        </div>
-                        <div class="username rela">
-                            <input type="text" name="username">
-                            <span class="label">Notes</span>
-                        </div>
-                        <div class="username rela">
-                            <input type="text" name="username">
-                            <span class="label">Phone</span>
-                        </div>
-                        <div class="username rela">
-                            <input type="text" name="username">
-                            <span class="label">City name</span>
-                        </div>
-                        <a href="#" class="payment-btn-link"><button class="payment-btn">Countinue payment</button></a>
-                    </form>
+                    </div>
+                    <div class="username rela">
+                        <input type="text" name="username">
+                        <span class="label">Delivery address</span>
+                    </div>
+                    <div class="username rela">
+                        <input type="text" name="username">
+                        <span class="label">Notes</span>
+                    </div>
+                    <div class="username rela">
+                        <input type="text" name="username">
+                        <span class="label">Phone</span>
+                    </div>
+                    <div class="username rela">
+                        <input type="text" name="username">
+                        <span class="label">City name</span>
+                    </div>
+                    <a href="#" class="payment-btn-link"><button class="payment-btn">Countinue payment</button></a>
+                </form>
             </div>
             <div class="col l-6 m-6 c-12 payment-right">
                 <p class="content-bold">Check payment</p>
@@ -87,15 +89,69 @@
                     </div>
                     <div class="information-order__Shipping">
                         <p>Shipping & Handling</p>
-                        <p>30$</p>
+                        <p>Free Ship</p>
                     </div>
                     <div class="information-order__subtotal">
                         <p>Subtotal</p>
-                        <p>1030$</p>
+                        <p>1000$</p>
+                    </div>
+                </div>
+                <div class="method-payment">
+                    <div class="method-payment__heading content-bold">Method payment</div>
+                    <div class="payment-card">
+                        <div class="payment-card__left">
+                            <label class="container-checkbox">OnePAY - Credit/ATM card/QR
+                                <input type="radio" checked="checked" name="radio" data-toggle="modal"
+                                    data-target="#exampleModalCenter" id="myBtn-modal">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="payment-card__right">
+                            <img src="./img/074315f4e64637ad6544fb57ee4a5a31.svg" alt="">
+                            <img src="./img/ed530ce499ff4476a49771c71117babb.svg" alt="">
+                            <img src="./img/514f6e6c6276bbce83746b13748ab9f5.svg" alt="">
+                            <img src="./img/c4d8f750eff92213f47e4a66f5582d66.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="payment-cod">
+                        <label class="container-checkbox">Cash on delivery(COD)
+                            <input type="radio" checked="checked" name="radio">
+                            <span class="checkmark"></span>
+                        </label>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-content__heading content-bold">Select payment method</div>
+            <div class="modal-content__payment">
+                <div class="payment-card__left">
+                    <label class="container-checkbox">Credit / Debit card
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="payment-card__right">
+                    <img src="./img/074315f4e64637ad6544fb57ee4a5a31.svg" alt="">
+                    <img src="./img/ed530ce499ff4476a49771c71117babb.svg" alt="">
+                    <img src="./img/514f6e6c6276bbce83746b13748ab9f5.svg" alt="">
+                    <img src="./img/c4d8f750eff92213f47e4a66f5582d66.svg" alt="">
+                </div>
+            </div>
+            <div class="modal-content__QR">
+                <label class="container-checkbox">QR Payment with mobile apps
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/payment.js"></script>
 </body>
+
 </html>
