@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <link rel="shortcut icon" href="./img/cropped-favicon-180x180.jpg" type="image/x-icon">
+    <!-- link font chu + icon + reset thuoc tinh co ban -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- link css -->
+    <link rel="stylesheet" href="./assets/css/base-receipt.css">
+    <link rel="stylesheet" href="./assets/css/grid-receipt.css">
+    <link rel="stylesheet" href="./assets/css/receipt.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="grid wide receipt-main">
+            <div class="receipt-heading">Order Receipt</div>
+            <div class="row">
+                <div class="col l-6 m-6 c-12">
+                    <div class="receipt-customer">
+                        <!-- <div class="receipt-customer-heading">Customer information</div>
+                        <div class="receipt-customer-name">Customer name:</div>
+                        <div class="receipt-customer-phone">Phone number:</div>
+                        <div class="receipt-customer-email">Email:</div>
+                        <div class="receipt-customer-address">Address:</div>
+                        <div class="receipt-customer-date">Date order:</div> -->
+                    </div>
+                </div>
+                <div class="col l-6 m-6 c-12">
+                    <div class="receipt-store">
+                        <div class="receipt-store-heading">Madam's boutique</div>
+                        <div class="receipt-store-address">8a Ton That Thuyet str, Ha Noi city</div>
+                        <div class="receipt-store-hotline">09-81-80-6996</div>
+                        <div class="receipt-store-email">madamboutique@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="receipt-product">
+                <div class="receipt-product-heading">Order summary</div>
+                <table>
+                    <thead class="receipt-product-thead">
+                        <tr>
+                            <th colspan="2" class="text-left">Product</th>
+                            <th class="text-center">Quantity</th>
+                            <th class="text-center">Price</th>
+                            <th class="text-right">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody class="receipt-product-item">
+                        <tr>
+                            <th class="product-name">
+                                <p>FLORENCE HANDBAGS</p>
+                            </th>
+                            <th class="no-text">
+
+                            </th>
+                            <th class="product-quantity">
+                                1
+                            </th>
+                            <th class="product-price">
+                                <span>1000$</span>
+                            </th>
+                            <th class="product-total-price">
+                                <p>2000$</p>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="receipt-subtotal">
+                    Order total: 2000$
+                </div>
+            </div>
+            <div class="receipt-footer">
+                <div class="receipt-footer-policy">
+                    Returns can be made by mail or in store. The return window for online purchases is 30 days from the
+                    date of delivery. Products must be intact with tags, attached accessories and intact as when
+                    receiving the product
+                </div>
+                <div class="receipt-footer-thank">Thank you for your order</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/receipt.js"></script>
+</body>
+
+</html>

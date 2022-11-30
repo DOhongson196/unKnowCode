@@ -1,0 +1,133 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.receipt-main{
+    border-radius: 3px;
+    border: 1px solid rgb(210, 210, 210);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    padding: 2.4rem;
+}
+
+.receipt-heading{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.receipt-product{
+    padding-top: 20px;
+    border-top: 1px solid #999;
+    margin-bottom: 20px;
+}
+
+.receipt-customer-heading,.receipt-product-heading,.receipt-store-heading{
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.receipt-customer-name,.receipt-customer-phone,.receipt-customer-email,.receipt-customer-address,.receipt-customer-date{
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    letter-spacing: 0.03rem;
+}
+
+.receipt-store-heading{
+    text-align: center;
+}
+
+.receipt-store-address,.receipt-store-hotline,.receipt-store-email{
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 1.6rem;
+}
+
+tr{
+    display: table-row;
+}
+
+.text-left{
+    text-align: left;
+    padding: 10px 15px 8px;
+}
+.text-center{
+    text-align: center;
+    padding: 10px 15px 8px;
+}
+.text-right{
+    text-align: right;
+    padding: 10px 15px 8px;
+}
+
+.receipt-product-thead th{
+    font-weight: 500;
+    background: #f5f5f5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.receipt-product-item th{
+    font-weight: 400;
+}
+
+.product-name{
+    text-align: left;
+    padding-left: 15px;
+}
+
+.product-quantity{
+    text-align: center;
+}
+
+.product-price{
+    text-align: center;
+}
+
+.product-total-price{
+    text-align: right;
+    padding-right: 15px;
+}
+
+.receipt-subtotal{
+    border-top: 1px solid rgb(212, 203, 203);
+    padding-top: 20px;
+    text-align: right;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding-right: 15px;
+}
+
+.receipt-footer{
+    padding-top: 20px;
+    border-top: 1px solid #999;
+}
+
+.receipt-footer-policy{
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.receipt-footer-thank{
+    text-align: center;
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 600;
+}

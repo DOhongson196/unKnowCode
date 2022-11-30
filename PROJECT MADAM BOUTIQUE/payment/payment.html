@@ -26,7 +26,7 @@
                 <div class="bredcrumb-wrap">
                     <a href="/index.html">HOME</a>
                     <span>|</span>
-                    <a href="/index.html">Shopping cart</a>
+                    <a href="/shopping cart/shoppingcart.html">Shopping cart</a>
                     <span>|</span>
                     <p>Payment</p>
                 </div>
@@ -35,44 +35,44 @@
         <!-- payment -->
         <div class="row">
             <div class="col l-6 m-6 c-12 payment-left">
-                <form>
+                <form id="form-payment">
                     <div class="payment-info">
                         <p class="content-bold">Contact Info</p>
-                        <p>Already have an account? <a href="">Log in</a></p>
+                        <p>Already have an account? <a href="/form login/login.html">Log in</a></p>
                     </div>
-                    <div class="username rela">
-                        <input type="text" name="username">
-                        <span class="label">Email</span>
-                        <span class="label-1">@gmail.com</span>
+                    <div class="form-field">
+                        <span class="label">Email*</span>
+                        <input type="text" name="email" id="email">
+                        <small></small>
                     </div>
                     <p class="content-bold">Delivery address</p>
-                    <div class="name">
-                        <div class="name-firstname rela">
-                            <input type="text" name="firstname" class="input-mini">
-                            <span class="label">First Name</span>
-                        </div>
-                        <div class="name-lastname rela">
-                            <input type="text" name="lastname" class="input-mini">
-                            <span class="label">Last Name</span>
-                        </div>
+                    <div class="form-field">
+                        <span class="label">Full Name*</span>
+                        <input type="text" name="fullname" id="fullname">
+                        <small></small>
                     </div>
-                    <div class="username rela">
-                        <input type="text" name="username">
-                        <span class="label">Delivery address</span>
+                    <div class="form-field">
+                        <span class="label">Delivery address*</span>
+                        <input type="text" name="deliveryaddress" id="deliveryaddress">
+                        <small></small>
                     </div>
-                    <div class="username rela">
-                        <input type="text" name="username">
+                    <div class="form-field">
                         <span class="label">Notes</span>
+                        <input type="text" name="textnotes" id="textnotes">
+                        <small></small>
                     </div>
-                    <div class="username rela">
-                        <input type="text" name="username">
-                        <span class="label">Phone</span>
+                    <div class="form-field">
+                        <span class="label">Phone*</span>
+                        <input type="text" name="phone" id="phone">
+                        <small></small>
                     </div>
-                    <div class="username rela">
-                        <input type="text" name="username">
-                        <span class="label">City name</span>
+                    <div class="form-field">
+                        <span class="label">City name*</span>
+                        <input type="text" name="cityname" id="cityname">
+                        <small></small>
                     </div>
-                    <a href="#" class="payment-btn-link"><button class="payment-btn">Countinue payment</button></a>
+                    <!-- <a href="/form register/register.html" target="_blank" class="payment-btn-link"></a> -->
+                    <button class="payment-btn" id="payment-btn" type="submit">Countinue payment</button>
                 </form>
             </div>
             <div class="col l-6 m-6 c-12 payment-right">
@@ -85,7 +85,7 @@
                     <div class="information-order__heading content-bold">Information order</div>
                     <div class="information-order__total">
                         <p>Total</p>
-                        <p>1000$</p>
+                        <p id="total"></p>
                     </div>
                     <div class="information-order__Shipping">
                         <p>Shipping & Handling</p>
@@ -93,7 +93,7 @@
                     </div>
                     <div class="information-order__subtotal">
                         <p>Subtotal</p>
-                        <p>1000$</p>
+                        <p id="sub-total"></p>
                     </div>
                 </div>
                 <div class="method-payment">
@@ -123,33 +123,80 @@
             </div>
         </div>
     </div>
+    <!-- Modal method paynment -->
     <div id="myModal" class="modal">
-        <!-- Modal content -->
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <div class="modal-content__heading content-bold">Select payment method</div>
-            <div class="modal-content__payment">
-                <div class="payment-card__left">
-                    <label class="container-checkbox">Credit / Debit card
-                        <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark"></span>
+            <div class="modal-content__QR">
+                <div class="content-qr">
+                    <label class="container-checkbox">QR Payment with mobile apps
+                        <input type="radio" checked="checked" name="pay" class="modal-qr">
+                        <span class="checkmark" id="checkmark-qr"></span>
                     </label>
+                    <img src="./img/3697141.png" alt="">           
                 </div>
-                <div class="payment-card__right">
-                    <img src="./img/074315f4e64637ad6544fb57ee4a5a31.svg" alt="">
-                    <img src="./img/ed530ce499ff4476a49771c71117babb.svg" alt="">
-                    <img src="./img/514f6e6c6276bbce83746b13748ab9f5.svg" alt="">
-                    <img src="./img/c4d8f750eff92213f47e4a66f5582d66.svg" alt="">
+                <div class="qr-img">
+                    <img src="./img/qr.png" alt="" class="img-qr">
                 </div>
             </div>
-            <div class="modal-content__QR">
-                <label class="container-checkbox">QR Payment with mobile apps
-                    <input type="radio" checked="checked" name="radio">
-                    <span class="checkmark"></span>
-                </label>
+            <div class="modal-content__payment">
+                <div class="modal-payment-card">
+                    <div class="payment-card__left">
+                        <label class="container-checkbox">Credit / Debit card
+                            <input type="radio" checked="checked" name="pay" class="modal-card">
+                            <span class="checkmark" id="checkmark-card"></span>
+                        </label>
+                    </div>
+                    <div class="payment-card__right">
+                        <img src="./img/074315f4e64637ad6544fb57ee4a5a31.svg" alt="">
+                        <img src="./img/ed530ce499ff4476a49771c71117babb.svg" alt="">
+                        <img src="./img/514f6e6c6276bbce83746b13748ab9f5.svg" alt="">
+                        <img src="./img/c4d8f750eff92213f47e4a66f5582d66.svg" alt="">
+                    </div>
+                </div>
+                <div class="modal-description">
+                    <div class="description-card-number">
+                        <label for="card-number">Card number*</label>
+                        <input type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" placeholder="1234 5678 9101 1234"
+                            id="card-number">
+                    </div>
+                    <div class="description-card-date">
+                        <div class="date-expiration">
+                            <label for="date-exp">Expiration Date*</label>
+                            <input type="text" placeholder="12/25" id="date-exp">
+                        </div>
+                        <div class="date-csr">
+                            <label for="csr">Csr*</label>
+                            <input type="number" placeholder="123" id="csr">
+                        </div>
+                    </div>
+                    <button class="btn-pay">Pay Now</button>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- modal payment successful-->
+    <div id="modalSuccess" class="modal-success">
+        <div class="modal-main">
+          <!-- <span class="close-modal-success">&times;</span> -->
+          <div class="modal-success__heading">Payment successful</div>
+          <div class="modal-success__subheading">Thank You</div>
+          <div class="modal-success__content">
+            <p>Thank you so much for your order and for taking the time to shop with us. We know how busy life can be, so we truly appreciate your business.</p>
+            <p>We hope you love your new items. If you have any questions or concerns, please <a href="">contact us</a> and we'd be more than happy to help.</p>
+          </div>
+          <div class="modal-success__terms">
+            <a href="">Terms & exchanges</a>
+          </div>
+          <div class="modal-success__footer">
+            <a href="/index.html"><button>Back to Home Page</button></a>
+            <a href=""><button>invoice details</button></a>
+          </div>
+        </div>
+    </div>
+
 
     <script src="./js/payment.js"></script>
 </body>
