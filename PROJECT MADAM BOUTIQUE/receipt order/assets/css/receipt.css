@@ -131,3 +131,17 @@ tr{
     font-style: italic;
     font-weight: 600;
 }
+
+.footer-receipt{
+    float: left;
+}
+
+.footer-receipt a{
+    font-size: 1.6rem;
+    line-height: 1.6;
+    text-decoration: none;
+    color: var(--text-color);
+    font-style: oblique;
+    font-weight: 600;
+    padding-left: 6px;
+}

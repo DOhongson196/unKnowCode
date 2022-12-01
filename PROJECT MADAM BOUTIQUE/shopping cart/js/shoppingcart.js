@@ -63,7 +63,7 @@ function switchItemshoppingCartToHTML(itemShoppingCart) {
             <p>${product.name}</p>
         </th>
         <th class="product-quantity">
-            <input type="number" id="quantity" value="${itemShoppingCart.quantity}"min="1">
+            <input onInput ='getQuantity(${itemShoppingCart.id})' type="number" id="quantity" value="${itemShoppingCart.quantity}"min="1">
         </th>
         <th class="product-price">
             <span>${product.price} $</span>
@@ -128,18 +128,17 @@ checkBox.addEventListener('change', function () {
 });
 
 
-const quantity = document.querySelector('#quantity')
-function getQuantity() {
+const quantity = document.querySelectorAll('#quantity')
+function getQuantity(id) {
     var listItemShoppingCart = getItemShoppingCart()
     for (var i = 0; i < listItemShoppingCart.length; i++) {
-        listItemShoppingCart[i].quantity = quantity.value
+        var currentlistItemShoppingCart = listItemShoppingCart[i]
+        if(currentlistItemShoppingCart.id == id){
+            listItemShoppingCart[i].quantity = quantity[i].value
+        }
     }
     saveListItemInLocalStorage(listItemShoppingCart)
 
-}
-
-quantity.oninput = function(){
-    getQuantity()
 }
 
 const update = document.querySelector('#update')

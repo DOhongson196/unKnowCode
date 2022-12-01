@@ -248,6 +248,10 @@ form {
     color: var(--error-color);
 }
 
+.margin-bot{
+    margin-bottom: 40px;
+}
+
 /* Hide the browser's default radio button */
 .container-checkbox input {
     position: absolute;
@@ -371,6 +375,10 @@ form {
     margin-top: 20px;
 }
 
+.date-expiration,.date-csr{
+    width: 48%;
+}
+
 .description-card-date input {
     border: 1px solid rgb(210, 210, 210);
     border-radius: 3px;
@@ -378,7 +386,7 @@ form {
     padding-left: 10px;
     height: 34px;
     outline: none;
-    width: 340px;
+    width: 100%;
     font-size: 1.4rem;
 }
 
