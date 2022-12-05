@@ -98,7 +98,6 @@ function deleteTask(id) {
     }
 
     saveListItemInLocalStorage(listItemShoppingCart)
-
     location.reload();
 }
 
@@ -138,7 +137,7 @@ function getQuantity(id) {
         }
     }
     saveListItemInLocalStorage(listItemShoppingCart)
-
+    calculation()
 }
 
 const update = document.querySelector('#update')
@@ -147,7 +146,17 @@ update.onclick = function(){
     location.reload();
 }
 
-
+let calculation = () => {
+    let cartIcon = document.getElementById("cartAmount");
+    let basket = getItemShoppingCart();
+    let basketTotal = 0
+    for(var i = 0; i < basket.length; i++){
+        basketTotal += Number(basket[i].quantity)
+    }
+    cartIcon.innerHTML = basketTotal
+}
+  
+calculation();
 
 
 

@@ -103,6 +103,17 @@ tr{
 .product-total-price{
     text-align: right;
     padding-right: 15px;
+    position: relative;
+}
+
+.product-total{
+    padding-right: 10px;
+}
+
+.product-total-price > span{
+    position: absolute;
+    right: 10%;
+    top: 34%;
 }
 
 .receipt-subtotal{

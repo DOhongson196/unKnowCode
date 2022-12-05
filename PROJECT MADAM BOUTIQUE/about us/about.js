@@ -1,7 +1,3 @@
-$('.carousel').carousel({
-    interval: 4000
-})
-
 var keyLocalStorageItemShoppingCart = 'listItemShoppingCart';
 
 function getItemShoppingCart(){

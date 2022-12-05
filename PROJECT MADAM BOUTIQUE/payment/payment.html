@@ -156,22 +156,27 @@
                     </div>
                 </div>
                 <div class="modal-description">
-                    <div class="description-card-number">
-                        <label for="card-number">Card number*</label>
-                        <input type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" placeholder="1234 5678 9101 1234"
-                            id="card-number">
-                    </div>
-                    <div class="description-card-date">
-                        <div class="date-expiration">
-                            <label for="date-exp">Expiration Date*</label>
-                            <input type="text" placeholder="12/25" id="date-exp">
+                    <form action="" id="form-card">
+                        <div class="description-card-number form-field-card" >
+                            <label for="card-number">Card number*</label>
+                            <input type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" placeholder="1234 5678 9101 1234"
+                                id="card-number">
+                            <small></small>
                         </div>
-                        <div class="date-csr">
-                            <label for="csr">Csr*</label>
-                            <input type="number" placeholder="123" id="csr">
+                        <div class="description-card-date form-field-card">
+                            <div class="date-expiration">
+                                <label for="date-exp">Expiration Date*</label>
+                                <input type="text" placeholder="12/25" id="date-exp">
+                                <small></small>
+                            </div>
+                            <div class="date-csr form-field-card">
+                                <label for="csr">Csr*</label>
+                                <input type="text" placeholder="123" id="csr">
+                                <small></small>
+                            </div>
                         </div>
-                    </div>
-                    <button class="btn-pay">Pay Now</button>
+                        <button class="btn-pay">Pay Now</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -188,7 +193,7 @@
             <p>We hope you love your new items. If you have any questions or concerns, please <a href="">contact us</a> and we'd be more than happy to help.</p>
           </div>
           <div class="modal-success__terms">
-            <a href="">Terms & exchanges</a>
+            <a href="" target="_blank">Terms & exchanges</a>
           </div>
           <div class="modal-success__footer">
             <a href="/index.html"><button>Back to Home Page</button></a>

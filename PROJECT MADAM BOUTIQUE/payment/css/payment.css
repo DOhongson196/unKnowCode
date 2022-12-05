@@ -248,6 +248,8 @@ form {
     color: var(--error-color);
 }
 
+
+
 .margin-bot{
     margin-bottom: 40px;
 }
@@ -603,3 +605,8 @@ form {
     margin-top: 20px;
     text-align: center;
 }
+
+.form-field-card small {
+    color: var(--error-color);
+}
+
