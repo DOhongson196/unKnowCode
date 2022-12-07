@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="shortcut icon" href="./img/cropped-favicon-180x180.jpg" type="image/x-icon">
+    <title>Search</title>
+    <link rel="shortcut icon" href="./assets/img/cropped-favicon-180x180.jpg" type="image/x-icon">
     <!-- link font chu + icon + reset thuoc tinh co ban -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -22,24 +22,24 @@
     <div class="header">
         <!-- PC -->
         <div class="header-nav">
-            <a href="/index.html"><img src="./img/logo.png" alt="Logo" srcset="" width="200px"></a>
+            <a href="/index.html"><img src="./assets/img/logo.png" alt="Logo" srcset="" width="200px"></a>
             <ul class="header-nav-list">
                 <li>
-                    <a href="#" class="sub-nav-collection">Collection</a>
+                    <a href="/product collection/product.html" class="sub-nav-collection">Collection</a>
                     <i class="fa-solid fa-angle-down icon-down"></i>
                     <ul class="subnav">
                         <div class="subnav-item">
                             <div class="subnav-collection">
                                 <li>
-                                    <a href="#">Fall 2022</a>
+                                    <a href="/product collection/product.html">Fall 2022</a>
                                 </li>
                                 <li>
                                     <a href="#">Winter 2022</a>
                                 </li>
                             </div>
                             <div class="subnav-img">
-                                <img src="./img/collectionIMG1.jpg" alt="Collection IMG">
-                                <img src="./img/collectionimg3.webp" alt="Collection IMG">
+                                <img src="./assets/img/collectionIMG1.jpg" alt="Collection IMG">
+                                <img src="./assets/img/collectionimg3.webp" alt="Collection IMG">
                             </div>
                         </div>
                     </ul>
@@ -58,8 +58,9 @@
                                 </li>
                             </div>
                             <div class="subnav-img">
-                                <img src="./img/DIOR_AUTUMN-WINTER_2019-2020_CAMPAIGN_©Janette Beckman_8.png.crdownload" alt="Collection IMG">
-                                <img src="./img/patek-main.webp" alt="Collection IMG">
+                                <img src="./assets/img/DIOR_AUTUMN-WINTER_2019-2020_CAMPAIGN_©Janette Beckman_8.png.crdownload"
+                                    alt="Collection IMG">
+                                <img src="./assets/img/patek-main.webp" alt="Collection IMG">
                             </div>
                         </div>
                     </ul>
@@ -83,7 +84,7 @@
                 <a href=""><i class="fa-regular fa-user header-icon-link"></i></a>
                 <div class="header-user-subnav">
                     <div class="header-user-login">
-                        <a href="/form login/login.html" >LOGIN</a>
+                        <a href="/form login/login.html">LOGIN</a>
                     </div>
                     <div class="header-user-regis">
                         <p>NEW USER? <a href="/form register/register.html">REGISTER NOW</a></p>
@@ -138,9 +139,46 @@
             </div>
         </div>
     </div>
-
+    <!-- scroll button -->
+    <span class="scroll-btn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </span>
+    <!-- toast-msg -->
+    <div id="toast">
+    </div>
     <!-- search -->
-
+    <div class="grid wide minH">
+        <div class="search-heading">
+            <input type="search" placeholder="Enter the name of the product you want to search" id="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="product-sort-content">
+            Showing: 0 Results
+        </div>
+        <!-- product item -->
+        <div class="row product-item">
+            <!-- <div class="col l-3 m-3 c-6">
+                <div class="product-item-list">
+                    <div class="product-item-list_img">
+                        <a href="">
+                            <img class="item-img1" src="./assets/img/tui1.webp" alt="">
+                            <img class="item-img2 hidden" src="./assets/img/tui2.webp" alt="">
+                        </a>
+                        <div class="product-item-list_btn">
+                            <button><i class="fa-solid fa-cart-shopping"></i></button>
+                            <button><i class="fa-solid fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-item-list_name">
+                        <a href="">MODIZ LONG WALLETS</a>
+                    </div>
+                    <div class="product-item-list_price">
+                        1000$
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
     <!-- footer -->
     <div class="footer">
         <div class="grid wide">
@@ -173,9 +211,9 @@
                             <li><a href=""><i class="fa-brands fa-pinterest icon-socials  icon-m"></i>Pinterest</a></li>
                         </ul>
                         <div class="footer-logobrand">
-                            <div class="footer-logobrand-item1"><img src="./img/png01.jpg" alt="logo VS"></div>
-                            <div class="footer-logobrand-item2"><img src="./img/pn02.jpg" alt="logo LV"></div>
-                            <div class="footer-logobrand-item3"><img src="./img/pn03.jpg" alt="logo CN"></div>
+                            <div class="footer-logobrand-item1"><img src="./assets/img/png01.jpg" alt="logo VS"></div>
+                            <div class="footer-logobrand-item2"><img src="./assets/img/pn02.jpg" alt="logo LV"></div>
+                            <div class="footer-logobrand-item3"><img src="./assets/img/pn03.jpg" alt="logo CN"></div>
                         </div>
                     </div>
                 </div>
@@ -192,7 +230,7 @@
         </div>
     </div>
 
-
+    <script src="./assets/js/shoppingcart.js"></script>
     <script src="./assets/js/search.js"></script>
 </body>
 

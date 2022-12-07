@@ -69,7 +69,7 @@ const app = {
               <a href="">${product.name}</a>
           </div>
           <div class="product-item-list_price">
-          ${product.price} $
+            ${product.price}$
           </div>
           </div>
           </div>
