@@ -24,9 +24,9 @@ const app = {
         <div class="col l-3 m-3 c-6">
         <div class="product-item-list">
             <div class="product-item-list_img">
-                <a href="">
-                    <img class="item-img1" src="./assets/img/tui2.webp" alt="">
-                    <img class="item-img2 hidden" src="./assets/img/tui1.webp"  alt="">
+                <a href="/product detail/productDetail.html">
+                    <img class="item-img1" src="${product.image1}" alt="">
+                    <img class="item-img2 hidden" src="${product.image2}" alt="">
                 </a>
                 <div class="product-item-list_btn">
                     <button onclick="addShoppingCart(${product.id})"><i class="fa-solid fa-cart-shopping"></i></button>
@@ -34,7 +34,7 @@ const app = {
                 </div>
             </div>
             <div class="product-item-list_name">
-                <a href="">${product.name}</a>
+                <a href="/product detail/productDetail.html">${product.name}</a>
             </div>
             <div class="product-item-list_price">
                 ${product.price}$
@@ -173,4 +173,56 @@ function toast() {
         main.appendChild(toast)
     }
 }
+
+//login
+//get isLogin
+function getIsLogin() {
+    var isLoginAccount = false
+    var jsonisLogin = localStorage.getItem('isLogin')
+
+    if (jsonisLogin != null) {
+        isLoginAccount = JSON.parse(jsonisLogin)
+    }
+    return isLoginAccount
+}
+//saveIsLoginLocalStorage
+function saveIsLoginLocalStorage(isLogin) {
+    var jsonisLogin = JSON.stringify(isLogin)
+
+    localStorage.setItem('isLogin', jsonisLogin)
+}
+
+function loginAccount() {
+    const renderLogin = document.querySelector('.header-user-subnav')
+    const checkLogin = getIsLogin()
+    if (checkLogin) {
+        renderLogin.innerHTML = `
+        <div class="header-user-account">
+            <a href="#" >My ACCOUNT</a>
+        </div>
+        <div class="header-user-regis">
+            <span id="logout" onclick="logout()">LOG OUT</span>
+        </div>
+        `
+    }else{
+        renderLogin.innerHTML = `
+        <div class="header-user-login">
+            <a href="/form login/login.html" >LOGIN</a>
+        </div>
+        <div class="header-user-regis">
+            <span>NEW USER? <a href="/form register/register.html">REGISTER NOW</a></span>
+        </div>
+        `
+    }
+}
+loginAccount()
+
+function logout(){
+    isLogin = false;
+    saveIsLoginLocalStorage(isLogin)
+    location.reload();
+}
+
+
+
 

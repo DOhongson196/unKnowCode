@@ -100,7 +100,7 @@ function render() {
 }
 render()
 
-//object
+//user object
 function UserPayment(email, fullName, deliveryAddress, notes, phone, cityName) {
   this.email = email
   this.fullName = fullName
@@ -386,3 +386,40 @@ formCard.addEventListener('input', debounce(function (e) {
       break;
   }
 }));
+
+//login
+//get isLogin
+function getIsLogin() {
+  var isLoginAccount = false
+  var jsonisLogin = localStorage.getItem('isLogin')
+
+  if (jsonisLogin != null) {
+      isLoginAccount = JSON.parse(jsonisLogin)
+  }
+  return isLoginAccount
+}
+
+//get user
+function getUserRegister() {
+  var listUserRegister = []
+  var jsonlistUserRegister = localStorage.getItem('userRegister')
+
+  if (jsonlistUserRegister != null) {
+      listUserRegister = JSON.parse(jsonlistUserRegister)
+  }
+  return listUserRegister
+}
+
+
+function loginAccount() {
+  const checkLogin = getIsLogin()
+  const listUser = getUserRegister()
+  const paymentIsLogin = css('#payment-islogin')
+  const lastUserList = listUser[listUser.length - 1]
+  if (checkLogin) {
+    emailEl.value = lastUserList.email
+    phoneEl.value = lastUserList.phone
+    paymentIsLogin.innerText = ''
+  }
+}
+loginAccount()

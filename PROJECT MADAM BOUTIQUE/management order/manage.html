@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management order</title>
+    <!-- link font chu + icon + reset thuoc tinh co ban -->
+    <link rel="shortcut icon" href="./assets/img/cropped-favicon-180x180.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- link css -->
+    <link rel="stylesheet" href="./assets/css/base-manage.css">
+    <link rel="stylesheet" href="./assets/css/grid-manage.css">
+    <link rel="stylesheet" href="./assets/css/manage.css">
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="header-nav">
+            <img src="./assets/img/logo.png" alt="">
+            <p>Management order list</p>
+        </div>
+        <div class="product-sort">
+            <div class="product-sort-filter">
+                <div class="select-filter">
+                    <span>List filter</span>
+                    <i class="fa-sharp fa-solid fa-caret-down"></i>
+                    <ul class="menu">
+                        <li><span id="sizeA">All status</span></li>
+                        <li><span id="sizeS">Status Pending</span></li>
+                        <li><span id="sizeM">Status Delivering</span></li>
+                        <li><span id="sizeL">Status Success</span></li>
+                        <li><span id="sizeXL">Status Cancel</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- content -->
+    <div class="grid wide">
+        <div class="receipt-product">
+            <table>
+                <thead class="receipt-product-thead">
+                    <tr>
+                        <th class="text-left">REF</th>
+                        <th class="text-left">Created</th>
+                        <th colspan="2" class="text-left">customer</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Delivery status</th>
+                        <th class="text-right">Status change</th>
+                    </tr>
+                </thead>
+                <tbody class="receipt-product-item">
+                    <!-- <tr>
+                        <th class="order-id">
+                            1
+                        </th>
+                        <th class="order-date">
+                            12/11/2022
+                        </th>
+                        <th class="order-cus">
+                            <div class="cus-name">Name: Do Hong Son</div>
+                            <div class="cus-phone">Phone: 0981806996</div>
+                            <div class="cus-address">Address: 983 Hong Ha Hoan Kiem Ha NOi</div>
+                        </th>
+                        <th class="order-notext">
+                        </th>
+                        <th class="order-price">
+                            <span>2000$</span>
+                        </th>
+                        <th class="order-status">
+                            <span>Pending</span>
+                        </th>
+                        <th class="order-change">
+                            <div class="change">
+                                <div class="change-content">
+                                    Status change
+                                    <i class="fa-sharp fa-solid fa-caret-down"></i>
+                                    <ul class="change-menu">
+                                        <li id="pending">Pending</li>
+                                        <li id="delivering">Delivering</li>
+                                        <li id="success">Success</li>
+                                        <li id="cancel">Cancel</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </th>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+
+        <script src="./assets/js/manage.js"></script>
+</body>
+
+</html>

@@ -206,19 +206,54 @@
     display: block;
 }
 
-.header-user-login>a {
+/* login */
+.header-user-login{
+    margin-top: 10px;
+}
+
+
+.header-user-login > a{
     color: white;
     text-decoration: none;
     font-size: 1.4rem;
-    border-radius: 3px;
+    border-radius: 4px;
+    letter-spacing: 1px;
     background-color: black;
-    font-weight: 400;
-    padding: 6px 80px;
-    margin-top: 10px;
+    font-weight: 500;
+    padding: 8px 90px;
     border: 2px solid black;
+    transition: all linear 0.25s;
+}
+.header-user-account{
+    margin-top: 10px;
+}
+.header-user-account > a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    background-color: black;
+    font-weight: 500;
+    padding: 8px 70px;
+    border: 2px solid black;
+    transition: all linear 0.25s;
 }
 
-.header-user-login a:hover {
+#logout{
+    font-size: 1.4rem;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+#logout:hover{
+    color: rgb(177, 68, 68);
+    cursor: pointer;
+}
+
+.header-user-login a:hover,.header-user-account a:hover{
     color: black;
     background-color: white;
     text-decoration: none;
@@ -226,15 +261,18 @@
 }
 
 .header-user-regis {
-    font-size: 1.3rem;
-    margin-top: -20px;
-    margin-bottom: -16px;
+    font-size: 1.4rem;
+    margin-top: -10px;
 }
 
-.header-user-regis a {
+.header-user-regis  a{
     color: black;
-    text-decoration: underline;
+    text-decoration:underline;
     display: inline-block;
+}
+
+.header-user-regis  a:hover{
+    color: rgb(177, 68, 68);
 }
 
 /* header mobile */
@@ -625,6 +663,7 @@
 .product-item-list_img a img {
     width: 100%;
     vertical-align: middle;
+    height: 300px;
 }
 
 .product-item-list_img a:hover {
@@ -648,7 +687,7 @@
 
 .product-item-list_btn {
     position: absolute;
-    bottom: -10%;
+    bottom: -14%;
     left: 0;
     width: 100%;
     text-align: center;
@@ -728,7 +767,7 @@
     }
 
     .product-item-list_btn {
-        bottom: -14%;
+        bottom: -18%;
     }
 }
 
@@ -762,13 +801,13 @@
     }
 
     .product-item-list_btn {
-        bottom: -14%;
+        bottom: -18%;
     }
 }
 
 @media (min-width: 1024px) and (max-width: 1239px) {
     .product-item-list_btn {
-        bottom: -14%;
+        bottom: -18%;
     }
 }
 
@@ -786,7 +825,6 @@
     background-color: white;
     border-radius: 5px;
     border-left: 5px solid #53a653;
-    ;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
     padding: 20px 0;
     max-width: 300px;

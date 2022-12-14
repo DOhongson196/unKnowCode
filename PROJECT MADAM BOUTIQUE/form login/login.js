@@ -1,8 +1,8 @@
-let css=(css) => document.querySelector(css);
+let css = (css) => document.querySelector(css);
 
 const passwordEl = css('#password'),
-emailEl = css('#email'),
-form = css('#login');
+    emailEl = css('#email'),
+    form = css('#login');
 
 //get user
 function getUserRegister() {
@@ -19,20 +19,22 @@ function getUserRegister() {
 
 
 //check login
-function checklogin(){
-    const email =  emailEl.value
+function checklogin() {
+    const email = emailEl.value
     const password = passwordEl.value
     const listUser = getUserRegister()
-    for(i=0; i<listUser.length; i++){
-        if(listUser[i].email === email && listUser[i].password === password){
+    for (i = 0; i < listUser.length; i++) {
+        if (listUser[i].email === email && listUser[i].password === password) {
             css('#login-alert').innerText = ''
             window.location = '/index.html'
-            
-        }else{
+            var checkIsLogin = true
+            saveIsLoginLocalStorage(checkIsLogin)
+
+        } else {
             css('#login-alert').innerText = 'Wrong password or email'
         }
     }
-    
+
 }
 
 
@@ -40,10 +42,10 @@ function checklogin(){
 const checkEmail = () => {
     let valid = false;
     const email = emailEl.value.trim();
-    if(!isRequired(email)){
-        showError(emailEl,'Email cannot be blank');
+    if (!isRequired(email)) {
+        showError(emailEl, 'Email cannot be blank');
     }
-    else{
+    else {
         showSuccess(emailEl);
         valid = true;
     }
@@ -54,10 +56,9 @@ const checkPass = () => {
 
     const password = passwordEl.value.trim();
 
-    if(!isRequired(password)){
+    if (!isRequired(password)) {
         showError(passwordEl, 'Password cannot be blank.');
-    }else
-    {
+    } else {
         showSuccess(passwordEl);
         valid = true;
     }
@@ -68,7 +69,7 @@ const checkPass = () => {
 
 const isRequired = value => value === '' ? false : true;
 
-const showError = (input,message) => {
+const showError = (input, message) => {
     const formField = input.parentElement;
     formField.classList.remove('success');
     formField.classList.add('error');
@@ -85,33 +86,33 @@ const showSuccess = (input) => {
     error.textContent = '';
 };
 
-form.addEventListener('submit',function(e){
+form.addEventListener('submit', function (e) {
     e.preventDefault();
 
     let isPassValid = checkPass(),
         isEmailValid = checkEmail()
 
-    let isFormValid = isPassValid && isEmailValid 
+    let isFormValid = isPassValid && isEmailValid
 
-    if(isFormValid){
+    if (isFormValid) {
         checklogin()
     }
 });
 
-const debounce = (fn,delay = 1) => {
+const debounce = (fn, delay = 1) => {
     let timeoutId;
     return (...args) => {
-        if(timeoutId){
+        if (timeoutId) {
             clearTimeout(timeoutId);
         }
         timeoutId = setTimeout(() => {
             fn.apply(null, args)
-        },delay);
+        }, delay);
     };
 };
 
-form.addEventListener('input',debounce(function(e){
-    switch(e.target.id){
+form.addEventListener('input', debounce(function (e) {
+    switch (e.target.id) {
         case 'password':
             checkPass();
             break;
@@ -133,13 +134,13 @@ const btnCancel = css('.form-btn-cancel')
 const login = css('.login')
 const forgot = css('.forgot')
 
-btnForgot.addEventListener('click',(e) => {
+btnForgot.addEventListener('click', (e) => {
     login.classList.add('hidden')
     forgot.classList.remove('hidden')
     e.preventDefault();
 })
 
-btnCancel.addEventListener('click',() => {
+btnCancel.addEventListener('click', () => {
     login.classList.remove('hidden')
     forgot.classList.add('hidden')
     e.preventDefault();
@@ -147,11 +148,11 @@ btnCancel.addEventListener('click',() => {
 
 var keyLocalStorageItemShoppingCart = 'listItemShoppingCart';
 
-function getItemShoppingCart(){
+function getItemShoppingCart() {
     var listItemShoppingCart = []
     var jsonlistItemShoppingCart = localStorage.getItem(keyLocalStorageItemShoppingCart)
 
-    if(jsonlistItemShoppingCart != null){
+    if (jsonlistItemShoppingCart != null) {
         listItemShoppingCart = JSON.parse(jsonlistItemShoppingCart)
     }
     return listItemShoppingCart
@@ -162,15 +163,67 @@ let calculation = () => {
     let cartIcon = document.getElementById("cartAmount");
     let basket = getItemShoppingCart();
     let basketTotal = 0
-    for(var i = 0; i < basket.length; i++){
+    for (var i = 0; i < basket.length; i++) {
         basketTotal += Number(basket[i].quantity)
     }
-    if(basketTotal <= 0){
+    if (basketTotal <= 0) {
         cartIcon.style.display = 'none';
-    }else{
+    } else {
         cartIcon.innerHTML = basketTotal
     }
 }
-  
+
 calculation();
+
+const isLogin = false
+// saveIsLoginLocalStorage(isLogin)
+//login
+//get isLogin
+function getIsLogin() {
+    var isLoginAccount = false
+    var jsonisLogin = localStorage.getItem('isLogin')
+
+    if (jsonisLogin != null) {
+        isLoginAccount = JSON.parse(jsonisLogin)
+    }
+    return isLoginAccount
+}
+//saveIsLoginLocalStorage
+function saveIsLoginLocalStorage(isLogin) {
+    var jsonisLogin = JSON.stringify(isLogin)
+
+    localStorage.setItem('isLogin', jsonisLogin)
+}
+
+function loginAccount() {
+    const renderLogin = document.querySelector('.header-user-subnav')
+    const checkLogin = getIsLogin()
+    if (checkLogin) {
+        renderLogin.innerHTML = `
+        <div class="header-user-account">
+            <a href="#" >My ACCOUNT</a>
+        </div>
+        <div class="header-user-regis">
+            <span id="logout" onclick="logout()">LOG OUT</span>
+        </div>
+        `
+    }else{
+        renderLogin.innerHTML = `
+        <div class="header-user-login">
+            <a href="/form login/login.html" >LOGIN</a>
+        </div>
+        <div class="header-user-regis">
+            <span>NEW USER? <a href="/form register/register.html">REGISTER NOW</a></span>
+        </div>
+        `
+    }
+}
+loginAccount()
+
+function logout(){
+    isLogin = false;
+    saveIsLoginLocalStorage(isLogin)
+    location.reload();
+}
+
 

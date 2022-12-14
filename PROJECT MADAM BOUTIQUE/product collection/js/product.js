@@ -19,64 +19,178 @@ const app = {
   products: [
     {
       id: 1,
-      name: 'MODIZ LONG WALLETS',
-      image1: './img/vifall2.webp',
-      image2: './img/vi fall1.webp',
-      price: 1000,
+      name: 'REVERSIBLE DAMIER AZUR COAT',
+      image1: 'https://iili.io/HnMvrDN.webp',
+      image2: 'https://iili.io/HnMv6xI.webp',
+      price: 2000,
       size: 'S'
     },
     {
       id: 2,
-      name: 'FLORENCE HANDBAGS',
-      image1: './img/tui2.webp',
-      image2: './img/tui1.webp',
-      price: 1300,
+      name: 'LACE INSERT OFFICER BLOUSE',
+      image1: 'https://iili.io/HnMvjoP.webp',
+      image2: 'https://iili.io/HnMvWNV.webp',
+      price: 4300,
       size: 'S'
     },
     {
       id: 3,
-      name: 'DIMENSION S HANDBAGS',
-      image1: './img/tuixanh1.webp',
-      image2: './img/tuixanh2.webp',
-      price: 1500,
+      name: 'ZIP-UP WOOL-SILK CADY DRESS',
+      image1: 'https://iili.io/HnMvwV1.webp',
+      image2: 'https://iili.io/HnMvXDB.webp',
+      price: 3500,
       size: 'M'
     },
     {
       id: 4,
-      name: 'DIMENSION S HANDBAGS',
-      image1: './img/tuixanh1.webp',
-      image2: './img/tuixanh2.webp',
-      price: 1500,
+      name: 'SHEER SILK LINGERIE DRESS',
+      image1: 'https://iili.io/HnMvDJf.webp',
+      image2: 'https://iili.io/HnMvQls.webp',
+      price: 6500,
       size: 'L'
+    },
+    {
+      id: 5,
+      name: 'FRILL BLOUSE',
+      image1: 'https://iili.io/HnMvZUG.webp',
+      image2: 'https://iili.io/HnMvLfn.webp',
+      price: 4200,
+      size: 'S'
+    },
+    {
+      id: 6,
+      name: 'ASYMMET SINGLE-BREASTED BLAZER',
+      image1: 'https://iili.io/HnMvkla.webp',
+      image2: 'https://iili.io/HnMveKg.webp',
+      price: 5300,
+      size: 'M'
+    },
+    {
+      id: 7,
+      name: 'SIGNATURE SHORT DOUBLE FACE',
+      image1: 'https://iili.io/HnMvvUJ.webp',
+      image2: 'https://iili.io/HnMvSHv.webp',
+      price: 2900,
+      size: 'L'
+    },
+    {
+      id: 8,
+      name: 'METALLIC WASH CROP TOP',
+      image1: 'https://iili.io/HnMvURR.webp',
+      image2: 'https://iili.io/HnMvgNp.webp',
+      price: 3100,
+      size: 'M'
+    },
+    {
+      id: 9,
+      name: 'LONG SLEEVED FITTED SHIRT',
+      image1: 'https://iili.io/HnMvPVt.webp',
+      image2: 'https://iili.io/HnMviiX.webp',
+      price: 2700,
+      size: 'S'
+    },
+    {
+      id: 10,
+      name: 'LVACATION CAP',
+      image1: 'https://iili.io/Hn4mWP9.webp',
+      image2: 'https://iili.io/Hn4mVM7.webp',
+      price: 1200,
+      size: 'S'
+    },
+    {
+      id: 11,
+      name: 'SHEARLING CAP',
+      image1: 'https://iili.io/Hn4munI.webp',
+      image2: 'https://iili.io/Hn4mIZN.webp',
+      price: 700,
+      size: 'S'
+    },
+    {
+      id: 12,
+      name: '5 FLOWERS CAP',
+      image1: 'https://iili.io/Hn4mAGt.webp',
+      image2: 'https://iili.io/Hn4mzjp.webp',
+      price: 1000,
+      size: 'S'
+    },
+    {
+      id: 13,
+      name: 'LV GET READY CAP',
+      image1: 'https://iili.io/Hn4mYas.jpg',
+      image2: 'https://iili.io/Hn4m7Fn.webp',
+      price: 2000,
+      size: 'S'
+    },
+    {
+      id: 14,
+      name: 'LV NO WAY BEANIE',
+      image1: 'https://iili.io/Hn4ma8G.webp',
+      image2: 'https://iili.io/Hn4ml9f.webp',
+      price: 900,
+      size: 'L'
+    },
+    {
+      id: 15,
+      name: 'PRECIOUS RABBIT HAT',
+      image1: 'https://iili.io/Hn4m0u4.webp',
+      image2: 'https://iili.io/Hn4m1wl.webp',
+      price: 700,
+      size: 'M'
+    },
+    {
+      id: 16,
+      name: 'LV JUMMY BEANIE',
+      image1: 'https://iili.io/Hn4mMnS.jpg',
+      image2: 'https://iili.io/Hn4mEt2.webp',
+      price: 800,
+      size: 'L'
+    },
+    {
+      id: 17,
+      name: 'LV SWEET BUCKET HAT',
+      image1: 'https://iili.io/Hn4mjcu.webp',
+      image2: 'https://iili.io/Hn4mhFe.webp',
+      price: 900,
+      size: 'M'
+    },
+    {
+      id: 18,
+      name: 'LV DAYTONA BUCKET HAT',
+      image1: 'https://iili.io/Hn4mO9j.webp',
+      image2: 'https://iili.io/Hn4mw8b.webp',
+      price: 1200,
+      size: 'M'
     },
   ],
   render: function (arr) {
     const htmls = arr.map((product, index) => {
-      return `
-      <div class="col l-4 m-4 c-6">
-      <div class="product-item-list">
-          <div class="product-item-list_img">
-          <a href="">
-                  <img class="item-img1" src="${product.image1}"  alt="">
-                  <img class="item-img2 hidden" src="${product.image2}"  alt="">
-                  </a>           
-              <div class="product-item-list_btn">
-                  <button onclick="addShoppingCart(${product.id})"><i class="fa-solid fa-cart-shopping"></i></button>
-                  <button ><i class="fa-solid fa-heart"></i></button>
-                  </div>
-                  </div>
-                  <div class="product-item-list_name">
-              <a href="">${product.name}</a>
-          </div>
-          <div class="product-item-list_price">
-            ${product.price}$
-          </div>
-          </div>
-          </div>
-          `
+      if (product.id < 10) {
+        return `
+        <div class="col l-4 m-4 c-6">
+        <div class="product-item-list">
+            <div class="product-item-list_img">
+            <a href="/product detail/productDetail.html">
+                    <img class="item-img1" src="${product.image1}" alt="">
+                    <img class="item-img2 hidden" src="${product.image2}"  alt="">
+                    </a>           
+                <div class="product-item-list_btn">
+                    <button onclick="addShoppingCart(${product.id})"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button ><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                    </div>
+                    <div class="product-item-list_name">
+                <a href="/product detail/productDetail.html">${product.name}</a>
+            </div>
+            <div class="product-item-list_price">
+              ${product.price}$
+            </div>
+            </div>
+            </div>
+            `
+      }
     })
     product.innerHTML = htmls.join('')
-    productShowing.innerText = `Showing: ${this.products.length} Results`
+    // productShowing.innerText = `Showing: ${this.products.length} Results`
   },
   scrollFunction: function () {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -105,6 +219,8 @@ const app = {
         return (a.price - b.price)
       })
       this.render(this.products)
+      this.mouseEvent()
+      productShowing.innerText = `Showing: 9 Results`
     })
     //sort by price high to low
     priceH.addEventListener('click', (e) => {
@@ -113,6 +229,8 @@ const app = {
         return (b.price - a.price)
       })
       this.render(this.products)
+      this.mouseEvent()
+      productShowing.innerText = `Showing: 9 Results`
     })
     //sort by price default
     priceD.addEventListener('click', (e) => {
@@ -121,6 +239,8 @@ const app = {
         return (a.id - b.id)
       })
       this.render(this.products)
+      this.mouseEvent()
+      productShowing.innerText = `Showing: 9 Results`
     })
     //filter size S
     sizeS.addEventListener('click', (e) => {
@@ -129,6 +249,8 @@ const app = {
         return value.size === 'S'
       })
       this.render(filterSizeS)
+      productShowing.innerText = `Showing: 4 Results`
+      this.mouseEvent()
     })
     //filter size M
     sizeM.addEventListener('click', (e) => {
@@ -137,6 +259,8 @@ const app = {
         return value.size === 'M'
       })
       this.render(filterSizeM)
+      this.mouseEvent()
+      productShowing.innerText = `Showing: 3 Results`
     })
     //filter size L
     sizeL.addEventListener('click', (e) => {
@@ -145,11 +269,15 @@ const app = {
         return value.size === 'L'
       })
       this.render(filterSizeL)
+      this.mouseEvent()
+      productShowing.innerText = `Showing: 2 Results`
     })
     //filter size all
     sizeA.addEventListener('click', (e) => {
       e.preventDefault();
       this.render(this.products)
+      this.mouseEvent()
+      productShowing.innerText = `Showing: 9 Results`
     })
 
   },
@@ -189,6 +317,8 @@ const app = {
     this.handleEvent()
 
     this.mouseEvent()
+
+    productShowing.innerText = `Showing: 9 Results`
   }
 
 }
@@ -263,6 +393,58 @@ let calculation = () => {
 }
 
 calculation();
+
+//login
+//get isLogin
+function getIsLogin() {
+  var isLoginAccount = false
+  var jsonisLogin = localStorage.getItem('isLogin')
+
+  if (jsonisLogin != null) {
+      isLoginAccount = JSON.parse(jsonisLogin)
+  }
+  return isLoginAccount
+}
+//saveIsLoginLocalStorage
+function saveIsLoginLocalStorage(isLogin) {
+  var jsonisLogin = JSON.stringify(isLogin)
+
+  localStorage.setItem('isLogin', jsonisLogin)
+}
+
+function loginAccount() {
+  const renderLogin = document.querySelector('.header-user-subnav')
+  const checkLogin = getIsLogin()
+  if (checkLogin) {
+      renderLogin.innerHTML = `
+      <div class="header-user-account">
+          <a href="#" >My ACCOUNT</a>
+      </div>
+      <div class="header-user-regis">
+          <span id="logout" onclick="logout()">LOG OUT</span>
+      </div>
+      `
+  }else{
+      renderLogin.innerHTML = `
+      <div class="header-user-login">
+          <a href="/form login/login.html" >LOGIN</a>
+      </div>
+      <div class="header-user-regis">
+          <span>NEW USER? <a href="/form register/register.html">REGISTER NOW</a></span>
+      </div>
+      `
+  }
+}
+loginAccount()
+
+function logout(){
+  isLogin = false;
+  saveIsLoginLocalStorage(isLogin)
+  location.reload();
+}
+
+
+
 
 
 

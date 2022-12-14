@@ -118,8 +118,68 @@ function subtotal() {
         var listPriceTotalvalue = listPriceTotal.textContent
         subtotal += Number(listPriceTotalvalue)
     }
-    console.log(listPriceTotalvalue )
     total.innerHTML = `Order total: ${subtotal}$`
 }
 
 showListItemShoppingCart()
+//subtotal
+function getProductList() {
+  var productList = []
+  var jsonProductList = localStorage.getItem('productFall2022')
+
+  if (jsonProductList != null) {
+    productList = JSON.parse(jsonProductList)
+  }
+  return productList
+}
+
+function getItemShoppingCart() {
+  var listItemShoppingCart = []
+  var jsonlistItemShoppingCart = localStorage.getItem('listItemShoppingCart')
+
+  if (jsonlistItemShoppingCart != null) {
+    listItemShoppingCart = JSON.parse(jsonlistItemShoppingCart)
+  }
+  return listItemShoppingCart
+}
+
+
+function subtotal() {
+    const productList = getProductList()
+    const shoppingCart = getItemShoppingCart()
+    var sum = 0
+    for (var i = 0; i < shoppingCart.length; i++) {
+      const shoppingID = shoppingCart[i].id
+      for (var j = 0; j < productList.length; j++) {
+        if (productList[j].id == shoppingID) {
+          sum = productList[j].price * shoppingCart[i].quantity + sum
+        }
+      }
+    }
+    return sum
+}
+
+
+
+//add manage order
+function newManageOrder() {
+    const listItemOrder = getItemOrderList()
+    const userList = getUserList()
+    const lastUserList = userList[userList.length - 1]
+
+    let id = Number(listItemOrder.length) + 1
+    let date = today
+    let nameOrder = lastUserList.fullName
+    let address = lastUserList.deliveryAddress
+    let phone = lastUserList.phone
+    let price = subtotal()
+    let statusOrder = 'Pending'
+  
+    var itemOrder = OrderList(id, date, nameOrder, address, phone, price, statusOrder)
+    listItemOrder.push(itemOrder)
+    saveListOrder(listItemOrder)
+    console.log(itemOrder)
+    console.log(listItemOrder)
+}
+
+newManageOrder()

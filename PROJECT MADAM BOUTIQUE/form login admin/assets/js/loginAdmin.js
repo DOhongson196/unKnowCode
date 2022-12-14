@@ -13,10 +13,10 @@ function checklogin() {
     const password = passwordEl.value
     if (email === 'admin' && password === 'admin') {
         css('#login-alert').innerText = ''
-        window.location = '/index.html'
+        window.location = '/management order/manage.html'
 
     } else {
-        css('#login-alert').innerText = 'Wrong Password or Username'
+        css('#login-alert').innerText = 'Wrong Username or Password '
     }
 
 }

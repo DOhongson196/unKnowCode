@@ -1,9 +1,9 @@
 :root {
-    --error-color: #fff;
+    --error-color: #f3f3f3;
 }
 body {
     height: 100vh;
-    background: url('/assets/img/GettyImages-1181326438.webp') top center/ cover no-repeat;
+    background: url('/assets/img/gucci.jpg') top center/ cover no-repeat;
 }
 
 .wrapper {
@@ -17,7 +17,7 @@ body {
 }
 
 form {
-    background: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgb(225 63 63 / 60%) 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(221, 213, 213, 0.6) 100%);
     transition: opacity 0.1s, transform 0.3s cubic-bezier(0.17, -0.65, 0.665, 1.25);
     transform: scale(1);
     padding: 40px;
@@ -65,7 +65,7 @@ form {
 .form-field input:valid~label {
     top: -20px;
     left: 0;
-    color: #e9b9b9;
+    color: #cfcccc;
     font-size: 1.4rem;
 }
 .btn-submit{
@@ -85,7 +85,7 @@ form {
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
-    background: linear-gradient(rgb(225 21 21 / 80%) 0%, rgb(2 2 2 / 60%) 100%);
+    background: linear-gradient(rgba(202, 187, 187, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%);
 }
 
 .btn-submit button:hover {
@@ -93,7 +93,7 @@ form {
 }
 
 .form-field small {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 10px;
     display: block;
     margin-top: 6px;
@@ -101,7 +101,7 @@ form {
 
 #login-alert {
     display: block;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: var(--error-color);
     width: 100%;
     text-align: center;
