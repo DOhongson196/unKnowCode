@@ -147,12 +147,12 @@ tr{
     float: left;
 }
 
-.footer-receipt a{
+.footer-receipt span{
     font-size: 1.6rem;
     line-height: 1.6;
-    text-decoration: none;
     color: var(--text-color);
     font-style: oblique;
     font-weight: 600;
     padding-left: 6px;
+    cursor: pointer;
 }

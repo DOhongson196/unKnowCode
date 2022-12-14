@@ -143,6 +143,11 @@ function getItemShoppingCart() {
   return listItemShoppingCart
 }
 
+function saveListItemInLocalStorage(listItemShoppingCart) {
+    var jsonlistItemShoppingCart = JSON.stringify(listItemShoppingCart)
+
+    localStorage.setItem('listItemShoppingCart', jsonlistItemShoppingCart)
+}
 
 function subtotal() {
     const productList = getProductList()
@@ -178,8 +183,13 @@ function newManageOrder() {
     var itemOrder = OrderList(id, date, nameOrder, address, phone, price, statusOrder)
     listItemOrder.push(itemOrder)
     saveListOrder(listItemOrder)
-    console.log(itemOrder)
-    console.log(listItemOrder)
 }
 
 newManageOrder()
+
+function backHomePage(){
+    var shoppingCart = getItemShoppingCart()
+    shoppingCart = [],
+    saveListItemInLocalStorage(shoppingCart)
+    window.location = '/index.html'
+}

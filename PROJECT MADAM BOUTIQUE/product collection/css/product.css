@@ -590,7 +590,7 @@
 }
 
 .wrap-right:hover  .wrap-left >.content-banner{
-    left: 40%;
+    right: 50%;
 }
 
 .content-banner {
