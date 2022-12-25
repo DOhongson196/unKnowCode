@@ -36,6 +36,7 @@ production : khi nào hoàn thành xong sản phẩm, up lên cho người dùng
 React.createElement
 ----------------------------------------------------------------------------------------------------------
 React.createElement(type,pros,children1,children2,childrenN..)
+children: cũng là  pros
 types: string, function/class (để chia nhỏ,tái sử dụng)
 biến function như 1 thẻ tag 
 -Wrapper
@@ -68,31 +69,16 @@ Render 2 element
 Render 2 element cùng lúc
 React.Fragment
 
-Arrow Function
-----------------------------------------------------------------------------------------------------------
-Function nameFunction(value){
-	console.log(value);
-}
-
-const Name = function(value){
-	console.log(value);
-}
-
-const Name = (value) =>  {
-	console.log(value);
-}
-
-const Name = value => console.log(value)
-const sum = (a,b) =>  a+b;           : return 1 kết quả
-const sum = (a,n) => ({a: a, b: b}); : return ra 1 object
 
 React prop
 ----------------------------------------------------------------------------------------------------------
-React element:  -là phần giống HTML
+React element:  -Code giống HTML
 		-Sử dụng prps giống như với attribute của thẻ HTML
 		-2 props class,for => claasName,htmlFor
 		-Phải tuân theo quy ước có sẵn
 Reac components: -là hàm ôm lấy phần element
 		 -sử dụng props giống như đối số cho component
 		 -tự do đặt tên 
+
+ko render được kiểu boolean,undefined,null
 

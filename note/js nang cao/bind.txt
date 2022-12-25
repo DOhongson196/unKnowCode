@@ -1,0 +1,4 @@
+bind(): dùng để ràng buộc function với 1 đối tượng
+bind(): ko ghi đè lên mà tạo 1 vùng nhớ mới
+
+bind(object,'đối số1','đối số2')

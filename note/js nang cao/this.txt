@@ -1,0 +1,5 @@
+this trong method thì trả về đối tượng mà nó trỏ dến
+this trong function(hàm) thì trả về window
+this trong function(hàm) trong strict mode la undefine
+
+arrown function ko có context nên nó sẽ lấy đối tượng gần nhất làm context

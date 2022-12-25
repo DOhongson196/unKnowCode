@@ -1,0 +1,15 @@
+1-IIFE - Immediately invoked function expression (function expression được gọi ngay lập tức)
+(function(){
+	console.log('Now') 
+})()
+
+2-Nếu ko dùng dấu ; ở mỗi dòng code thì phải dùng ; ở đầu IIFE để phân biệt các lệnh
+;(function(){
+	})()
+
+3-IIFE là private (không gọi được ở phạm vi bên ngoài)
+
+4-IIFE không có tính dùng lại
+
+5-IIFE được tạo ra vì tránh tạo ra nhiều global variable.
+

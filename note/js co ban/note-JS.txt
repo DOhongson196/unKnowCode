@@ -74,7 +74,7 @@ array1.concat(array2)                  : nối 2 mảng theo thứ tự
 array.slice(vị trí muốn cắt, điểm kết thúc)  : cắt mảng
 array.sort()                                 : sắp xếp theo thứ tự tăng dần
 array.reverse()                              : sắp xếp theo thứ tự giảm dần
-arrat.sort(function(a, b){return a - b})     : sắp xếp số
+array.sort(function(a, b){return a - b})     : sắp xếp số
 
 
 

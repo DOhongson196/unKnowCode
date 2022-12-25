@@ -1,0 +1,21 @@
+var:
+console.log('age') //undefined
+console.log('fullName') //fullName is not defined 
+var age = 18;
+
+vì JS sẽ đưa giá trị khai báo lên đầu (var age), còn gán giá trị age = 18 giữ nguyên, được tạo giá trị là undefined
+
+function:
+console.log(sum(6,9)) //16
+
+function sum(a,b) {
+	return a+b
+}
+
+vì JS coi cả function là phần khai báo
+
+let,const:
+
+như var nhưng ko có giá trị khởi tạo là undefined nên sẽ vào vùng deadzone
+
+

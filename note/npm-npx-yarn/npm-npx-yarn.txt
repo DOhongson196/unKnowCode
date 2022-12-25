@@ -1,0 +1,24 @@
+-NPM
+	-Project scope
+		-npm i react => dependencies
+		-npm i -D react => devDependencies
+
+		-npm unistall react
+	-Global scope
+		-npm i -g create-react-app
+		
+		-npm uninstall -g create-react-app
+
+-NPX 
+	-NPX
+	-NPX error:
+
+-YARN & NPM
+	-đều là quản lý gói của node, js
+-NPM:
+	-Quản lý thư viện
+	-Là một kho lưu trữ
+	-CLI, tương tác qua terminal
+
+-YARN
+	-

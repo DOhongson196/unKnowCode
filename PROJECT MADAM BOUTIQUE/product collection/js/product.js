@@ -192,18 +192,18 @@ const app = {
     product.innerHTML = htmls.join('')
     // productShowing.innerText = `Showing: ${this.products.length} Results`
   },
-  scrollFunction: function () {
+  scrollFunction() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
       scrollBtn.style.display = "block";
     } else {
       scrollBtn.style.display = "none";
     }
   },
-  topFunction: function () {
+  topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   },
-  handleEvent: function () {
+  handleEvent() {
     const _this = this
     //scroll btn display
     window.onscroll = () => { _this.scrollFunction() }
@@ -281,7 +281,7 @@ const app = {
     })
 
   },
-  mouseEvent: function () {
+  mouseEvent() {
     const productItems = $$('.product-item-list')
     const img1 = $$('.item-img1')
     const img2 = $$('.item-img2')
@@ -297,7 +297,7 @@ const app = {
       e.preventDefault();
     }))
   },
-  filterProductID: function (id) {
+  filterProductID(id) {
     var productList = JSON.parse(localStorage.getItem('productFall2022'))
     for (var i = 0; i < productList.length; i++) {
       var currentProduct = productList[i]
@@ -306,10 +306,10 @@ const app = {
       }
     }
   },
-  saveLocalstorage: function () {
+  saveLocalstorage() {
     localStorage.setItem('productFall2022', JSON.stringify(this.products))
   },
-  start: function () {
+  start() {
     this.saveLocalstorage()
 
     this.render(this.products)

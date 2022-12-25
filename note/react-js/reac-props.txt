@@ -1,0 +1,12 @@
+-Có 2 cách truyền props qua component
+
+<YourComponent
+	propName1="String literals"
+	propName2={expression} (biểu thức, truyền biến)
+/>
+-Props default to "true"
+-Spread/Rest props
+-Children prop
+	-<YourComponent>String literals</YourComponent>
+	-<YourComponent>{expression}</YourComponent>
+-Render props

@@ -1,0 +1,21 @@
+1.{} : code block 
+-Khi khai báo let, const trong code block sẽ là local variable
+-var là global variable
+
+2.function
+-var, function là local variable
+
+3.Khi gọi mỗi hàm luôn có 1 phạm vi mới được tạo ra(1 hàm được gọi nhiều lần thì tạo ra nhiều phạm vi)
+
+4. các hàm có thể truy cập các biến được khai báo trong phạm vi bên ngoài nó (hộp to hơn)
+
+5.Khi nào biến được xóa khỏi bộ nhớ:
+variable: khi kết thúc chương trình
+bên trong code block & trong hàm? khi kết thúc khối code
+biến trong hàm được tham chiếu bởi 1 hàm: khi hàm tham chiếu bị xóa
+
+6.cách thức một biến được truy cập
+-tìm ở trong phạm vi của nó, nếu ko thấy tìm ở phạm vi gần nhất lớn hơn nó nếu ko có thì báo lỗi
+
+
+
