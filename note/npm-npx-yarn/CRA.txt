@@ -1,0 +1,6 @@
+-node-modules:nơi chứa tất cả thư viện
+-public: là file public có thể truy cập qua địa chỉ trang web
+-src   : chứa source code
+-src-reportWebVitals.js: phân tích tối ưu, hiệu năng
+-gitignore: những file ko được tải lên git
+-build : file chạy dự án

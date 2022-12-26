@@ -19,6 +19,13 @@
 	-Quản lý thư viện
 	-Là một kho lưu trữ
 	-CLI, tương tác qua terminal
+	-file lock để quản lý thư viện
+		vd: các thư viện khác nhau lại dùng chung một thư viện con
+		vd: xóa file node-module, file lock sẽ lưu lại các tên thư viện cần tải => ko cần cài lại từ đầu
+	-chỉ cài đc từng thư viện
+	-ko có cache => ko tốn GB
 
 -YARN
-	-
+	-cài đc nhiều thư viện 1 lúc
+	-có cache(lưu tạm) => khôi phục nhanh
+	-tốn Gb

@@ -1,0 +1,7 @@
+Hooks: là method(hàm) được viết sẵn trong thư viện react-js
+	-mỗi hàm có tình năng cụ thể
+	-function component cần thêm tính năng thì dùng hooks(vì cách dùng là gắn vào nên gọi là hooks)
+	-bắt đầu bằng từ use
+	-chỉ dùng cho function component
+	-đơn giản và dễ hiểu hơn
+

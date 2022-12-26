@@ -1,0 +1,20 @@
+-useState: Trạng thái của dữ liệu
+-Dùng khi nào: 
+	-Khi muốn dữ liệu thay đổi thì giao diện tự động cập nhât(render lại theo dữ liệu)
+-Cách dùng:
+import { useState } from 'react'
+
+function Component(){
+	const [state,setState] = useSate(initState)
+}
+
+initState(đối số): giá trị khởi tạo(chỉ dùng 1 lần ở đầu vào)
+[state,setState] : return ra 1 mảng, state = initState(giá trị khởi tạo), setState là hàm dùng để sửa state
+
+**
+-Component được re-render sau khi `setState`
+-Initial state chỉ dùng cho lần đầu
+-Set state với callback?
+-Initial state với callback? => dùng giá trị return ra làm initial state
+vd: tính tổng tiền dùng callback trong Initial state để tính toán sẽ tối ưu(vì chỉ sử dụng 1 lần các lsau ko gọi lại)
+-Set state là thay thế state bằng giá trị mới (thay thế hoàn toán chứ ko phải có rồi thì sửa)

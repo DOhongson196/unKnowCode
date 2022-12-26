@@ -1,0 +1,5 @@
+ReacJS
+1 chiều: chiều trên giao diện (thay đổi ở value input trong code ko thay đổi)
+
+VueJS
+2 chiều: chiều trên giao diện + dữ liệu (thay đổi ở value input trong code cũng thay đổi theo)
