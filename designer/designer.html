@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAT COLLECTION</title>
+    <title>Designer</title>
     <link rel="shortcut icon" href="./img/cropped-favicon-180x180.jpg" type="image/x-icon">
     <!-- link font chu + icon + reset thuoc tinh co ban -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <!-- link css -->
-    <link rel="stylesheet" href="./css/base-product.css">
-    <link rel="stylesheet" href="./css/grid-product.css">
-    <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/base-designer.css">
+    <link rel="stylesheet" href="./css/designer.css">
+    <link rel="stylesheet" href="./css/grid-designer.css">
 </head>
 
 <body>
@@ -25,13 +25,13 @@
             <a href="/index.html"><img src="./img/logo.png" alt="Logo" srcset="" width="200px"></a>
             <ul class="header-nav-list">
                 <li>
-                    <a href="/product collection/product.html" class="sub-nav-collection">Collection</a>
+                    <a href="#" class="sub-nav-collection">Collection</a>
                     <i class="fa-solid fa-angle-down icon-down"></i>
                     <ul class="subnav">
                         <div class="subnav-item">
                             <div class="subnav-collection">
                                 <li>
-                                    <a href="/product collection/product.html">Fall 2022</a>
+                                    <a href="#">Fall 2022</a>
                                 </li>
                                 <li>
                                     <a href="#">Winter 2022</a>
@@ -45,7 +45,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="sub-nav-accesorries">ACCESSORIES</a>
+                    <a href="" class="sub-nav-accesorries">ACCESSORIES</a>
                     <i class="fa-solid fa-angle-down icon-down"></i>
                     <ul class="subnav">
                         <div class="subnav-item">
@@ -66,20 +66,29 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="/brand/brand.html">brand</a>
+                    <a href="">brand</a>
                 </li>
-                <li><a href="/new&promotion/new.html">News & Promotion</a></li>
+                <li>
+                    <a href="">DESIGNERS</a>
+                </li>
+                <li><a href="">News & Promotion</a></li>
                 <li><a href="/about us/aboutus.html">about us</a></li>
             </ul>
         </div>
         <div class="header-icon">
             <div class="icon-search">
-                <a href="/search/search.html"><i class="fa-solid fa-magnifying-glass icon-search header-icon-link label-search"></i></a>
+                <a href=""><i class="fa-solid fa-magnifying-glass icon-search header-icon-link label-search"></i></a>
                 <!-- <input type="input" id="search" name="search"> -->
             </div>
             <div class="header-user">
                 <a href=""><i class="fa-regular fa-user header-icon-link"></i></a>
                 <div class="header-user-subnav">
+                    <div class="header-user-login">
+                        <a href="/form login/login.html">LOGIN</a>
+                    </div>
+                    <div class="header-user-regis">
+                        <p>NEW USER? <a href="/form register/register.html">REGISTER NOW</a></p>
+                    </div>
                 </div>
             </div>
             <div class="header-shoppingcart">
@@ -104,16 +113,19 @@
             </label>
             <ul class="header-nav-list-mobile">
                 <li>
-                    <a href="/product collection/product.html" class="header-nav-link-mobile">Collection</a>
+                    <a href="" class="header-nav-link-mobile">Collection</a>
                 </li>
                 <li>
-                    <a href="/brand/brand.html" class="header-nav-link-mobile">BRAND</a>
+                    <a href="" class="header-nav-link-mobile">brand</a>
                 </li>
                 <li>
-                    <a href="#" class="header-nav-link-mobile">ACCESSORIES</a>
+                    <a href="" class="header-nav-link-mobile">DESIGNERS</a>
                 </li>
-                <li><a href="/new&promotion/new.html" class="header-nav-link-mobile">News & Promotion</a></li>
-                <li><a href="/about us/aboutus.html" class="header-nav-link-mobile">ABOUT US</a></li>
+                <li>
+                    <a href="" class="header-nav-link-mobile">ACCESSORIES</a>
+                </li>
+                <li><a href="" class="header-nav-link-mobile">News & Promotion</a></li>
+                <li><a href="/about us/aboutus.html" class="header-nav-link-mobile">about us</a></li>
             </ul>
         </div>
     </div>
@@ -123,64 +135,49 @@
             <div class="bredcrumb-wrap">
                 <a href="/index.html">HOME</a>
                 <span>|</span>
-                <p>HAT COLLECTION</p>
+                <p>My Account</p>
             </div>
         </div>
     </div>
-    <!-- scroll button -->
-    <span class="scroll-btn">
-        <i class="fa-solid fa-arrow-up"></i>
-    </span>
-    <!-- toast-msg -->
-    <div id="toast">
-    </div>
-    <!-- product-collection -->
-    <div class="product-collection">
-        <div class="grid wide">
-            <div class="row">
-                <div class="col l-12 m-12 c-12">
-                    <div class="product-heading">
-                        HAT COLLECTION
-                    </div>
-                    <div class="product-banner">
-                        <img src="./img/LOUIS-VUITTON-SPRING-2022-TWIST-HANDBAG-CAMPAIGN-FILM-STARRING-HOYEON-JUNG.jpg" alt="FALL2022">
-                        <div class="banner-content">
-                            <h2>hats collection</h2>
-                            <span>Dresses heads and hands with a fashionable collection of hats and gloves for women</span>
-                        </div>
-                    </div>
-                </div>
+    <!-- designers -->
+    <div class="card_main">
+        <div class="card">
+            <div class="card_img">
+                <img src="./img/1.webp">
             </div>
-            <div class="row">
-                <div class="product-sort">
-                    <div class="product-sort-content"></div>
-                    <div class="product-sort-filter">
-                        <div class="select-filter">
-                            <span>Filter</span>
-                            <i class="fa-solid fa-angle-down icon-down"></i>
-                            <ul class="menu">
-                                <li><span id="sizeA">All style</span></li>
-                                <li><span id="sizeS">Style cap</span></li>
-                                <li><span id="sizeM">Style bucket hat</span></li>
-                                <li><span id="sizeL">Style beanie</span></li>
-                            </ul>
-                        </div>
-                        <div class="select-sort">
-                            <span>Sort by</span>
-                            <i class="fa-solid fa-angle-down icon-down"></i>
-                            <ul class="menu">
-                                <li><span id="priceD">Price - Default</span></li>
-                                <li><span id="priceH">Price - High to Low</span></li>
-                                <li><span id="priceL">Price - Low to High</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-items">
-                    <div class="row product-item">
-                    </div>
-                </div>
+            <h2>Dior</h2>
+            <p>you maybe know</p>
+            <form action="./desginer1.html">
+                <button class="button" type="submit">
+                    View More
+                </button>
+            </form>
+        </div>
+        <!-- ketthuc2 -->
+        <div class="card">
+            <div class="card_img">
+                <img src="./img/2.jpg">
             </div>
+            <h2>Vuitton</h2>
+            <p>you maybe know</p>
+            <form action="./designer2.html">
+                <button class="button" type="submit">
+                    View More
+                </button>
+            </form>
+        </div>
+        <!-- ketthuc3 -->
+        <div class="card">
+            <div class="card_img">
+                <img src="./img/3.webp">
+            </div>
+            <h2>Chanel</h2>
+            <p>you maybe know</p>
+            <form action="./designer3.html">
+                <button class="button" type="submit">
+                    View More
+                </button>
+            </form>
         </div>
     </div>
     <!-- footer -->
@@ -192,7 +189,7 @@
                         <div class="footer-heading">MAY WE HAVE YOU?</div>
                         <ul class="footer-list">
                             <li><a href="">FAQs</a></li>
-                            <li><a href="/contact us/contact.html">Contact Us</a></li>
+                            <li><a href="">Contact Us</a></li>
                             <li><a href="">Email Unsubscribe</a></li>
                             <li><a href="/payment question/paymentQ.html">Payment Options</a></li>
                             <li><a href="">Shipping Services</a></li>
@@ -234,8 +231,8 @@
         </div>
     </div>
 
-    <script src="./js/shoppingcart.js"></script>
-    <script src="./js/product.js"></script>
+
+    <script src="./js/designer.js"></script>
 </body>
 
 </html>
