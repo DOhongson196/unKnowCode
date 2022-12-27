@@ -1,0 +1,2 @@
+Mounted: gắn vào
+Unmounted: gỡ ra

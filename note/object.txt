@@ -1,0 +1,23 @@
+object {
+	name: 'dohongson'
+	age: 18
+}
+
+object[name] = 'dohongson'
+object[key] = value
+
+
+[fieldName] = 'new-name'
+[fieldAge] = 'new-age'
+
+object {
+	[fieldName]: 'dohongson'
+	[fieldAge]: 18
+}
+
+=> 
+object {
+	new-name: 'dohongson'
+	new-age: 18
+}
+

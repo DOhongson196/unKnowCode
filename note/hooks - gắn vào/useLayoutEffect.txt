@@ -1,0 +1,13 @@
+useEffect:
+-cập nhật lại state
+-cập nhật lại DOM (mutated)
+-Render lại UI
+-gọi cleanup nếu dép thay đổi
+-gọi useEffect callback
+
+useLayoutEffect:
+-cập nhật lại state
+-cập nhật lại DOM (mutated)
+-gọi cleanup nếu dép thay đổi(sync)
+-gọi useLayoutEffect callback(sync)
+-Render lại UI

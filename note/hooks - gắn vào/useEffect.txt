@@ -1,0 +1,26 @@
+Dùng khi:
+	-side effects: thay đổi dữ liệu chương trình
+	vd:
+	-update DOM
+	-call API
+	-listen DOM events
+	-cleanup
+
+cách dùng:
+	-useEffect(callback,[deps])
+	-callback bắt buộc
+	-deps(ràng buộc) là mảng không bắt buộc
+
+3 trường hợp sử dụng:
+	-useEffect(callback)
+	*gọi callback mỗi khi component re-render
+	*gọi callback mỗi khi component thêm element vào DOM
+	-useEffect(callback,[])
+	*callback chỉ được gọi 1 lần sau khi component mounted
+	-useEffect(callback,[deps])
+	*callback sẽ đc gọi lại khi deps thay đổi
+
+lưu ý:
+	-trong cả 3 trường hợp callback luôn được gọi sau khi component mounted
+	-cleanup function luôn được gọi trc khi unmounted
+	-cleanup function luôn được gọi trc khi callback được gọi trừ lần mounted

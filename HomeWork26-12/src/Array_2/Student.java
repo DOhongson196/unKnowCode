@@ -13,9 +13,9 @@ import java.util.Scanner;
  */
 public class Student {
 
-    String Student_code;
-    String Full_name;
-    double Point;
+    private String Student_code;
+    private String Full_name;
+    private double Point;
 
     public Student() {
     }
@@ -25,36 +25,6 @@ public class Student {
         this.Full_name = name;
         this.Point = point;
     }
-
-    public String getStudent_code() {
-        return Student_code;
-    }
-
-    public void setStudent_code(String Student_code) {
-        this.Student_code = Student_code;
-    }
-
-    public String getFull_name() {
-        return Full_name;
-    }
-
-    public void setFull_name(String Full_name) {
-        this.Full_name = Full_name;
-    }
-
-    public double getPoint() {
-        return Point;
-    }
-
-    public void setPoint(double Point) {
-        if(Point>=0)
-            this.Point = Point;
-        else
-            System.out.println("Wrong input!");
-    }
-    
-
-    
 
     public void input() {
         Scanner sc = new Scanner(System.in);
@@ -67,7 +37,15 @@ public class Student {
     }
 
     public void render() {
-        System.out.println("Student code: " + Student_code + " Full name: " +Full_name+" Point: " +Point);
+        System.out.println("Student code: " + Student_code + " Full name: " + Full_name + " Point: " + Point);
+    }
+
+    public String getFull_name() {
+        return Full_name;
+    }
+
+    public double getPoint() {
+        return Point;
     }
 
 }

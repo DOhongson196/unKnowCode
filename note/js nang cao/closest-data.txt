@@ -1,0 +1,5 @@
+closest là 1 phương thức kiểm tra element hoặc cha element có chứa class đó hay ko
+
+data-name ="" : tạo ra 1 object để lấy ra value ở trong
+VD: data-index = "index"
+const value = element.dataset.index

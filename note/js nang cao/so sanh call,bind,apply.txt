@@ -1,0 +1,14 @@
+call(),bind(),apply() đều là prototype của function
+
+
+bind()
+-tạo ra hàm mới
+-không thực hiện gọi hàm mới
+-các đối số t2,t3 ... sẽ được ưu tiên
+
+call()
+-thực hiện bind this với thisArg và thực hiện gọi hàm
+-nhận các đối số cho hàm gốc
+
+apply()
+call() khác apply(): apply đối số thứ 2 nhận vào là mảng

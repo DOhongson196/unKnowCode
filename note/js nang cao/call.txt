@@ -1,0 +1,1 @@
+Call() là phương thức trong prototype của function constructor, phương thức này có thể dùng để gọi hàm và cũng có thể bind this cho hàm

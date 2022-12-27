@@ -5,18 +5,16 @@
  */
 package Array_2;
 
-import java.util.Scanner;
+import java.util.Comparator;
 
 /**
  *
  * @author admin
  */
-public class main {
+public class sortPoint implements Comparator<Student> {
 
-    public static void main(String[] args) {
-        int n;
-        Student[] arr = new Student[30];
-        Scanner sc = new Scanner(System.in);
-        
+    @Override
+    public int compare(Student student1, Student student2) {
+        return (int) (student1.getPoint() - student2.getPoint());
     }
 }
