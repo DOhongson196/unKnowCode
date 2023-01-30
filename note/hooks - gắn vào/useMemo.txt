@@ -1,0 +1,2 @@
+useMemo cách dùng như useEffect (useMemo dùng để tính toán, useEffect dùng để xử lý Event)
+	useMemo return lại kết quả, còn useEffect return lại cleanup function

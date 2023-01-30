@@ -1,0 +1,13 @@
+useRef:
+-lưu các giá trị qua một tham chiếu bên ngoài
+-function component mặc định ko có ref
+-kết hợp với {forwardRef} để truyền ref từ component cha xuống component con(nhận ref là tham số thứ 2)
+
+kết hợp useEffect,useState với useRef để lấy giá trị hiện tại và giá trị trước đó:
+[currentValue,setCurrentValue] = useState()
+
+preValue = useRef()
+
+useEffect(() => {
+	preValue.current = currentValue
+},[currentValue])

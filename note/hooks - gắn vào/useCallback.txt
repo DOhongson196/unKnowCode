@@ -1,0 +1,6 @@
+useCallback(cb,[deps])
+
+phải có memo() mới dùng useCallback
+
+cb lưu ra ngoài component
+deps giống useEffect
