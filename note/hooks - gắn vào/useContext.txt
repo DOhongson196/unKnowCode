@@ -1,3 +1,6 @@
+truyền dữ liệu từ component cha xuống component con mà ko qua trung gian, gián tiếp
+CompA => CompB => CompC
+CompA => CompC
 1. Create context
 2. Provider
 3. Consumer

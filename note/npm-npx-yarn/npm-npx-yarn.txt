@@ -3,7 +3,7 @@
 		-npm i react => dependencies
 		-npm i -D react => devDependencies
 
-		-npm unistall react
+		-npm uninstall react
 	-Global scope
 		-npm i -g create-react-app
 		

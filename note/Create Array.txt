@@ -1,0 +1,4 @@
+Array(độ dài mảng).fill()
+
+
+Array(9).fill().map()

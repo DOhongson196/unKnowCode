@@ -1,0 +1,4 @@
+component dùng để chia nhỏ thành nhiều thành phần nhằm mục đích tái sử dụng lại
+
+stateless functional component: component nhưng ko sử dụng state
+stateful functional component: sử dụng state

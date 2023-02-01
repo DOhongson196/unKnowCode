@@ -1,0 +1,31 @@
+Interface:
+Không phải là class.
+Chỉ chứa những method/properties trống không có thực thi.
+Nó giống như một khuôn mẫu, một khung để để các lớp implement và follow.
+Các lớp có thể implements nhiều interface.
+Là một contract, các class implement phải triển khai các method theo như interface đã định nghĩa.
+
+
+Abstract class:
+Khá giống Interface nhưng nó có thể làm nhiều việc hơn.
+Có 2 loại method là abstract method và method thường:
+abstract method là method trống không có thực thi.
+method thường là method có thực thi.
+Các lớp chỉ có thể kế thừa một Abstract class
+Hướng đến tính năng và những tính năng có thực thi được sử dụng làm hàm chung cho các class extend.
+
+
+Khi nào sử dụng chúng:
+Interface : 
+Khi bạn muốn tạo dựng một bộ khung chuẩn gồm các chức năng mà những module hay project cần phải có.
+Giống như sau khi nhận requirement của khách hàng về team ngồi với nhau và phân tích các đầu mục
+các tính năng của từng module, sau đó triển khai vào code viết các interface như đã phân tích,
+để các bạn dev có thể nhìn vào đó để thực hiện đủ các tính năng (khi đã implement rồi thì không sót một tính năng nào ^^).
+
+Abstract class:
+Giống như demo trên bạn có thể hiểu khi định nghĩa một đối tượng có những chức năng A,B,C
+ trong đó tính năng A,B chắc chắn sẽ thực thi theo cách nào đó, còn tính năng C phải tùy thuộc vào đối tượng
+ cụ thể là gì, như đối tượng Dog, Cat tuy chúng đều có thể phát ra âm thanh nhưng âm thanh là khác nhau.
+ Vì vậy method Speak() là abstract method để chỉ ra rằng tính năng này còn dang dở chưa rõ thực thi,
+ các lớp extend phải hoàn thành nốt tính năng này, còn những tính năng đã hoàn thành vẫn sử dụng như bình thường đây
+ là những tính năng chung.
