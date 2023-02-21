@@ -23,7 +23,7 @@ các tính năng của từng module, sau đó triển khai vào code viết cá
 để các bạn dev có thể nhìn vào đó để thực hiện đủ các tính năng (khi đã implement rồi thì không sót một tính năng nào ^^).
 
 Abstract class:
-Giống như demo trên bạn có thể hiểu khi định nghĩa một đối tượng có những chức năng A,B,C
+ khi định nghĩa một đối tượng có những chức năng A,B,C
  trong đó tính năng A,B chắc chắn sẽ thực thi theo cách nào đó, còn tính năng C phải tùy thuộc vào đối tượng
  cụ thể là gì, như đối tượng Dog, Cat tuy chúng đều có thể phát ra âm thanh nhưng âm thanh là khác nhau.
  Vì vậy method Speak() là abstract method để chỉ ra rằng tính năng này còn dang dở chưa rõ thực thi,

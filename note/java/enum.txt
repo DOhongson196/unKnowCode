@@ -1,0 +1,4 @@
+giới hạn đầu vào là gì.
+dùng trong trường hợp khi đã xác định cụ thể đầu vào.
+ví dụ:
+giới tính: enum(nam,nữ)

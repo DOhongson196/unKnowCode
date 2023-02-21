@@ -1,0 +1,55 @@
+-String: bất biến
+-StringBuffer: khả biến,multi-thread
+-StringBuilder: khả biến,single-thread
+
+*kiểm tra String
+---------------------------------------------------------------------------------------------
+length() : độ dài
+charAt() : lấy ra kí tự (lấy băng độ dài bắt đầu từ 0)
+getChars(int Begin,int End,char[] dst, int dstBegin) : lấy kí tự trong chuỗi
+getChars(vị trí bắt đầu ">=", "<" vị trí kết thức,mảng, vị trí bắt đầu lưu)
+getBytes : lấy kí tự trong chuỗi
+
+*So sánh String
+---------------------------------------------------------------------------------------------
+equals(): so sánh trả về boolean
+dùng để kiểm tra pass
+
+equalsIgnoreCase(): so sánh trả về boolean bỏ qua chữ hoa chữ thường
+
+compareTo(): so sánh trả về lớn hơn bé hơn
+
+compareToIgnoreCase(): so sánh trả về lớn hơn bé hơn bỏ qua chữ hoa chữ thường
+
+regionMatches():
+
+startsWith(): bắt đầu bằng kí tự
+kiểm tra sđt xem nhà mạng, tỉnh thành phố...
+
+endWith(): kết thúc bằng kí tự
+định dạng file pdf, jpg ....
+
+regionMatches(): so sánh 1 đoạn
+
+*tìm kiếm
+---------------------------------------------------------------------------------------------
+str1.indexOf(str2,vị trí bắt đầu tìm): nếu tìm thấy trả lại kết quả luôn ko tiếp tục tìm tiếp
+
+lastIndexOf(): tìm kiếm ngược lại
+tìm kiếm tên file, xác định định dạng file
+
+*xử lý chuỗi
+---------------------------------------------------------------------------------------------
+concat(): nối chuỗi
+
+replaceAll(): thay thế nội dung bên trong chuỗi
+String str1 = "Do Hong Son"
+String str2 = s1.replaceAll("Son","Nosz")
+=> str1 = "Do Hong Son" ko đổi
+   str2 = "Do Hong Nosz"
+dùng để thay thế nội dung trong trường hợp muốn sửa lại toàn bộ
+
+toCharArray(): biến đuổi 1 chuỗi thành 1 mảng các kí tự
+DHS => [D,H,S]
+
+subString(): cắt chuỗi

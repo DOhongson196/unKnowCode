@@ -1,0 +1,4 @@
+set ko có 2 phần tử giống nhau
+
+hashset : ko có thứ tự
+treeSet : có thứ tự

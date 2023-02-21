@@ -1,0 +1,3 @@
+while(condition)
+if condition true => continue
+if condition false => break

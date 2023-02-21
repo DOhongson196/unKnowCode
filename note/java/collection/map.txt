@@ -1,0 +1,5 @@
+có key và value
+key ko được trùng nhau
+
+hashmap: ko sắp xếp
+treemap: sắp xếp

@@ -1,0 +1,23 @@
+*overLoading
+- nạp chồng các method(phương thức)
+- dùng khi muốn tạo 2 method có tên giống nhau nhưng khác tham số truyền vào
+- trong 1 class
+- tham số khác nhau
+- giá trị trả về khac nhau hoặc giống nhau
+- giúp code dễ đọc, dễ hiểu
+
+public int sum(int a, int b){
+	return a+b
+}
+
+public double sum(double a, double b){
+	return a+b
+}
+
+
+*overWrite
+- dùng để ghi đè lên các method(phương thức) của hàm cha
+- dùng trong trường hợp kế thừa lại lớp cha mà muốn thay đổi phương thức
+- 2 class cha và con
+- giá trị trả về giống nhau
+- tham số giống nhau

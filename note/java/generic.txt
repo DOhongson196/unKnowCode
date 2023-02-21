@@ -1,0 +1,3 @@
+<> Tham số hóa kiểu dữ liệu
+
+generic giúp ta đa dạng dữ liệu đầu vào cho đối tượng tạo ra

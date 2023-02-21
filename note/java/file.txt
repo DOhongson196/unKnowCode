@@ -1,0 +1,59 @@
+exists(): kiểm tra xem tệp tin có tồn tại ko, trả về boolean
+createNewFile(): tạo tệp tin
+mkdir(): tạo thư mục
+mkdirs(): tạo thư mục trong đó có nhiều thư mục con
+
+
+canExecute(): file có thể chạy được ko vd:exe, trả về boolean
+canRead(): có mở ra đọc được ko vd:txt,word...., trả về boolean
+canWrite(): có viết được ko vd:txt, trả về boolean
+
+getAbsolutePath() : trả về đường dẫn
+
+isDirectory() : kiểm tra xem có phải folder ko trả về boolean
+isFile()      : kiểm tra xem có phải tệp tin ko trả về boolean
+
+list() : duyệt folder
+list(FilenameFilter filter): duyệt theo file định dạng VD: chỉ muốn lấy file hình ảnh thì JPG,PNG
+listFile() : duyệt file
+
+delete(): xóa file or folder, phải là folder phải rỗng, nếu ko tồn tại thì báo lỗi boolean
+deleteOnExit():  xóa file or folder,phải là folder phải rỗng nếu ko tồn tại cũng k báo lỗi
+
+file1.renameTo(file2)
+
+Files.copy(file gốc,copy,tiêu chuẩn copy)
+Files.move(file gốc,copy,tiêu chuẩn copy)
+dùng move sẽ chuyển được cả thư mục con bên trong, còn copy thì ko chuyển được thư mục con
+
+text
+------------------------------------------------------------------------
+FileWrite(): ghi
+BufferedWriter(): ghi theo dòng, 
+PrintWriter(File file,String bảng mã): ghi được unicode, ghi theo dòng
+close(): để đóng file
+flush(): đẩy hết dữ liệu lưu xuống luôn, ko nằm trong ram
+
+BufferedReader(): đọc theo dòng
+readLine(): để đọc từng dòng kết hợp với vòng lặp
+Files.readAllLine(path,standardCharsets)
+
+nhị phân
+------------------------------------------------------------------------
+outputStream: ghi nhị phân
+inputStream: đọc nhị phân
+
+Object
+------------------------------------------------------------------------
+ObjectOutputStream: 
+WriteObject:
+Implements Serializable ở object muốn lưu => new File => new outputStream => new ObjectOutputStream
+=> Truyền đối tượng vào oos => oos.flush() => oos.close()
+với 1 arr thì dùng foreach duyệt qua mảng rồi thực hiện lại bước trên
+
+ObjectInputStream: 
+readObject:
+
+new File => new InputStream => new ObjectInputStream => While(is.available>0) => ois.readObject() => if(!=null) arr.add()
+ => ois.close()
+

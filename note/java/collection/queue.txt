@@ -1,0 +1,19 @@
+Queue: hàng đợi
+1st in 1st out
+
+element():lấy ra nhưng ko xóa trả về true và exception
+peek():lấy ra nhưng ko xóa  trả về true false
+
+remove():lấy ra và xóa trả về true và exception
+poll():lấy ra và xóa trả về true false
+
+add(): thêm vào trả về true và exception
+offer():thêm vào trả về true false
+
+Dqueue: hàng đợi 2 đầu
+
+giống quêu nhưng thêm last và first
+
+
+
+

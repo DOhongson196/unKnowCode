@@ -1,0 +1,4 @@
+-Trong 1 project ko thể có 2 package cùng tên
+-Tên Package phải viết thường
+-Các Package khác nhau có thể có các class cùng tên
+-Muốn dùng class của package khác thì phải import

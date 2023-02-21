@@ -1,0 +1,9 @@
+Collection
+------------------------------------
+Set: ko có dữ liệu trùng nhau,sắp xếp
+List: có dữ liệu trùng nhau
+
+
+Map
+------------------------------------
+có key và value

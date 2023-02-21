@@ -1,0 +1,26 @@
+Stack
+-------------------------------------------------------
+First come last out
+VD: xếp bài, lá bài cuối cùng được chia đầu tiên
+
+
+Queue
+-------------------------------------------------------
+1st come 1st out
+VD: xếp hàng đến sớm nhất được vào sớm nhất
+
+QueueD 2 đầu
+
+Use
+-------------------------------------------------------
+giá trị nhập vào ko được trùng nhau
+VD: làm phiếu bốc thăm
+
+Map
+-------------------------------------------------------
+gốm key và value
+key nhập vào ko được trùng nhau
+VD: làm từ điển
+
+
+

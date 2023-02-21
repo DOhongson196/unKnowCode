@@ -1,0 +1,7 @@
+Systen.currentTime(): lấy thời gian hiện tại
+
+TimeUnit: convert hours => days, hours => s, days => s
+
+getDate() + getMonth()+1 + getYear()+1900
+
+calendar

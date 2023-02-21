@@ -1,0 +1,7 @@
+abs: tuyệt đối
+ceil: trả về giá trị nguyên nhỏ nhất lớn hơn hoặc bằng đối
+VD: ceil(1.5) => 2
+floor: giống ceil nhưng lấy giá trị nhỏ hơn đối
+VD: floor(1.5) => 1
+round: làm tròn
+round(a*100.0)/100.0 : làm tròn lấy 2 số sau dấu phẩy

@@ -1,0 +1,14 @@
+binarySearch(): tìm kiếm muốn dùng được phải sắp xếp
+sort(): sắp xếp
+muốn tìm kiếm hay sắp xếp trong 1 đối tượng phải có hàm compareTo trước
+
+copyOf(): copy mảng
+fill(): điền mảng
+toString(): chuyển sang String để in ra
+equals() : so sánh trả về true false
+
+
+split() : cắt chuỗi
+muốn cắt chuỗi dựa trên nhiều ký tự ngăn cách
+split.("\\.|\\,");
+

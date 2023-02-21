@@ -1,0 +1,7 @@
+- kế thừa  cha => con
+- kế thừa cha => con => cháu
+- kế thừa cha => con gái
+	      => con trai
+              => con nuôi
+
+-Trong java ko có đa kế thừa

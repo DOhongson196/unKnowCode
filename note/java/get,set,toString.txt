@@ -1,0 +1,2 @@
+-get,set dùng để lấy ra và chỉnh sửa dữ liệu biến trong trường hợp để private để đảm bảo tính toàn vẹn dữ liệu
+-toString giúp chuyển kiểu dữ liệu từ địa chỉ trong bộ nhớ thành dạng String để in ra

@@ -1,0 +1,3 @@
+alt + s + a: tạo constructor
+alt + s + r: tạo get set
+ctrl + alt + mũi tên: copy

@@ -1,0 +1,2 @@
+equals: so sánh 2 đối tượng trả về boolean
+hashcode: so sánh 2 đối tượng trả về >,<,=

@@ -1,0 +1,11 @@
+stack: xếp chồng lên nhau
+Last in 1st out
+cho vào đầu tiên lấy ra sau cùng
+cho vào cuối cùng lấy ra đầu tiên
+
+push() : đưa giá trị
+pop()  : lấy giá trị ra xóa khỏi stack
+peek() : lấy giá trị ra nhưng ko xóa khỏi stack
+clear(): xóa toàn bộ stack
+contains(): xác định giá trị có tồn tại trong stack
+size() : độ dài
