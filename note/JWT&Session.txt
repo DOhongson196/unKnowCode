@@ -1,0 +1,10 @@
+Session tạo ID lưu ở phía server, lưu ở phía client là cookie
+-------------------------------------------------------------------------
+JWT tạo object truyền đi dưới dạng JSON
+Mã JWT, được lưu ở phía client, thường là ở trong local storage,
+và sẽ được gửi kèm vào phần header của mỗi request tiếp theo
+
+JWT bao gồm ba phần, được ngăn cách bởi dấu chấm (.), đó là :
+Header
+Payload
+SIgnature

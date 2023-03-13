@@ -1,0 +1,31 @@
+XML - eXtensible Markup Language – ngôn ngữ đánh dấu mở
+--------------------------------------------------------------------------------------------------------------------
+rộng.
+- XML không có thẻ riêng, người dùng có thể tạo
+bất kỳ thẻ nào theo ý muốn ( tuân theo quy tắc của XML)
+- Thành phần chính: tag - thẻ, data - dữ liệu,
+thuộc tính
+- Mục đích: mô tả dữ liệu
+- Namespace trong xml là một phương pháp để phân biệt các phần tử trùng tên nhưng khác nhau về ý nghĩa hoặc số lượng hoặc tên phần tử con
+
+
+--------------------------------------------------------------------------------------------------------------------
+JSON và XML là hai cách khác nhau để lưu trữ dữ liệu trong máy tính. Cả hai đều hữu ích để lưu trữ dữ liệu,
+nhưng mỗi cái đều có ưu điểm và nhược điểm. Ví dụ, JSON dễ đọc và dễ hiểu hơn XML nhưng kém linh hoạt hơn.
+Mặt khác, XML linh hoạt hơn JSON nhưng có thể khó viết hơn.
+
+schema or DTD
+---------------------------------------------------------------------------------------------------------------------
+dùng để validate
+phải khai báo well-formed
+<!ELEMENT element-name (#PCDATA)> : chứa value
+<!ELEMENT danhsachsinhvien (id,name,age,address)>: chứa phần tử con
+<!ELEMENT danhsachsinhvien (note+)> : thêm dấu + ở sau phần tử con => thẻ con bắt buộc phải xuất hiện ít nhất 1 lần trong thẻ cha
+<!ELEMENT danhsachsinhvien (note*)> : thêm dấy * ở sau phần tử con =>Là phần tử/ thẻ con có thể không xuất hiện hoặc xuất hiện nhiều lần 
+<!ELEMENT danhsachsinhvien (note?)> : thêm dấy ? ở sau phần tử con =>Là phần tử/ thẻ con có thể không xuất hiện hoặc xuất hiện 1 lần
+<!ELEMENT element-name (child-name1|child-name2|child-name3)> : Là 1 trong 3phần tử/ thẻ con được xuất hiện trong thẻ cha
+
+
+
+
+
