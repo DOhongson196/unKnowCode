@@ -1,0 +1,9 @@
+DTO (Data transfer object): là các class đóng gói data để chuyển giữa client - server hoặc giữa các service
+ trong microservice. Mục đích tạo ra DTO là để giảm bớt lượng info không cần thiết phải chuyển đi,
+ và cũng tăng cường độ bảo mật.
+-----------------------------------------------------------------------------------------------
+Service Đánh dấu một Class là tầng Service, phục vụ các logic nghiệp vụ.
+Service sẽ giao tiếp với DB thông qua Repository
+-----------------------------------------------------------------------------------------------
+Repository Đánh dấu một Class Là tầng Repository, phục vụ truy xuất dữ liệu để giao tiếp với DB.
+thay cho DAO

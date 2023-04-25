@@ -1,0 +1,9 @@
+SMTP là giao thức tiêu chuẩn gửi mail => ko cần phải xây dựng máy chủ dùng máy chủ có sẵn như google, micro
+IMAP là giao thứ phổ biến để nhận mail => đồng bộ hóa trên các thiết bị
+POP3 là giao thức nhận mail trên thiết bị => khi gửi xong sever sẽ xóa dữ liệu
+
+SMTP gửi => sever ng gửi => sever ng nhận => IMAP nhận
+
+To: gửi email từng người 1
+Cc: gửi email hàng loạt công khai danh sách
+bcc: gửi email hàng loạt ko công khai danh sách

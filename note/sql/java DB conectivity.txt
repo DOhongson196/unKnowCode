@@ -1,0 +1,2 @@
+- là 1 API được thiết kế để hỗ trợ Java trong việc truy cập DB
+- gồm phương thức thực hiện truy vấn và cập nhật CSDL gián tiếp qua Java

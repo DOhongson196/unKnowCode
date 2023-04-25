@@ -1,0 +1,11 @@
+-dùng làm Controller đứng giữa view và model
+
+-sử dụng get hay post đều xử lý ở method get => nếu login giống nhau viết ở method get
+
+Dùng tiếng việt:
+request.setCharacterEncoding("UTF-8");
+response.setCharacterEncoding("UTF-8");
+response.setContentType("text/html; charset=UTF-8");
+
+-Dùng requestDispatcher để chuyển trang.
+-request.setAttribute("name attribute","đối tượng muốn truyền");

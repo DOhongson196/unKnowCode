@@ -1,0 +1,4 @@
+Spring IOC Container: là trái tim spring
+-quản lý vòng đời của bean: khởi tạo, cấu hình, tương tác với bean
+-có 2 cách tạo IOC container: bean factory
+			      Application Con text

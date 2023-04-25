@@ -1,0 +1,5 @@
+j2ee,java ee,jakarta :là 1 tên gọi qua các năm
+các công nghệ: jboss,jsp,servlet ....
+
+server sider rendering: server và client render cùng lúc(JSP)
+client render: server render  => client render

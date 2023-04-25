@@ -4,6 +4,7 @@ object {
 }
 
 object[name] = 'dohongson'
+object[age] = 18
 object[key] = value
 
 

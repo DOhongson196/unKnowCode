@@ -1,0 +1,19 @@
+-là view(giao diện)
+-JSP Giúp chèn các đoạn mã java vào html
+Cú pháp bắt đầu trang JSP: 
+<%@ đoạn mã %>
+-thực hiện code bên trong nhưng ko trả về kết quả
+-được dùng để tạo ra các biến
+-lưu trữ, truy cập ác giá trị trong phiên
+
+<%= biểu thưc %>
+
+request.getParameter(String): để lấy tham số client truyền đi
+VD: String soLuong = request.getParameter("SoLuong");
+-dữ liệu trả về là chuỗi nên khi muốn sử dụng phải ép kiểu để xử lý(khi ép kiểu phải bắt lỗi)
+VD: double Double.parseDouble(String)
+
+include directive: nội dụng tại thời điểm dịch trang => web tĩnh
+<%@ include file="header.jsp" %>  
+include action: nội dung tại thời điểm request => web động
+<jsp:include page="printdate.jsp" />

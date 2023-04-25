@@ -11,6 +11,8 @@
 	       attribute aternative text (văn bản thay thế khi hình ảnh bị lỗi): (alt) 
 	       attribute (width) và (height) để xác định kích thước ảnh(đơn vị thường dùng pixels)
 
+<pre>        : đúng nội dung ở trong thẻ pre, dùng để viết code
+
 attribute (style): dùng để thêm vào các kiểu cho phần tử (Vd: màu sắc,font chữ, size ...)
 attribute (lang) : dùng dể xác định ngôn ngữ cho web dùng trong lúc gọi <html> (vd: <html lang="en")
 attribute (title):(tiêu đề) dùng đẻ bổ sung(chú thích) cho thông tin phần tử khi dùng chuột di qua

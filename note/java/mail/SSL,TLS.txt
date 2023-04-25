@@ -1,0 +1,2 @@
+SSL,TLS dùng để bảo mật mã hóa dữ liệu giữa người gửi và người nhận
+TLS ra đời sau là phiên bản SSL nâng cấp

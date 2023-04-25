@@ -11,7 +11,7 @@ VD: xếp hàng đến sớm nhất được vào sớm nhất
 
 QueueD 2 đầu
 
-Use
+Set
 -------------------------------------------------------
 giá trị nhập vào ko được trùng nhau
 VD: làm phiếu bốc thăm

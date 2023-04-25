@@ -1,0 +1,8 @@
+JWTs (Json web token): dùng để bảo mật
+JWTs: sau khi người dùng đăng nhập thành công => sever tạo một JWTS => JWTs lưu ở phía user
+=> mỗi lần user request sẽ kèm theo JWTs => sever kiểm tra JWTs
+
+JWTs: gồm 3 phần, header, payload, signature
+header: loại token + thuật toán để mã hóa
+payload: thực thể(user) và thông tin phụ trợ(như thời gian hết hạn)
+signature:

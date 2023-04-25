@@ -1,0 +1,20 @@
+request- mỗi lần chuyển trang đều phải thực hiện lại request để chuyển dữ liêu => nếu ng dùng thực hiện nhiều hành động
+=> khó xử lý
+
+session: - gán cho mỗi ng truy cập một init id và bắt đầu phiên
+	 - id được gửi kèm trong mỗi response gửi từ sever
+		+client cũng biết id này
+		+được lưu dưới dạng cookie
+	 -khi client gửi yêu cầu tiếp theo sẽ đính kèm id này
+
+
+Servlet: HttpSession session = request.getSession();
+JSP    : chỉ cần sử dụng session tích hợp mà tomcat tạo ra từ request
+
+truyền dữ liệu: session.setAttribute("name",value)
+lấy dữ liệu   : sesion.getAttribute("name") trả về object
+
+encodeURL: mã hóa code chuyển đi, trong java nếu cookies bị vô hiệu hóa thì tự chuyển id
+set time out cho session => dùng 1 biến để check
+
+

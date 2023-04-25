@@ -1,0 +1,27 @@
+folder service: chứa các file tương tác với server
+-------------------------------------------------------------------------
+file Service: cung cấp các hàm tương tác với server
+file constant: chứa đường dẫn URL 
+
+folder redux
+--------------------------------------------------------------------------
+rootReducer
+=================================================
+để combine tất cả các reducers trong application thành một single index reducer.
+Mỗi một reducers đại diện cho một phần của application state, 
+và Mỗi một reducer thì có state parameter là khác nhau
+
+store
+=================================================
+Redux Store như 1 nơi lưu state global mà tất cả các Component trong phạm vi của Store đều có thể truy xuất 
+để lấy dữ liệu hoặc cập nhật dữ liệu. Giao diện của các Component đó cũng sẽ được tự động cập nhật 
+khi state thay đổi
+
+reducers
+=================================================
+Để cập nhật state trong Store thì chúng ta cần dispatch action tương ứng được khai báo
+
+
+actions
+=================================================
+actionTypes: nơi chứa các biến mô tả hành động(type)

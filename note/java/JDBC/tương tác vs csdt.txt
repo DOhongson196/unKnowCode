@@ -1,0 +1,16 @@
+B1: kết nối vs CSDL
+B2: tạo đối tượng statement
+-xác định câu lệnh SQL
++DDL: tương tác vs table
++DML: tương tác bên trong table
++DCL: phân quyền
+statement
+preparedStatement
+callableStatement
+B3: thực thi statement
+B4: xử lý kết quả
+B5: ngắt kết nối
+
+
+ResultSet chứa dữ liệu trả về từ DB
+Đối tượng của ResultSet duy trì một con trỏ trỏ đến một hàng của một bảng. Ban đầu, con trỏ trỏ đến hàng đầu tiên

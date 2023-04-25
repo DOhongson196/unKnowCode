@@ -1,0 +1,31 @@
+là 1 framework giúp ánh xạ các đối tượng trong JAVA
+
+Transient: nơi update thông tin
+Persistent: nơi lưu trữ tạm thời ở session
+Detached: nơi lưu thông tin
+
+trasient => saveOrupdate =>
+persistent => commit => detached => refresh => persistent
+
+chỉ dùng get, load, find cho những table ko có quan hệ
+
+save() == persist() : khác nhau là persist ko throw exception
+
+(name = "string") : để đổi tên
+
+@GenerateValue: tự động tăng
+@MappedSuperclass: map dựa trên lớp cha
+
+mappedBy: map dựa trên(phụ thuộc vào ai có trc)
+
+kế thừa: +single table: class cha và con chung 1 bảng
+	 +tabler per class: class cha và con => 2 table
+	 +Joined: giống nhau class cha, khác nhau class con
+
+cascade: +ALL:
+	 +PERSIST: ko liên quan
+	 +REMOVE: xóa nhưng ko lưu
+	 +MERGE: lưu,cập nhật theo nhưng ko xóa
+
+fetch: +EAGER: load table khóa phụ
+       +LAZY: ko load table khó phụ

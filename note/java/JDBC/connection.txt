@@ -1,0 +1,10 @@
+-tạo hàm connection
++Đăng ký Driver: DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
++tạo url
++tạo username
++tạo password
++DriverManager.getConnection(url,name,pass);
+
+-tạo hàm closeConnection
++nếu c!=null
++c.close()

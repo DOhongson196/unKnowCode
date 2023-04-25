@@ -1,0 +1,5 @@
+ORM giúp biến table từ erd => database
+chuyển câu lệnh sql => hsql
+
+JPA là chuẩn để lưu trữ dữ liệu
+là 1 ORM được dùng trong JAVA

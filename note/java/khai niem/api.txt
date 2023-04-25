@@ -1,0 +1,46 @@
+-API là các hàm xử lý gọi url, trả về data thô thường là dạng JSON, XML
+-API cung cấp cho lập trình viên xử lý
+END-POINT(url để gọi API,trả về JSON)
+-Jersey Servlet Container chứa servlet nhận các url và trả về JSON
+-Jersey inject là cấu nối giữa tomcat vs jersey
+-Jersey Media Jackson convert object trong code thành JSON và ngược lại
+-Lombok giúp tự tạo get, set, contructor...
+
+CẦN
+-----------------------------------------------------
+1.cần 1 web server để nhận HTTP Request và Response: Tomcat
+
+2.cần 1 web app trả về data thô
+WEB ta làm gồm 2 phần được: - trang web user thường
+			      - web sv cung cấp các hàm CRUD DATA
+-Thư viện/framework để nhận reques/trả response dạng XML,JSON:
+	Restful API/Rest API ---------------------- JERSEY
+	 chuẩn quy ước 				     dependency ta dùng viết API
+	 nhận trả data                               hiện thực hóa web api
+
+3.cần Database sẽ được thao tác CRUD bởi các web api
+
+THỰC HIỆN
+------------------------
+cài đặt cấu hình tomcat trên server/hosting
+-Tomcat 10.x khác 8.x: package lõi về xử lý request/response đã đổi tên 
+từ import javax thành import jakarta
+	  JavaEE             JAKARTA EE
++bin chứa file chạy
++conf: cấu hình
++logs : nhật kí hoạt động
++webapps: nơi chứa deploys
+------------------------
+Port/cổng trong app
+người dùng => www.teentrangweb.com => dns(domain name system) => địa chỉ trang dưới dạng IP(22.05.000.11) => web
+quy ước trên app server phục vụ request phải đặt 1 nick name là 1 con số cho dễ sử lý 
+Tomcat 8080
+MySQl 3306
+FTP server 21
+Mail server 110,25
+Port là 1 số tự nhiên đặt nick name cho 1 app chạy trên server để khi request đến sẽ biết gửi cho app nào xử lý
+Port là con số tự nhiên 2 byte:
+Port từ 0 => 1024 dành riêng cho app nổi tiếng
+Tomcat cho ta độ port mặc định 8080 thành tên mình muốn => nằm trong tập tin server.xml của thư mục conf
+
+                                        

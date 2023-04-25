@@ -6,7 +6,7 @@ var age = 18;
 vì JS sẽ đưa giá trị khai báo lên đầu (var age), còn gán giá trị age = 18 giữ nguyên, được tạo giá trị là undefined
 
 function:
-console.log(sum(6,9)) //16
+console.log(sum(6,9)) //15
 
 function sum(a,b) {
 	return a+b
