@@ -1,0 +1,36 @@
+JSON: JavaScript Object Notation
+
+
+-Dữ liệu ở dạng name/value
+VD: "name": "value"
+-Dữ liệu được ngăn các bằng dấu phẩy
+VD: ["porsche","Honda","Kia"]
+-{}: đối tượng
+-[]: mảng
+
+-JSON phải dùng "" ko đc thay thế bằng ''
+
+-value JSON:
++String:
+VD: {"name": "son"}
++number:
+VD: {"age" : 18}
++object
+{
+    "employee":{
+	"name": "son",
+	"age" : 18,
+	"title": "abc,
+    }
+}
++array
+VD: {
+"car": ["porsche","Honda","Kia"]
+}
++boolean
+{"sale":true}
++null
+{"middlename":null}
+
+
+JSON trong java: Java sử dụng thư viện của goolge GSON: toJson() parse and fromJson() stringtify

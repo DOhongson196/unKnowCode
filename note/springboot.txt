@@ -1,0 +1,17 @@
+-tight-coupling(liên kết ràng buộc): liên kết ràng buộc(dependence) trong java vô cùng chặt chẽ
+=> loosely coupled là cách làm liên kết bớt ràng buộc
+-------------------------------------------------------------------------------------------------
+Dependency injection(DI): Dependency Injection là việc các Object nên phụ thuộc vào các Abstract Class
+và thể hiện chi tiết của nó sẽ được Inject vào đối tượng lúc runtime.
+Dependency Injection giúp chúng ta dễ dàng mở rộng code và giảm sự phụ thuộc giữa các dependency với nhau
+-------------------------------------------------------------------------------------------------
+Inversion of Control(IOC): Đảo chiều sự điều khiển, là 1 cái kho giúp quản lý khi chúng ta cần 
+-------------------------------------------------------------------------------------------------
+SpringApplication.run(App.class, args) chính là câu lệnh để tạo ra container. Sau đó nó tìm toàn bộ các
+dependency trong project của bạn và đưa vào đó.
+Spring đặt tên cho container là ApplicationContext
+và đặt tên cho các dependency là Bean
+-------------------------------------------------------------------------------------------------
+@Component là một Annotation (chú thích) đánh dấu trên các Class để giúp Spring biết nó là một Bean.
+-------------------------------------------------------------------------------------------------
+@Autowired khai báo Annotation này nói với Spring Boot hãy tự inject (tiêm) một instance
