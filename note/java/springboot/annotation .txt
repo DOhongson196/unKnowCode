@@ -1,0 +1,37 @@
+@Controller: chưa các mapping method
+---------------------------------------------
+@RequestMappinng("home/index")
+@RequestMappinng("home/about")
+=>
+@Controller
+@RequestMappinng("home")
+public class HomeController{
+	@RequestMapping("index"){
+	}
+	@RequestMapping("about"){
+	}
+}
+---------------------------------------------
+@Controller
+@RequestMappinng("url")
+public class HomeController{
+	@RequestMapping(){
+	
+	}=> /url
+	@RequestMapping(params="btnInsert"){
+
+	}=> /url?btnInsert
+	@RequestMapping(params="btnUpdate"){
+
+	}=> /url?btnUpdate
+}
+
+@CrossOrigin: khai báo cors(thiếp lập cổng client gửi các request đến server)
+@Valid: validation
+@PathVariable: đường dẫn động {}
+@PathVariable là annotation để lấy tham số là một thành phần của đường dẫn. Ví dụ http://acme.com/book/5 thì 5 là thành phần dùng làm tham số
+@RequestParam : ?query=
+@RequestParam là annotation để lấy tham số là biến trong query string. Ví dụ http://acme.com/book?id=5 thì id=5
+@ModelAttribute hứng một post request dạng form data
+@RequestBody hứng một post request dạng json
+

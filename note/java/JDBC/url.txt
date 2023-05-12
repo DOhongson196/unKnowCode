@@ -1,0 +1,1 @@
+String url = "jdbc:mySQL://<server>:<port>/<database>?<props>"

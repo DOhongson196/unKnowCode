@@ -1,0 +1,12 @@
+Get:
+-mặc định
+-thêm dữ liệu form vào cuối url
+-nhanh
+-tham số max ~4k dữ liệu
+-cho phép đánh dấu trang
+
+Post:
+-phải khai báo
+-dữ liệu form ko hiển thị
+-ko có giới hạn dữ liệu
+-ngăn đánh dấu trang

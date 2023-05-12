@@ -1,0 +1,4 @@
+dependencies: quản lý thư viện
+dependencie: ôm lấy các thư viện con
+
+finalname: đổi tên khi install

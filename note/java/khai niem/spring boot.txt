@@ -1,0 +1,4 @@
+-là dự án bổ sung của Spring nhằm đơn giản hóa việc phát triển ứng dụng Spring
+-dễ dàng việc thiếp lập, giảm thiểu mã cấu hình
+Spring boot = spring framework + web service + mã cấu hình 
+

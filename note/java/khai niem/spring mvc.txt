@@ -1,0 +1,2 @@
+-xây dựng ra để cải thiện những vấn để jsp, servlet gặp phải
+-thay thế controller ko phải servlet bằng các thư viện có sẵn @Controller, @request

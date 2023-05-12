@@ -1,0 +1,3 @@
+404- sai đường dẫn, ko tìm thấy trang
+500- sai code
+

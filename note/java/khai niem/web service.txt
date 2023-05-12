@@ -1,0 +1,3 @@
+web service: + SOAP
+	     + REST => hay dùng để tương tác với JSON
+dùng để tương tác với database giúp dùng được trên đa nền tảng mà ko cần tạo lại hàm

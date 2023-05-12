@@ -1,0 +1,7 @@
+web: + tĩnh: phải chỉnh sửa trong code
+     + động: có trang quản trị để sủa
+
+để tạo nên trang web có: FE + BE
+database dể lưu dữ liệu
+
+Java web có 2 trường phái là: j2ee và spring

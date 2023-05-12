@@ -1,0 +1,7 @@
+Groupd id: tên công ty, tên bộ phân làm dự án
+Antifact id: tên dự án
+jar: ứng dụng desktop
+war: web
+Description: mô tả dự án
+
+Parent Project: dự án cha
