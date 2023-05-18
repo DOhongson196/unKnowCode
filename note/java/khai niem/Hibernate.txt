@@ -28,4 +28,4 @@ cascade: +ALL:
 	 +MERGE: lưu,cập nhật theo nhưng ko xóa
 
 fetch: +EAGER: load table khóa phụ
-       +LAZY: ko load table khó phụ
+       +LAZY: ko load table khóa phụ
