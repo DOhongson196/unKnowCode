@@ -1,0 +1,4 @@
+Lần đầu đăng nhập trang web, trình duyệt sẽ gửi phương thức http(bao gồm request, uri, cookies)
+lúc này chưa có cookies
+sever set cookies rồi response lại cho trình duyệt
+lúc này cookies mới được set
