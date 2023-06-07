@@ -1,0 +1,9 @@
+-có 2 cách login: + login window
+		  + login user SQL(tự tạo)
+
+-login => user 1 => admin DB1
+       => user 2 => view DB2
+       => user 3 => ko cấp quyền vào
+
+nếu ko cấp quyền ta ko thể select được cột nào => nếu muốn user đó xem
+ta sẽ tạo view VD: bảng có 6 cột ta sẽ tạo view cho xem 3 cột 
