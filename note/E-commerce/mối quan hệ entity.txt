@@ -16,3 +16,6 @@ ORDER:
 
 Tách entity "order" và "order detail" thành hai entity riêng biệt mang lại lợi ích trong việc quản lý,
 mở rộng, linh hoạt và tối ưu hóa hệ thống đơn hàng. 
+
+order detail:
+	
