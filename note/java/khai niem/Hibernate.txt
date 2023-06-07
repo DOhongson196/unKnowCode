@@ -23,9 +23,9 @@ kế thừa: +single table: class cha và con chung 1 bảng
 	 +Joined: giống nhau class cha, khác nhau class con
 
 cascade: +ALL:
-	 +PERSIST: ko liên quan
+	 +PERSIST: ko liên quan(dùng khi muốn xóa các bảng có liên quan đến nhau)
 	 +REMOVE: xóa nhưng ko lưu
 	 +MERGE: lưu,cập nhật theo nhưng ko xóa
 
 fetch: +EAGER: load table khóa phụ
-       +LAZY: ko load table khó phụ
+       +LAZY: ko load table khóa phụ

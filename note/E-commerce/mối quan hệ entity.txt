@@ -1,0 +1,18 @@
+ManytoOne(nhiều đến 1)
+OnetoMany(1 đến nhiều)
+Sản phẩm:
+	+ManyToOne: category(loại) nhiều sản phẩm có thể thuộc cùng 1 loại
+	+ManyToOne: Manufacturer(NSX,người chế tạo) nhiều SP có thể được SX từ 1 NSX
+	+ManyToMany: ProductImages(ảnh) Một SP có thể có nhiều hình ảnh, 1 hình ảnh có thể sử dụng chung cho nhiều sản phẩm
+	+OneToOne: ProductImages(ảnh) Một SP chỉ có thể có một hình ảnh đại diện
+
+USER: 
+	+OneToMany: Token(mã xác thực) một sản phẩm có thể có nhiều token(xác thực tài khoản, đổi pass, lấy lại MK...)
+	+ManyToMany: Roles(vai trò) một user có thể có nhiều roles, 1 roles có thể dùng cho nhiều user
+
+ORDER:
+	+OneToMany:Order details(chi tiết đơn hàng) Một đơn hàng có thể có nhiều chi tiết đơn hàng
+	+OnetoOne: User Một đơn hàng thuộc về một khách hàng
+
+Tách entity "order" và "order detail" thành hai entity riêng biệt mang lại lợi ích trong việc quản lý,
+mở rộng, linh hoạt và tối ưu hóa hệ thống đơn hàng. 
