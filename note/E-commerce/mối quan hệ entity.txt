@@ -10,9 +10,11 @@ USER:
 	+OneToMany: Token(mã xác thực) một sản phẩm có thể có nhiều token(xác thực tài khoản, đổi pass, lấy lại MK...)
 	+ManyToMany: Roles(vai trò) một user có thể có nhiều roles, 1 roles có thể dùng cho nhiều user
 
-ORDER:
-	+OneToMany:Order details(chi tiết đơn hàng) Một đơn hàng có thể có nhiều chi tiết đơn hàng
-	+OnetoOne: User Một đơn hàng thuộc về một khách hàng
+ORDER:	+OneToMany:Order details(chi tiết đơn hàng) Một đơn hàng có thể có nhiều chi tiết đơn hàng
+	+OneToOne: Một user có thể có nhiều order details
+
+CART:   +OneToOne: một người chỉ có 1 giỏ hàng
+      	+OneTOMay: một cart có thể có nhiều sản phẩm
 
 Tách entity "order" và "order detail" thành hai entity riêng biệt mang lại lợi ích trong việc quản lý,
 mở rộng, linh hoạt và tối ưu hóa hệ thống đơn hàng. 
